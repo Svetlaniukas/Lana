@@ -10,78 +10,24 @@
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-<div class=" container d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+
+<div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
       <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path></svg>
         <span class="fs-4">Pricing example</span>
       </a>
-     {% block menu %}{% endblock %}
-      <script>
-  var months = new Array(13);
-  months[1]="января"; months[2]="февраля"; months[3]="марта"; months[4]="апреля"; months[5]="мая"; months[6]="июня"; months[7]="июля"; months[8]="августа"; months[9]="сентября"; months[10]="октября"; months[11]="ноября"; months[12]="декабря";
-
-  var time = new Date();
-  var thismonth = months[time.getMonth() + 1];
-  var date = time.getDate();
-  var thisyear = time.getYear();
-  var day = time.getDay() + 1;
-
-  if (thisyear < 2000)
-      thisyear = thisyear + 1900;
-  if (day == 1) DayofWeek = "Воскресенье";
-  if (day == 2) DayofWeek = "Понедельник";
-  if (day == 3) DayofWeek = "Вторник";
-  if (day == 4) DayofWeek = "Среда";
-  if (day == 5) DayofWeek = "Четверг";
-  if (day == 6) DayofWeek = "Пятница";
-  if (day == 7) DayofWeek = "Суббота";
-</script>
-
-<script>
-setInterval(function() {
-  var cd = new Date();
-  var clockdat = document.getElementById("clockdat");
-  clockdat.innerHTML = cd.toLocaleTimeString();
-}, 1000);
-</script>
-
-<body>
-        <div class="center" style="background-color: #3b424a; padding:5px;">
-        <span style="color:aqua">Сегодня:</span>
-            <span style="color:yellow; font-size:14px;">
-       <script>
-      document.write(date+" ");
-      document.write(thismonth+ " "+thisyear+" "+"года"+" — "+ DayofWeek);
-          </script>
-       (<span id="clockdat" style="color:aqua;"></span>)
-        </span>
-</div>
-</body>
 
       <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
         <a class="me-3 py-2 text-dark text-decoration-none" href="/home">Home Page</a>
         <a class="me-3 py-2 text-dark text-decoration-none" href="/staff">Staff Page</a>
       </nav>
 </div>
-    {% block clock %} {% endblock %}
+    {% block menu %}{% endblock %}
 
-<div class="container fluid py-5">
-        <h1 class="display-5 fw-bold">Custom jumbotron</h1>
-        <p class="col-md-8 fs-4">New Look Hair Design
-A lot of people ask where we got our name, well we’re 3 sisters Estelle, Ciara & Hayleigh who grew up with hairdressing following our mother’s footsteps. Hairdressing is second nature to us!
-We love nothing more than helping make you look and feel fabulous offering all aspects of hairdressing, makeovers by our amazing MUAS and the best eyebrows by our brow specialist.
-We also specialise in a wide range of hair extension techniques using only the best for you!
+    {% block content %}{% endblock %}
 
-.</p>
-        <button class="btn btn-primary btn-lg" type="button">Example button</button>
-      </div>
-      <div class="h-100 p-5 text-bg-dark rounded-3">
-          <h2>Change the background</h2>
-          <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then, mix and match with additional component themes and more.</p>
-          <button class="btn btn-outline-light" type="button">Example button</button>
-      </div>
-    {% block body %}{% endblock %}
-
+</div>
+    {% block footer %}
 <div class ="container d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
     <p class="col-md-4 mb-0 text-muted">© 2022 Company, Inc</p>
 
@@ -96,6 +42,7 @@ We also specialise in a wide range of hair extension techniques using only the b
       <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
     </ul>
 </div>
-    {% block footer %}{% endblock %}
+</div>
+    {% endblock %}
 </body>
 </html>
