@@ -1,21 +1,32 @@
-import datetime
+from datetime import datetime
 
 from flask import Flask, render_template
 
 app = Flask (__name__)
 
+
+
 @app.route ('/')
 @app.route ('/home')
 def home():
-    today = datetime.date.today( )
-    from_file = readfile("master.txt")
-    return render_template ("home.html")
+    today = datetime.now( )
+    page_content = render_template(
+        "home.html",
+        curent_year = today.year
+    )
 
+    return page_content 
 
 @app.route ('/staff')
 def staff():
-    today = datetime.date.today( )
-    return render_template ("staff.html")
+    today = datetime.now( )
+    calendar_itiem = "123"
+    return render_template (
+        "staff.html",
+        curent_year = today.year,
+        calendar_itiem = calendar_itiem
+
+    )
 
 @app.route
 def user(name, id):
