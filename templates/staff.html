@@ -1,16 +1,13 @@
 {% extends 'template_main.html' %}
-   {% block title %}Staff Page{% endblock %}
+{% block title %}Staff Page{% endblock %}
 {% block content %}
-
-{{ calendar_itiem }}
-<div class="container list-group w-auto">
+<div class="container">
   <label class="list-group-item d-flex gap-3">
     <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked="" style="font-size: 1.375em;">
     <span class="pt-1 form-checked-content">
-      <strong>Finish sales report</strong>
+      <strong>Open date</strong>
       <small class="d-block text-muted">
-        <svg class="bi me-1" width="1em" height="1em"><use xlink:href="#calendar-event"></use></svg>
-        1:00–2:00pm
+        <svg class="bi me-1" width="1em" height="1em"><use xlink:href=></use></svg>
       </small>
     </span>
   </label>
@@ -37,10 +34,10 @@
   <label class="list-group-item d-flex gap-3 bg-light">
     <input class="form-check-input form-check-input-placeholder bg-light flex-shrink-0 pe-none" disabled="" type="checkbox" value="" style="font-size: 1.375em;">
     <span class="pt-1 form-checked-content">
-      <span contenteditable="true" class="w-100">Add new task...</span>
+      <span contenteditable="true" class="w-100">{{ calendar_year }}</span>
       <small class="d-block text-muted">
         <svg class="bi me-1" width="1em" height="1em"><use xlink:href="#list-check"></use></svg>
-        Choose list...
+        </small><small class="d-block text-muted">
       </small>
     </span>
   </label>
