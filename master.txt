@@ -1,14 +1,25 @@
-{% extends 'template_main.html' %}
-
-{% block title %}Staff{% endblock %}
-
-{% block content %}
-    <div>
-    <menu> type="context">
-      <li>{{ Finish sales report }}</li><1:00–2:00pm</li>
-      <li>{{ Weekly All Hands }}</li><2:00–3.30pm</li>
-      <li>{{ Out of office }}</li><li>>Tomorrow</li>
-      <li>{{ Add new task...}}</li><li>New list...</li>
-	</menu>
-   </div>
-{% endblock %}}
+<div class="container">
+  <label class="list-group-item d-flex gap-3">
+    <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked="" style="font-size: 1.375em;">
+    <span class="pt-1 form-checked-content">
+      <strong>Monday</strong>
+         10.am-2.pm
+      </small>
+    </span>
+  </label>
+      <strong>tuesday</strong>
+        9.am-3.pm
+      </small>
+    </span>
+  </label>
+      <strong>Wednsday</strong>
+         10.am-5.pm
+      </small>
+    </span>
+  </label>
+      <span contenteditable="true" class="w-100">Friday</span>
+          8am-4pm
+    </small>
+    </span>
+  </label>
+</div>
