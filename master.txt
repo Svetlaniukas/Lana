@@ -1,25 +1,7 @@
 <div class="container">
-  <label class="list-group-item d-flex gap-3">
-    <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked="" style="font-size: 1.375em;">
-    <span class="pt-1 form-checked-content">
-      <strong>Monday</strong>
-         10.am-2.pm
-      </small>
-    </span>
-  </label>
-      <strong>tuesday</strong>
-        9.am-3.pm
-      </small>
-    </span>
-  </label>
-      <strong>Wednsday</strong>
-         10.am-5.pm
-      </small>
-    </span>
-  </label>
-      <span contenteditable="true" class="w-100">Friday</span>
-          8am-4pm
-    </small>
-    </span>
-  </label>
+      <strong>[Monday:10.am-4.pm]</strong>
+      <strong>[tuesday:9.am-3.pm]</strong>
+      <strong>[Wednesday:10.am-5.pm]</strong>
+      <span content editable="true" class="w-100">[Friday:8am-4pm]</span>
 </div>
+
