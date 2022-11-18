@@ -25,12 +25,12 @@ def home():
 def staff():
         today = datetime.now( )
         c = calendar.TextCalendar()
-        staff = ("master.txt" 'wr')
+        staff1 = ("master.txt" 'wr')
 
         page_content =  render_template("staff.html",
         current_year = today.time,
         calendar_year = c.formatyear(2002, w=2, l=1, c=6, m=3 ),
-        staff = staff
+        staff =  staff1 in "__main__"
 
         )
 
