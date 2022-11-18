@@ -1,7 +1,21 @@
+ <html>
+    <head>
+        <title>{{ title }}</title>
+    </head>
+    <body>
+       {% for member in members: %}
+	</ul>
+    </body>
+</html>
+</html>
 <div class="container">
-      <strong>[Monday:10.am-4.pm]</strong>
-      <strong>[tuesday:9.am-3.pm]</strong>
-      <strong>[Wednesday:10.am-5.pm]</strong>
-      <span content editable="true" class="w-100">[Friday:8am-4pm]</span>
+      <li>{{Monday:10.am-4.pm}}</li>
+      <li>{{tuesday:9.am-3.pm}}</li>
+      <li>{{Wednesday:10.am-5.pm}}</li>
+      <li>{{Friday:8am-4pm}}</li>
 </div>
+ {% endfor %}
+   </ul>
+  </body>
+</html>
 
