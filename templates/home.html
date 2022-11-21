@@ -1,7 +1,9 @@
 {% extends 'template_main.html' %}
-      {% block title %}Home page{% endblock %}
+{% block title %}
+Home page
+{% endblock %}
+
 {% block content %}
-{% for member in members: %}
 <div class="container fluid py-5">
         <h1 class="display-5 fw-bold">Custom jumbotron</h1>
         <h1 class="display-5 fw-bold">{{ calendar_item }}</h1>
