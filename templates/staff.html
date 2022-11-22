@@ -1,51 +1,33 @@
 {% extends 'template_main.html' %}
 {% block title %}Staff Page{% endblock %}
+file = open("master.txt",'r')
+time_table = {}
+
 {% block content %}
-
-
-{{calendar_year}}
+{{today}}
 <div class="container">
   <label class="list-group-item d-flex gap-3">
     <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked="" style="font-size: 1.375em;">
     <span class="pt-1 form-checked-content">
-      <strong>Monday</strong>
-      <small class="d-block text-muted">
+        {
+        Monday' : 10.am-4.pm
+        tuesday : 9.am-3.pm
+        Wednesday : 10.am-5.pm
+        Friday': 8am-4pm }
+
+     <span class="pt-1 form-checked-content">
+         <small class="d-block text-muted">
+        <svg class="bi me-1" width="1em" height="1em"><use xlink:href=""></use></svg>
+
+      </small>
+    </span>
+        <small class="d-block text-muted">
         <svg class="bi me-1" width="1em" height="1em"><use xlink:href=></use></svg>
-         10am-2pm
+
       </small>
     </span>
   </label>
-  <label class="list-group-item d-flex gap-3">
-    <input class="form-check-input flex-shrink-0" type="checkbox" value="" style="font-size: 1.375em;">
-    <span class="pt-1 form-checked-content">
-      <strong>tuesday</strong>
-      <small class="d-block text-muted">
-        <svg class="bi me-1" width="1em" height="1em"><use xlink:href="#calendar-event"></use></svg>
-        9.am-3.pm
-      </small>
-    </span>
-  </label>
-  <label class="list-group-item d-flex gap-3">
-    <input class="form-check-input flex-shrink-0" type="checkbox" value="" style="font-size: 1.375em;">
-    <span class="pt-1 form-checked-content">
-      <strong>Wednsday</strong>
-      <small class="d-block text-muted">
-        <svg class="bi me-1" width="1em" height="1em"><use xlink:href="#alarm"></use></svg>
-         10.am-5.pm
-      </small>
-    </span>
-  </label>
-  <label class="list-group-item d-flex gap-3 bg-light">
-    <input class="form-check-input form-check-input-placeholder bg-light flex-shrink-0 pe-none" disabled="" type="checkbox" value="" style="font-size: 1.375em;">
-    <span class="pt-1 form-checked-content">
-      <span contenteditable="true" class="w-100">Friday</span>
-      <small class="d-block text-muted">
-        <svg class="bi me-1" width="1em" height="1em"><use xlink:href="#list-check"></use></svg>
-        </small><small class="d-block text-muted">
-          8am-4pm
-    </small>
-    </span>
-  </label>
+
 </div>
 
 {% endblock %}

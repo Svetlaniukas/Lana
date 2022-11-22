@@ -1,4 +1,5 @@
-Monday:10.am-4.pm
-tuesday:9.am-3.pm
-Wednesday:10.am-5.pm
-Friday:8am-4pm
+Monday' : 10.am-4.pm
+tuesday : 9.am-3.pm
+Wednesday : 10.am-5.pm
+Friday': 8am-4pm
+
