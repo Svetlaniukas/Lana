@@ -1,24 +1,18 @@
 {% extends 'template_main.html' %}
-{% block title %}Staff Page{% endblock %}
-
+{% block title %}staff Page{% endblock %}
 
 {% block content %}
-{{today}}
 <div class="container">
-  <label class="list-group-item d-flex gap-3">
+     <label class="list-group-item d-flex gap-3">
     <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked="" style="font-size: 1.375em;">
     <span class="pt-1 form-checked-content">
-         {{staff_table}}
-
-      </small>
-    </span>
-        <small class="d-block text-muted">
-        <svg class="bi me-1" width="1em" height="1em"><use xlink:href=></use></svg>
-
+      <strong>Finish sales report</strong>
+      <small class="d-block text-muted">
+        <svg class="bi me-1" width="1em" height="1em"><use xlink:href="#calendar-event"></use></svg>
+          {{staff_file}}{{ time_table}}
       </small>
     </span>
   </label>
-
 </div>
 
 {% endblock %}
