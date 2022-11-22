@@ -1,7 +1,7 @@
 import calendar
 from datetime import datetime
 from flask import Flask, render_template
-
+import pandas as pd
 app = Flask (__name__)
 
 @app.route ('/')
@@ -19,17 +19,17 @@ def home():
 def staff():
     today = datetime.now ( )
     c = calendar.TextCalendar ( )
-    file = open ("master.txt", 'r')
+    file = open ("master.txt", 'r+')
     time_table = {}
     for line in file:
-        (key, val) = line.split (':')*2
+        (key, val) = line.split(':')
         time_table[key] = val
 
     page_content = render_template (
         "staff.html",
         current_year = today.year,
         calendar_year = c.formatyear (2002, w=2, l=1, c=6, m=3),
-        staff_file = time_table 
+        staff_table = pd.DataFrame
     )
 
     return page_content

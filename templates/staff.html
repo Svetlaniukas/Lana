@@ -1,7 +1,6 @@
 {% extends 'template_main.html' %}
 {% block title %}Staff Page{% endblock %}
-file = open("master.txt",'r')
-time_table = {}
+
 
 {% block content %}
 {{today}}
@@ -9,15 +8,7 @@ time_table = {}
   <label class="list-group-item d-flex gap-3">
     <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked="" style="font-size: 1.375em;">
     <span class="pt-1 form-checked-content">
-        {
-        Monday' : 10.am-4.pm
-        tuesday : 9.am-3.pm
-        Wednesday : 10.am-5.pm
-        Friday': 8am-4pm }
-
-     <span class="pt-1 form-checked-content">
-         <small class="d-block text-muted">
-        <svg class="bi me-1" width="1em" height="1em"><use xlink:href=""></use></svg>
+         {{staff_table}}
 
       </small>
     </span>

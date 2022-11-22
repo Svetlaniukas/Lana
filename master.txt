@@ -1,5 +1,4 @@
-Monday' : 10.am-4.pm
-tuesday : 9.am-3.pm
-Wednesday : 10.am-5.pm
-Friday': 8am-4pm
-
+'Monday': ' 10.am-4.pm\n',
+'tuesday ': ' 9.am-3.pm\n',
+'Wednesday ': ' 10.am-5.pm\n',
+'Friday': ' 8am-4pm\n'
