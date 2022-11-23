@@ -1,8 +1,7 @@
-file = open("master.txt",'r')
-time_table = {}
+file = open("staff.weekend.txt",'r')
+time_ = {}
 for line in file :
     print (line)
     (key, val) = line.split(':')
-    time_table[key] = val
-    print (time_table)
-
+    time_[key] = val
+    print (time_)

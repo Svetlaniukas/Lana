@@ -3,21 +3,35 @@
 
 {% block content %}
 <div class="container">
-      {% for description, time in staff_file.items()%}
-     <label class="list-group-item d-flex gap-3">
+      {% for description, time in staff_file.items() %}
+    <label class="list-group-item d-flex gap-3">
     <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked="" style="font-size: 1.375em;">
     <span class="pt-1 form-checked-content">
-      <strong>{{description}}report</strong>
-      <small class="d-block text-muted">
+      <strong>{{description}}</strong>
+        <small class="d-block text-muted">
         <svg class="bi me-1" width="1em" height="1em"><use xlink:href="#calendar-event"></use></svg>
           {{time}}
       </small>
     </span>
-       {% endfor %}
-     </label>
+      {% endfor %}
+    </label>
 </div>
-
+<div class="container">
+      {% for date, time in staff_time.items() %}
+    <label class="list-group-item d-flex gap-3">
+    <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked="" style="font-size: 1.375em;">
+    <span class="pt-1 form-checked-content">
+      <strong>{{date}}</strong>
+        <small class="d-block text-muted">
+        <svg class="bi me-1" width="1em" height="1em"><use xlink:href="#calendar-event"></use></svg>
+          {{time}}
+      </small>
+    </span>
+      {% endfor %}
+    </label>
+</div>
 {% endblock %}
+
 
 
 
