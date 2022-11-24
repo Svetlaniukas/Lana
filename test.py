@@ -1,29 +1,20 @@
-from calendar import calendar
-from datetime import datetime
+from tkinter import Text
 
 from flask import Flask, render_template
+from numpy.core.setup_common import file
 
 app = Flask (__name__)
+
 @app.route ('/staff')
 def staff():
-    today = datetime.now ( )
-    c = calendar.TextCalendar ( )
-    file = open ("staff_week_day.txt", 'r')
-    file = open ("staff.weekend.txt", 'r')
-def staff_shift( file_week_day, file_weekend):
-    staff_dictionary = dict (zip (file_week_day, file_weekend))
-    for lines in staff_dictionary :
-        (key, val) = lines.split(':')
-        staff_dictionary [key] = val
+    file1 = Text ("staff_week_day.txt", 'r')
+    file2 = open ("staff.weekend.txt", 'r')
+    file3 = file1+file2
+   def staff_shift(file1, file2 ):
+       for key, value in nums.items ( ):
+           print (key, 'is', value)
 
-        page_content = render_template (
+    page_content = render_template (
         "staff.html",
-        current_time_and_date = staff_dictionary
-
+      
     )
-
-    return page_content
-
-if __name__ == "__main__":
-    app.run (debug=True)
-    
