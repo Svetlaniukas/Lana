@@ -1,20 +1,21 @@
-from tkinter import Text
+from flask import render_template
 
-from flask import Flask, render_template
-from numpy.core.setup_common import file
-
-app = Flask (__name__)
 
 @app.route ('/staff')
-def staff():
-    file1 = Text ("staff_week_day.txt", 'r')
-    file2 = open ("staff.weekend.txt", 'r')
-    file3 = file1+file2
-   def staff_shift(file1, file2 ):
-       for key, value in nums.items ( ):
-           print (key, 'is', value)
+def staff(current_staff_shift):
+    staff_week_day = open ("staff_week_day.txt", 'r')
+    staff_weekend = open ("staff.weekend.txt", 'r')
 
-    page_content = render_template (
-        "staff.html",
-      
-    )
+    def items(current_staff_shift):
+        current_staff_shift = dict (chain (staff_week_day.items ( ), staff_weekend.items ( )))
+
+    page_content = render_template ("staff.html",
+    current_time_and_date=current_staff_shift,
+                                    )
+
+    return page_content
+
+
+if __name__ == "__main__":
+    app.run (debug=True)
+

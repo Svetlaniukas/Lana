@@ -3,7 +3,7 @@
 
 {% block content %}
 <div class="container">
-      {% for description, time in staff_week_day.items() %}
+      {% for description, time in current_time_and_date.items() %}
     <label class="list-group-item d-flex gap-3">
     <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked="" style="font-size: 1.375em;">
     <span class="pt-1 form-checked-content">
@@ -17,7 +17,7 @@
     </label>
 </div>
 <div class="container">
-      {% for date, time in staff.weekend.items() %}
+      {% for date, time in current_time_and_date.items() %}
     <label class="list-group-item d-flex gap-3">
     <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked="" style="font-size: 1.375em;">
     <span class="pt-1 form-checked-content">

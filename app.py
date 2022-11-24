@@ -1,8 +1,8 @@
 import calendar
 from datetime import datetime
-
 from _CAL.Holiday import today
 from flask import Flask, render_template
+from itertools import chain
 
 app = Flask (__name__)
 
@@ -18,19 +18,24 @@ def home():
     return page_content
 
 @app.route ('/staff')
-def staff():
-    staff_week_day = open ("staff_week_day.txt", 'r')
-    staff_weekend= open ("staff.weekend.txt", 'r')
-def staff_shift(staff_week_day=None, staff_weekend=None):
-     staff_dictionary = dict (zip (staff_week_day, staff_weekend))
-     for lines in staff_dictionary:
-         (key, val) = lines.split (':')
-         staff_dictionary[key] = val
-     page_content = render_template ("staff.html",
-                 current_time_and_date = staff_dictionary,
-     )
+def staff(current_staff_shift):
+    staff_week_day = open("staff_week_day.txt", 'r')
+    staff_weekend = open ("staff.weekend.txt", 'r')
+ 
+    def items(current_staff_shift ):
+        current_staff_shift = dict (chain (staff_week_day .items ( ), staff_weekend.items ( )))
 
-     return page_content
+    page_content = render_template ("staff.html",
+    current_time_and_date = current_staff_shift,
+    )
+   
+    return page_content
+
 
 if __name__ == "__main__":
     app.run (debug=True)
+
+
+
+
+   
