@@ -35,7 +35,3 @@ def staff(current_staff_shift):
 if __name__ == "__main__":
     app.run (debug=True)
 
-
-
-
-   
