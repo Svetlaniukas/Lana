@@ -19,21 +19,26 @@ def home():
         return page_content
 
 
-staff_file = {}
-for line in staff_file :
-    (key, val) = line.split(':')
-    line[key] = val
+def read_staff_from_file():
+    dict_staff = {}
+    for_week_days_shift = open ("staff_week_day.txt", 'r')
+    for_staff_weekend_shift = open ("staff_weekend.txt", 'r')
+    for line in for_week_days_shift:
+        (key, val) = line.split (':')
+        dict_staff[key] = val
+    for line in for_staff_weekend_shift:
+        (key, val) = line.split ('=')
+        dict_staff[key] = val
 
+        return
 
 @app.route ('/staff')
-def staff():
-         for_staff_weekend_shift = staff_file,
-         for_week_days_shift = staff_file,
-         for_week_days_shift = open ("staff_week_day.txt", 'r')
-         for_staff_weekend_shift = open("staff.weekend.txt", 'r')
+def staff(dict_staff):
+         for_staff_weekend_shift = read_staff_from_file()
+         for_week_days_shift = read_staff_from_file()
          page_content = render_template ("staff.html",
-                        file_for_week_day=for_week_days_shift,
-                        file_for_weekend=for_staff_weekend_shift,
+                        for_week_days_shift = for_week_days_shift,
+                        for_staff_weekend_shift = for_staff_weekend_shift
                                          )
 
 
@@ -42,4 +47,4 @@ def staff():
 
 if __name__ == "__main__":
          app.run (debug=True)
-
+        
