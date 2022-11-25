@@ -1,4 +1,5 @@
 import calendar
+from copy import t
 from datetime import datetime
 
 from _CAL.Holiday import today
@@ -20,20 +21,22 @@ def home():
          return page_content
 
 
-for_week_days_shift = open ("staff_week_day.txt", 'r')
-for_staff_weekend_shift = open ("staff.weekend.txt", 'r')
 staff_file = {}
-@app.route ('/staff')
-def staff(staff_weekend , staff_week_day):
-         today = datetime.now ( )
-         for line in staff_weekend:
-             (key, val) = line.split ('=')
-         for line in staff_week_day:
-             (key, val) = line.split (':')
+for line in staff_file:
+    (key, val) = line.split(':')
+    t[key] = val
 
+
+@app.route ('/staff')
+def staff(staff_file):
+    
+         for_week_days_shift =open ("staff_week_day.txt", 'r')
+         for_staff_weekend_shift = open("staff.weekend.txt", 'r')
+         for_staff_weekend_shift = {}
+         for_week_days_shift ={}
          page_content = render_template ("staff.html",
-                        file_for_week_day=for_week_days_shift,
-                        file_for_weekend=for_staff_weekend_shift
+         file_for_week_day=for_week_days_shift,
+         file_for_weekend=for_staff_weekend_shift
 
                                         )
          return page_content
