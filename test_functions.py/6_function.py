@@ -1,86 +1,116 @@
+movie = 'Alien'
+rating = 200
+result = f'Movie: "{movie}", rating: {rating}'
+print(result)
 
-# movie = 'The good,the bad, and the ungly'
-# rating = 100
-
-# result = f'Movie: "{movie}", rating: {rating}'
-# print(result)
-
-# print()
-
-# movie = 'Alien'
-#  rating = 200
-
-# result = f'Movie: "{movie}", rating: {rating}'
-# print(result)
+result = f'Movie: "{movie}", rating: {rating}'
+print(result)
 
 
-# def greet(name):
-    # print('Hello, name)
-    # result = f'Hello {name}'
-    # print(result)
+def greet2():
+    """
+    :param movie:
+    """
+    result2 = f'Movie: {movie}'
+    print(result2)
 
-    # greet('world')
-    # greet('oleg')
-
-
-# def greet(name):
-      # print('Hello, name)
-      # result = f'{massage}, {name}'
-      # print (result)
-
-       # greet ('world, 'Goodbye')
-
- # def greet(name):
-    # print('Hello, name)
-    # result = f'{massage}, {name}'
-    # print (result)
-
-     # greet(massage='world, name='Goodbye')
-
- # def greet(name):
-      # print('Hello, name)
-      # result = f'{massage}, {name}'
-      # print (result)
-
-      # greet (massage='Hello')
+greet2()
 
 
-# def greet(name):
-    # print('Hello, name)
-    # result = f'{massage}, {name}'
-    # print (result)
+def greet3(movie='good_day', rating=300, ):
+    """
 
-    # greet ( name= 'asdf', 'Hello')
+    :param movie:
+    :param rating:
+    """
+    result3 = f'City:{movie}, {rating}'
+    print(result3)
+
+greet3()
+
+
+def greet4(massage='world', name='oleg'):
+    """
+
+    :param massage:
+    :param name:
+    """
+    result4 = f'Movie: {massage}, {name}'
+    print(result4)
+
+greet4()
+
+
+
+
+def greet5(massage='Hello'):
+    """
+
+    :param massage:
+    """
+    result5 = f'massage{massage}'
+    print(result5)
+
+greet5()
+
+
+def greet6(massage='Hello', name='asdf'):
+    """
+
+    :param massage:
+    :param name:
+    """
+    result6 = f'{massage}, {name}'
+    print(result6)
+
+greet6()
+
+
+# greet ( name= 'asdf', 'Hello')
 
 
 # greeting = 'Hello'
 # token = 'world'
 
-# def greet(name):
-    # print('Hello, name)
-    # result = f'{massage}, {name}'
-    # print (result)
+def greet7(name='greeting', massage='to'):
+    """
 
-    # greet (greeting , to)
+    :param name:
+    :param massage:
+    """
+    result7 = f' {name} {massage}, '
+    print(result7)
 
-    # massage = greeting = 'hello'
+greet7()
 
- # def greet(name):
-        # print('Hello, name)
-     # result = f'{massage}, {name}'
-     # return result
+
+# greet (greeting , to)
+
+# massage = greeting = 'hello'
+
+def greet8(name='greeting', massage='to'):
+    """
+
+    :param name:
+    :param massage:
+    :return:
+    """
+    g = f'str{massage}, {name}'
+    return (g)
+
+greet8()
+
 
 # g = greet(greeting, to)
 # print(g)
 
-# print(greet('hello))
-# g = greet('                  hello').title().strip()
-# print(g)
-#
+def greet9(name='hello'):
+    """
+    :param name:
+    """
+    g = f'greet{name}'
+    print(g)
 
-
-
-
-
+greet9()
 
 
