@@ -1,6 +1,5 @@
 from multiprocessing import context
 
-
 movie = 'Alien'
 rating = 200
 result = f'Movie: "{movie}", rating: {rating}'
@@ -27,21 +26,37 @@ greet3('Terminator', 34)
 
 
 
-def sum(first='numeric', second=33):
+def sum(first, second):
     result = first + second
     print(result)
 
 sum(5, 7)
-sum1 = ('summa:', 10 - 2)
-print(sum1)
-sum2 = ('all is good', 123)
-print(sum2)
-sum3 = ('summa:', 25 - 5)
-print()
-sum4 = ('result:', str(10 * 5))
-print()
-sum5 = ('result:', str(10 / 2))
-print()
+sum(2, 2)
+
+def sum_minus(first, second):
+    result = first - second
+    print(result)
+
+sum_1 = ('summa:', sum_minus(10, 2))
+
+
+
+
+def num_multiplay(first, second):
+    result = first * second
+    print(result)
+
+
+num_2 = ('result:', num_multiplay(10, 5))
+
+
+def num_divide(first, second):
+    result = first / second
+    print(result)
+
+
+num_3 = ('result:', num_divide(10, 2))
+
 
 
 def numeric(id=1, name='Lana', surname='Mel'):
@@ -61,8 +76,5 @@ staff = ('result:', 35 - 10)
 print(staff)
 num3 =('result:', 20 / 2)
 print(num3)
-
-
-
 
 
