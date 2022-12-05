@@ -36,3 +36,7 @@ def test_num_divide():
 
 def test_numeric(sur_name):
     assert numeric({numbers}, {name}, {sur_name}) == (20, 'Tania', 'Bal')
+
+def test_alex(sur_name):
+    assert numeric({numbers}, {name}, {sur_name}) == (20, 'alex1, 'Bal1')
+
