@@ -50,6 +50,6 @@ def test_staff_book():
     assert my_function.staff_book('Lena', 'Ross', 34) == 'First name:"Lena", Second name:"Ross", Phone numbers:34'
 
 
-def Test_string_should_failed(self):
+def Test_string_should_failed():
     with pytest.raises(ValueError):
-        assert sum_not_exist("A", "B")
+        assert my_function.sum_not_exist("A", "B")

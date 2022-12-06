@@ -52,7 +52,7 @@ def staff_book(name, surname, telephone):
     return result
 
 
-def sum_not_exist(a,b):
-    result = a + b
+def sum_not_exist():
+    result =(a + b) + 12
     print(result)
     return result
