@@ -38,7 +38,7 @@ def test_sum_multiplay():
 
 def test_myfunc_should_be_faled():
     with pytest.raises(ValueError):
-    assert sum_not_exist(4,7)
+    assert sum_not_exist (4,7)
 
 
 def test_num_divide():
@@ -54,3 +54,4 @@ def test_sum_not_exist():
 
 def test_staff_book(doctest_namespace):
     assert my_function.staff_id({}, {}, {}) == 'name: "Tania", surname: "Bal", rating: 20'
+.
