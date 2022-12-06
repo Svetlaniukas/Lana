@@ -46,9 +46,13 @@ def divide(a, b):
     return result
 
 
-def sum_not_exist():
-    a = 'hello'
-    b = - 4
-    print(a, b)
-    return a, b
+def staff_book(name, surname, telephone):
+    result = f'First name:"{name}", Second name:"{surname}", Phone numbers:{telephone}'
+    print(result, int(telephone))
+    return result
 
+
+def sum_not_exist(a,b):
+    result = a + b
+    print(result)
+    return result

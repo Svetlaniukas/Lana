@@ -1,4 +1,5 @@
 import pytest
+from _pytest.doctest import doctest_namespace
 
 import my_function
 
@@ -28,12 +29,13 @@ def test_sum_plius():
 
 
 def test_sum_minus():
-    assert my_function.minus(int(10 - 2)) == 'summa:', 8
-    assert my_function.minus(9, 2) != 'summa:'
+    assert my_function.minus(10, 2) == ('summa:', 8)
+    assert my_function.minus(9, 2) != ('summa:', 12)
+
 
 def test_sum_multiplay():
-    assert my_function.multi(10, 5) == 'result:', 50
-    assert my_function.multi(9,0) == 'result:', 80
+    assert my_function.multi(10, 5) == ('result:', 50)
+    assert my_function.multi(9, 2) != ('result:', 20)
     assert my_function.multi(1, 5) != 'result:', 50
 
 
@@ -42,11 +44,12 @@ def test_num_divide():
     assert my_function.divide(20, 2) == ('result:', 10)
 
 
+def test_staff_book():
+    assert my_function.staff_book('Tania', 'Bal', 20) == 'First name:"Tania", Second name:"Bal", Phone numbers:20'
 
-def test_sum_not_exist():
+    assert my_function.staff_book('Lena', 'Ross', 34) == 'First name:"Lena", Second name:"Ross", Phone numbers:34'
+
+
+def Test_string_should_failed(self):
     with pytest.raises(ValueError):
-        assert my_function.sum_not_exist()
-
-
-def test_staff_book(doctest_namespace):
-    assert my_function.staff_id({}, {}, {}) == 'name: "Tania", surname: "Bal", rating: 20'
+        assert sum_not_exist("A", "B")
