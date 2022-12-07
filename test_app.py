@@ -25,6 +25,6 @@ def test_index_contain_staff_shift_day():
     assert 'Wednesday : 10.am-5.pm'
     assert 'Thursday : 10am-4pm'
     assert 'Friday : 8am-4pm '
-)
+
 
 
