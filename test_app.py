@@ -1,5 +1,5 @@
 import pytest
-
+from datetime import datetime, timedelta
 from app import app
 
 
@@ -26,9 +26,6 @@ def test_index_contain_staff_shift_day():
     assert 'Thursday : 10am-4pm'
     assert 'Friday : 8am-4pm '
 
-import pytest
-
-from datetime import datetime, timedelta
 
 testdata = [
     (datetime(2001, 12, 12), datetime(2001, 12, 11), timedelta(1)),
