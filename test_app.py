@@ -28,8 +28,8 @@ def test_index_contain_staff_shift_day():
 
 
 testdata = [
-    (datetime(2001, 12, 12), datetime(2001, 12, 11), timedelta(1)),
-    (datetime(2001, 12, 11), datetime(2001, 12, 12), timedelta(-1)),
+    (datetime(2023, 12, 12), datetime(2023, 12, 11), timedelta(1)),
+    (datetime(2023, 12, 11), datetime(2023, 12, 12), timedelta(-1)),
 ]
 
 
