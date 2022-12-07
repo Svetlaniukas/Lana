@@ -15,7 +15,7 @@ def home():
     calendar_year = calendar.TextCalendar ( )
     page_content = render_template ("home.html",
     current_time = date_time ,
-    calendar_year = calendar_year.formatyear(2002, w=2, l=1, c=6, m=3)
+    calendar_year = calendar_year.formatyear(format())
 
     return page_content
 
