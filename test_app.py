@@ -1,6 +1,11 @@
 import pytest
-from datetime import datetime, timedelta
 from app import app
+
+
+def test_read_staff_from_module():
+    response = app.test_client().get('/staff')
+    print(response.data)
+    assert 'Monday' in response.data.decode('utf-8')
 
 
 def test_index_contain_route():

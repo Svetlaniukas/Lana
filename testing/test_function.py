@@ -1,7 +1,16 @@
 import pytest
-from _pytest.doctest import doctest_namespace
-
 import my_function
+import mymodule
+
+def read_staff_from_file():
+    assert mymodule.read_staff_from_file('Monday', '10.am-4.pm') == 'Monday : 10.am-4.pm'
+    assert mymodule.read_staff_from_file('', '9.am-3.pm') == 'Tuesday : 9.am-3.pm'
+    assert mymodule.read_staff_from_file('Wednesday', '') == 'Wednesday : 10.am-5.pm'
+    assert mymodule.read_staff_from_file('SATURDAY', '10am-4pm') != 'Thursday : 10am-4pm'
+    assert mymodule.read_staff_from_file('', '') == 'Friday : 8am-4pm'
+    with pytest.raises(ZeroDivisionError):
+        pass
+    assert mymodule.read_staff_from_file("A", "B")
 
 
 def test_cinema_movie_name_rating():
@@ -51,5 +60,5 @@ def test_staff_book():
 
 
 def Test_string_should_failed():
-    with pytest.raises(ValueError):
-        assert my_function.sum_not_exist("A", "B")
+    with pytest.raises(ZeroDivisionError):
+        assert my_function.staff_book("A", "B")
