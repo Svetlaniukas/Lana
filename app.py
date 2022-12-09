@@ -18,13 +18,10 @@ def home():
     return page_content
 
 
-
-
-
 @app.route('/staff')
 def staff():
-    for_week_days_shift = mymodule.read_staff_from_file("staff_week_day.html", ":")
-    for_staff_weekend_shift = mymodule.read_staff_from_file("staff_weekend.html", "=")
+    for_week_days_shift = mymodule.read_staff_from_file("staff_week_day.txt", ":")
+    for_staff_weekend_shift = mymodule.read_staff_from_file("staff_weekend.txt", "=")
     page_content = render_template("staff.html",
                                    for_week_days_shift=for_week_days_shift,
                                    for_staff_weekend_shift=for_staff_weekend_shift
