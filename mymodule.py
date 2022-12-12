@@ -1,12 +1,12 @@
 NAME = "mymodule"
 
 
-def read_staff_from_file(file_name, file_delemiter):
+def open_staff_file(file_name, file_delimiter):
     dict_staff = {}
-    for_week_days_shift = open(file_name, 'r')
-    for line in for_week_days_shift:
-        (key, val) = line.split(file_delemiter)
-        dict_staff[key] = val
-    return dict_staff
-
-
+    for_staff_file = open(file_name, 'r')
+    for line in for_staff_file:
+        if file_name in file_delimiter:
+            line.rstrip()
+            (key, val) = line.split(file_delimiter)
+            dict_staff[key] = val
+            return (key, val), dict_staff

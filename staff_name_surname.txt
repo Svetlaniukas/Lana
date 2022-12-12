@@ -1,4 +1,3 @@
-Lena , Petrova
-Tania , Bal
-Lana , Mel
-German , Bal
+Denis,Petrov
+Tania,Bal
+Lana,Mel

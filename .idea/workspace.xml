@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="54064b98-3bf8-4da5-8bb8-6967e270d163" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
@@ -33,6 +36,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2IJPFB5NKNsiPAzMhPybDI5RMkr" />
   <component name="ProjectViewState">
     <option name="compactDirectories" value="true" />
@@ -48,7 +54,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "TODO_SCOPE": "Project Files",
     "last_opened_file_path": "/Users/lana/PycharmProjects",
-    "settings.editor.selected.configurable": "terminal"
+    "settings.editor.selected.configurable": "editor.preferences.tabs"
   },
   "keyToStringList": {
     "ChangesTree.GroupingKeys": [
@@ -61,7 +67,44 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Python tests.pytest in /test">
+  <component name="PyDebuggerOptionsProvider">
+    <option name="myAttachToSubprocess" value="false" />
+    <option name="mySaveCallSignatures" value="true" />
+    <option name="mySupportGeventDebugging" value="true" />
+    <option name="myDropIntoDebuggerOnFailedTests" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/testing" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="mymodule" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PycharmProjects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mymodule.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="Tox" factoryName="Tox">
       <module name="PycharmProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -79,7 +122,7 @@
       </runOnlyEnvs>
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_alex" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_mymodule.test_1_line_file_shut_retur_1_itiems" type="tests" factoryName="Autodetect" singleton="false" nameIsGenerated="true">
       <module name="PycharmProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -89,39 +132,39 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_alex&quot;" />
+      <option name="_new_target" value="&quot;test_mymodule.test_1_line_file_shut_retur_1_itiems&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_movie_with_rating" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_mymodule.test_5_line_file_shut_retur_5_itiems" type="tests" factoryName="Autodetect" nameIsGenerated="true">
       <module name="PycharmProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testing" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_movie_with_rating&quot;" />
+      <option name="_new_target" value="&quot;test_mymodule.test_5_line_file_shut_retur_5_itiems&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_name_plius_movie_concatinate" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_mymodule.test_delimiter_comma_shut_retur_valid_dictionary" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="PycharmProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testing" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_name_plius_movie_concatinate&quot;" />
+      <option name="_new_target" value="&quot;test_mymodule.test_delimiter_comma_shut_retur_valid_dictionary&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_sum" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_mymodule.test_emthy_file_shut_retur_emthy_dictionary" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="PycharmProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -131,7 +174,35 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_sum&quot;" />
+      <option name="_new_target" value="&quot;test_mymodule.test_emthy_file_shut_retur_emthy_dictionary&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_mymodule.test_if_file_not_empty_then_shut_return_dictionary" type="tests" factoryName="Autodetect" nameIsGenerated="true">
+      <module name="PycharmProjects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_mymodule.test_if_file_not_empty_then_shut_return_dictionary&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_mymodule.test_not_emthy_file_shut_retur_not_emthy_dictionary" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="PycharmProjects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_mymodule.test_not_emthy_file_shut_retur_not_emthy_dictionary&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -149,20 +220,6 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_sum_string_should_failed_value" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="PycharmProjects" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testing" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_sum_string_should_failed_value&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Python tests in test_division_function.py" type="tests" factoryName="Autodetect">
       <module name="PycharmProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -173,7 +230,21 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/testing/test_function.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_function.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in test_mymodule.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="PycharmProjects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testing" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_mymodule.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
@@ -183,6 +254,22 @@
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_function" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in PycharmProjects" type="tests" factoryName="py.test" nameIsGenerated="true">
+      <module name="PycharmProjects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testing" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -210,22 +297,26 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.mymodule" />
+      <item itemvalue="Python tests.Python tests for test_mymodule.test_if_file_not_empty_then_shut_return_dictionary" />
+      <item itemvalue="Python tests.Python tests for test_mymodule.test_1_line_file_shut_retur_1_itiems" />
+      <item itemvalue="Python tests.Python tests for test_mymodule.test_5_line_file_shut_retur_5_itiems" />
       <item itemvalue="Python tests.Python tests for test_sum_minus" />
       <item itemvalue="Python tests.pytest in /test" />
       <item itemvalue="Python tests.Python tests in test_division_function.py" />
-      <item itemvalue="Python tests.Python tests for test_alex" />
-      <item itemvalue="Python tests.Python tests for test_movie_with_rating" />
-      <item itemvalue="Python tests.Python tests for test_name_plius_movie_concatinate" />
-      <item itemvalue="Python tests.Python tests for test_sum" />
-      <item itemvalue="Python tests.Python tests for test_sum_string_should_failed_value" />
+      <item itemvalue="Python tests.pytest in PycharmProjects" />
+      <item itemvalue="Python tests.Python tests for test_mymodule.test_delimiter_comma_shut_retur_valid_dictionary" />
+      <item itemvalue="Python tests.Python tests for test_mymodule.test_emthy_file_shut_retur_emthy_dictionary" />
+      <item itemvalue="Python tests.Python tests for test_mymodule.test_not_emthy_file_shut_retur_not_emthy_dictionary" />
+      <item itemvalue="Python tests.Python tests in test_mymodule.py" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for test_sum" />
-        <item itemvalue="Python tests.Python tests for test_movie_with_rating" />
-        <item itemvalue="Python tests.Python tests for test_name_plius_movie_concatinate" />
-        <item itemvalue="Python tests.Python tests for test_alex" />
-        <item itemvalue="Python tests.Python tests for test_sum_string_should_failed_value" />
+        <item itemvalue="Python.mymodule" />
+        <item itemvalue="Python tests.Python tests for test_mymodule.test_not_emthy_file_shut_retur_not_emthy_dictionary" />
+        <item itemvalue="Python tests.Python tests for test_mymodule.test_delimiter_comma_shut_retur_valid_dictionary" />
+        <item itemvalue="Python tests.Python tests in test_mymodule.py" />
+        <item itemvalue="Python tests.Python tests for test_mymodule.test_emthy_file_shut_retur_emthy_dictionary" />
       </list>
     </recent_temporary>
   </component>
@@ -315,7 +406,105 @@
       <option name="project" value="LOCAL" />
       <updated>1670319068845</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="ad file pytest with broblem report">
+      <created>1670319247735</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1670319247735</updated>
+    </task>
+    <task id="LOCAL-00013" summary="ad file pytest with broblem report">
+      <created>1670319347658</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1670319347658</updated>
+    </task>
+    <task id="LOCAL-00014" summary="ad file pytest with broblem report">
+      <created>1670322515901</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1670322515901</updated>
+    </task>
+    <task id="LOCAL-00015" summary="ad file pytest with report">
+      <created>1670329854958</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1670329854958</updated>
+    </task>
+    <task id="LOCAL-00016" summary="ad file pytest with report">
+      <created>1670354944551</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1670354944551</updated>
+    </task>
+    <task id="LOCAL-00017" summary="add test.app.py with checking app content">
+      <created>1670433471673</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1670433471673</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add test.app.py with checking app content">
+      <created>1670433611048</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1670433611048</updated>
+    </task>
+    <task id="LOCAL-00019" summary="add test.app.py with checking app content">
+      <created>1670434087755</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1670434087755</updated>
+    </task>
+    <task id="LOCAL-00020" summary="add test.app.py with checking app content">
+      <created>1670434180803</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1670434180803</updated>
+    </task>
+    <task id="LOCAL-00021" summary="add test.app.py with checking app content">
+      <created>1670434248178</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1670434248178</updated>
+    </task>
+    <task id="LOCAL-00022" summary="add app.py">
+      <created>1670434854378</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1670434854378</updated>
+    </task>
+    <task id="LOCAL-00023" summary="add @pytest.mark.parametrize staff shift">
+      <created>1670448789559</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1670448789559</updated>
+    </task>
+    <task id="LOCAL-00024" summary="add my model with staff rote cheking">
+      <created>1670500662452</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1670500662452</updated>
+    </task>
+    <task id="LOCAL-00025" summary="add my model with staff rote cheking">
+      <created>1670607016101</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1670607016101</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -336,30 +525,45 @@
     <MESSAGE value="fixt function my object math." />
     <MESSAGE value="ad file with pytest testing" />
     <MESSAGE value="ad file pytest with broblem report" />
-    <option name="LAST_COMMIT_MESSAGE" value="ad file pytest with broblem report" />
+    <MESSAGE value="ad file pytest with report" />
+    <MESSAGE value="add test.app.py with checking app content" />
+    <MESSAGE value="add app.py" />
+    <MESSAGE value="add @pytest.mark.parametrize staff shift" />
+    <MESSAGE value="add my model with staff rote cheking" />
+    <option name="LAST_COMMIT_MESSAGE" value="add my model with staff rote cheking" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/testing/my_function.py</url>
+          <url>file://$PROJECT_DIR$/my_function.py</url>
           <line>3</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/testing/test_function.py</url>
+          <url>file://$PROJECT_DIR$/test_function.py</url>
           <line>24</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/testing/test_function.py</url>
+          <url>file://$PROJECT_DIR$/test_function.py</url>
           <line>23</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/testing/test_function.py</url>
+          <url>file://$PROJECT_DIR$/test_function.py</url>
           <line>32</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test_app.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test_app.py</url>
+          <line>4</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

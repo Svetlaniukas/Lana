@@ -20,8 +20,8 @@ def home():
 
 @app.route('/staff')
 def staff():
-    for_week_days_shift = mymodule.read_staff_from_file("staff_week_day.txt", ":")
-    for_staff_weekend_shift = mymodule.read_staff_from_file("staff_weekend.txt", "=")
+    for_week_days_shift = mymodule.open_staff_file("staff_week_day.txt", ":")
+    for_staff_weekend_shift = mymodule.open_staff_file("staff_weekend.txt", "=")
     page_content = render_template("staff.html",
                                    for_week_days_shift=for_week_days_shift,
                                    for_staff_weekend_shift=for_staff_weekend_shift
