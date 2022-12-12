@@ -21,10 +21,10 @@ def test_not_emthy_file_shut_retur_not_emthy_dictionary():
 
 
 def test_delimiter_comma_shut_retur_valid_dictionary():
-        persons = mymodule.open_staff_file("staff_name_surname.txt", ',')
-        assert persons.get("Denis") == "Petrov"
-        assert persons.get("Tania") == "Bal"
-        assert persons.get("Lana") == "Mel"
+    persons = mymodule.open_staff_file("staff_name_surname.txt", ',')
+    assert persons.get("Denis") == "Petrov\n"
+    assert persons.get("Tania") == "Bal\n"
+    assert persons.get("Lana") == "Mel"
 
 
 def test_delimiter_slash_shut_retur_valid_dictionary():
