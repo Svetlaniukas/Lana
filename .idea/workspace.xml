@@ -83,7 +83,7 @@
       <recent name="$PROJECT_DIR$/testing" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.app">
+  <component name="RunManager" selected="Python tests.Python tests for test_mymodule.test_3_line_file_shut_retur_3_itiems">
     <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PycharmProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -312,10 +312,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for test_mymodule.test_3_line_file_shut_retur_3_itiems" />
         <item itemvalue="Python.app" />
         <item itemvalue="Python tests.Python tests for test_app.test_index_contain_staff_shift_week_day" />
         <item itemvalue="Python tests.Python tests for test_mymodule.test_not_emthy_file_shut_retur_not_emthy_dictionary" />
-        <item itemvalue="Python tests.Python tests for test_mymodule.test_3_line_file_shut_retur_3_itiems" />
         <item itemvalue="Python tests.Python tests for test_mymodule.test_delimiter_comma_shut_retur_valid_dictionary" />
       </list>
     </recent_temporary>
@@ -546,7 +546,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670928665161</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="fixed file test.mymodel">
+      <created>1670940305310</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1670940305310</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -575,7 +582,8 @@
     <MESSAGE value="model addline rstrip function" />
     <MESSAGE value="add model function" />
     <MESSAGE value="try to fixt \n" />
-    <option name="LAST_COMMIT_MESSAGE" value="try to fixt \n" />
+    <MESSAGE value="fixed file test.mymodel" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed file test.mymodel" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
