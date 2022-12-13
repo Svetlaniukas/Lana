@@ -83,8 +83,8 @@
       <recent name="$PROJECT_DIR$/testing" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_mymodule.test_3_line_file_shut_retur_3_itiems">
-    <configuration name="mymodule" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.app">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PycharmProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -96,7 +96,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mymodule.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -120,6 +120,20 @@
       <runOnlyEnvs>
         <array />
       </runOnlyEnvs>
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_app.test_index_contain_staff_shift_week_day" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="PycharmProjects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_app.test_index_contain_staff_shift_week_day&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="Python tests for test_mymodule.test_1_line_file_shut_retur_1_itiems" type="tests" factoryName="Autodetect" singleton="false" nameIsGenerated="true">
@@ -150,20 +164,6 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_mymodule.test_5_line_file_shut_retur_3_itiems" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="PycharmProjects" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_mymodule.test_5_line_file_shut_retur_3_itiems&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Python tests for test_mymodule.test_5_line_file_shut_retur_5_itiems" type="tests" factoryName="Autodetect" nameIsGenerated="true">
       <module name="PycharmProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -175,6 +175,20 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_mymodule.test_5_line_file_shut_retur_5_itiems&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_mymodule.test_delimiter_comma_shut_retur_valid_dictionary" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="PycharmProjects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_mymodule.test_delimiter_comma_shut_retur_valid_dictionary&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -192,7 +206,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_mymodule.test_not_valid_delimiter_shud_trow_error" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_mymodule.test_not_emthy_file_shut_retur_not_emthy_dictionary" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="PycharmProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -202,7 +216,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_mymodule.test_not_valid_delimiter_shud_trow_error&quot;" />
+      <option name="_new_target" value="&quot;test_mymodule.test_not_emthy_file_shut_retur_not_emthy_dictionary&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -231,20 +245,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;$PROJECT_DIR$/test_function.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests in test_mymodule.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="PycharmProjects" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_mymodule.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
@@ -297,7 +297,7 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.mymodule" />
+      <item itemvalue="Python.app" />
       <item itemvalue="Python tests.Python tests for test_mymodule.test_if_file_not_empty_then_shut_return_dictionary" />
       <item itemvalue="Python tests.Python tests for test_mymodule.test_1_line_file_shut_retur_1_itiems" />
       <item itemvalue="Python tests.Python tests for test_mymodule.test_5_line_file_shut_retur_5_itiems" />
@@ -305,18 +305,18 @@
       <item itemvalue="Python tests.pytest in /test" />
       <item itemvalue="Python tests.Python tests in test_division_function.py" />
       <item itemvalue="Python tests.pytest in PycharmProjects" />
+      <item itemvalue="Python tests.Python tests for test_app.test_index_contain_staff_shift_week_day" />
       <item itemvalue="Python tests.Python tests for test_mymodule.test_3_line_file_shut_retur_3_itiems" />
-      <item itemvalue="Python tests.Python tests for test_mymodule.test_5_line_file_shut_retur_3_itiems" />
-      <item itemvalue="Python tests.Python tests in test_mymodule.py" />
-      <item itemvalue="Python tests.Python tests for test_mymodule.test_not_valid_delimiter_shud_trow_error" />
+      <item itemvalue="Python tests.Python tests for test_mymodule.test_delimiter_comma_shut_retur_valid_dictionary" />
+      <item itemvalue="Python tests.Python tests for test_mymodule.test_not_emthy_file_shut_retur_not_emthy_dictionary" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.app" />
+        <item itemvalue="Python tests.Python tests for test_app.test_index_contain_staff_shift_week_day" />
+        <item itemvalue="Python tests.Python tests for test_mymodule.test_not_emthy_file_shut_retur_not_emthy_dictionary" />
         <item itemvalue="Python tests.Python tests for test_mymodule.test_3_line_file_shut_retur_3_itiems" />
-        <item itemvalue="Python tests.Python tests in test_mymodule.py" />
-        <item itemvalue="Python.mymodule" />
-        <item itemvalue="Python tests.Python tests for test_mymodule.test_not_valid_delimiter_shud_trow_error" />
-        <item itemvalue="Python tests.Python tests for test_mymodule.test_5_line_file_shut_retur_3_itiems" />
+        <item itemvalue="Python tests.Python tests for test_mymodule.test_delimiter_comma_shut_retur_valid_dictionary" />
       </list>
     </recent_temporary>
   </component>
@@ -539,7 +539,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670878280907</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="try to fixt \n">
+      <created>1670928665161</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1670928665161</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -567,7 +574,8 @@
     <MESSAGE value="add my model with staff rote cheking" />
     <MESSAGE value="model addline rstrip function" />
     <MESSAGE value="add model function" />
-    <option name="LAST_COMMIT_MESSAGE" value="add model function" />
+    <MESSAGE value="try to fixt \n" />
+    <option name="LAST_COMMIT_MESSAGE" value="try to fixt \n" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

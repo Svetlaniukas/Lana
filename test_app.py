@@ -15,15 +15,15 @@ def test_index_contain_main_title_name():
     assert 'New Look Hair Design' in response.data.decode('utf-8')
 
 
-@pytest.mark.parametrize("day", ['Monday', 'Tuesday', 'Wendsday', 'Thursday', 'Friday'])
+@pytest.mark.parametrize("day", ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'])
 def test_index_contain_staff_shift_week_day(day):
     response = app.test_client().get('/staff')
     print(f'"{day}"')
-    assert response
+    assert day in response.data.decode('utf-8')
 
 
 @pytest.mark.parametrize("weekend", ['Saturday', 'Sunday'])
 def test_index_contain_staff_shift_weekend(weekend):
     response = app.test_client().get('/staff')
     print(f'"{weekend}"')
-    assert response
+    assert weekend in response.data.decode('utf-8')
