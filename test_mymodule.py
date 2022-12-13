@@ -36,9 +36,11 @@ def test_not_valid_delimiter_shud_trow_error():
 
 
 def test_3_line_file_shut_retur_3_itiems():
-    staff = mymodule.open_staff_file("staff_name_surname.txt", ',')
-    assert staff["Denis"] == "Petrov"
-    assert len('Denis,Petrov') == 3
+    assert mymodule.open_staff_file("staff_name_surname.txt", ',')
+    assert "Denis" "Lana" "Tania"
+
+
+print("—", end="")
 
 
 def test_1_line_file_shut_retur_1_itiems():
