@@ -78,12 +78,13 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/testing" />
+      <recent name="$PROJECT_DIR$/test" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/templates" />
-      <recent name="$PROJECT_DIR$/testing" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_mymodule.test_3_line_file_shut_retur_3_itiems">
+  <component name="RunManager">
     <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PycharmProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -97,6 +98,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="my.json" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PycharmProjects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/my.json" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -175,20 +197,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_mymodule.test_5_line_file_shut_retur_5_itiems&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_mymodule.test_delimiter_comma_shut_retur_valid_dictionary" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="PycharmProjects" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_mymodule.test_delimiter_comma_shut_retur_valid_dictionary&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -298,6 +306,7 @@
     </configuration>
     <list>
       <item itemvalue="Python.app" />
+      <item itemvalue="Python.my.json." />
       <item itemvalue="Python tests.Python tests for test_mymodule.test_if_file_not_empty_then_shut_return_dictionary" />
       <item itemvalue="Python tests.Python tests for test_mymodule.test_1_line_file_shut_retur_1_itiems" />
       <item itemvalue="Python tests.Python tests for test_mymodule.test_5_line_file_shut_retur_5_itiems" />
@@ -307,16 +316,15 @@
       <item itemvalue="Python tests.pytest in PycharmProjects" />
       <item itemvalue="Python tests.Python tests for test_app.test_index_contain_staff_shift_week_day" />
       <item itemvalue="Python tests.Python tests for test_mymodule.test_3_line_file_shut_retur_3_itiems" />
-      <item itemvalue="Python tests.Python tests for test_mymodule.test_delimiter_comma_shut_retur_valid_dictionary" />
       <item itemvalue="Python tests.Python tests for test_mymodule.test_not_emthy_file_shut_retur_not_emthy_dictionary" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.my.json." />
         <item itemvalue="Python tests.Python tests for test_mymodule.test_3_line_file_shut_retur_3_itiems" />
         <item itemvalue="Python.app" />
         <item itemvalue="Python tests.Python tests for test_app.test_index_contain_staff_shift_week_day" />
         <item itemvalue="Python tests.Python tests for test_mymodule.test_not_emthy_file_shut_retur_not_emthy_dictionary" />
-        <item itemvalue="Python tests.Python tests for test_mymodule.test_delimiter_comma_shut_retur_valid_dictionary" />
       </list>
     </recent_temporary>
   </component>
@@ -553,7 +561,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670940305310</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="fixed val/key '\n'">
+      <created>1670940638000</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1670940638000</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -583,7 +598,8 @@
     <MESSAGE value="add model function" />
     <MESSAGE value="try to fixt \n" />
     <MESSAGE value="fixed file test.mymodel" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed file test.mymodel" />
+    <MESSAGE value="fixed val/key '\n'" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed val/key '\n'" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
