@@ -2,7 +2,7 @@ import pytest
 import mymodule
 
 
-def twork_with_db_json_staff_shift():
+def work_with_db_json_staff_shift():
     assert mymodule.NAME == "mymodule"
 
 
@@ -10,12 +10,12 @@ def test_empty_json_shut_return_empty_dictionary():
     dict_empty = mymodule.work_with_db_json_staff_shift("staff_empty_file.json", '')
     assert len(dict_empty) == 0
 
-def test_not_emthy_json_shut_retur_not_emthy_dictionary():
+def test_not_empty_json_shut_retur_not_emthy_dictionary():
     file_with_data = mymodule.work_with_db_json_staff_shift("staff.json", 'weekday')
     assert file_with_data['Wednesday'] == '10.am-5.pm'
 
 
-def test_delimiter_comma_shut_retur_valid_dictionary():
+def test_json_valid_shut_return_valid_dictionary():
     persons = mymodule.work_with_db_json_staff_shift("staff_name_surname.json", 'person')
     assert persons['Denis'] == 'Petrov'
     assert persons['Tania'] == 'Bal'
