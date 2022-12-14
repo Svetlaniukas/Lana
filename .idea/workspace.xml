@@ -78,55 +78,14 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/test_function" />
       <recent name="$PROJECT_DIR$/testing" />
       <recent name="$PROJECT_DIR$/test" />
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/templates" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="PycharmProjects" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="my.json" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="PycharmProjects" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/my.json" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Python tests for test_mymodule_json.test_1_line_json_shut_retur_1_itiems">
     <configuration default="true" type="Tox" factoryName="Tox">
       <module name="PycharmProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -144,7 +103,7 @@
       </runOnlyEnvs>
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_app.test_index_contain_staff_shift_week_day" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_mymodule_json.test_1_line_file_shut_retur_1_itiems" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="PycharmProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -154,7 +113,63 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_app.test_index_contain_staff_shift_week_day&quot;" />
+      <option name="_new_target" value="&quot;test_mymodule_json.test_1_line_file_shut_retur_1_itiems&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_mymodule_json.test_1_line_json_shut_retur_1_itiems" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="PycharmProjects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_mymodule_json.test_1_line_json_shut_retur_1_itiems&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_mymodule_json.test_3_line_file_shut_retur_3_itiems" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="PycharmProjects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_mymodule_json.test_3_line_file_shut_retur_3_itiems&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_mymodule_json.test_delimiter_comma_shut_retur_valid_dictionary" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="PycharmProjects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_mymodule_json.test_delimiter_comma_shut_retur_valid_dictionary&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_mymodule_json.test_json_shut_retur_valid_dictionary" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="PycharmProjects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_mymodule_json.test_json_shut_retur_valid_dictionary&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -163,26 +178,12 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testing" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_function" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_mymodule.test_1_line_file_shut_retur_1_itiems&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_mymodule.test_3_line_file_shut_retur_3_itiems" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="PycharmProjects" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_mymodule.test_3_line_file_shut_retur_3_itiems&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -214,26 +215,12 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_mymodule.test_not_emthy_file_shut_retur_not_emthy_dictionary" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="PycharmProjects" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_mymodule.test_not_emthy_file_shut_retur_not_emthy_dictionary&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Python tests for test_sum_minus" type="tests" factoryName="Autodetect" nameIsGenerated="true">
       <module name="PycharmProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testing" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_function" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -247,12 +234,12 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testing" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_function" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_function.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_function/test_function.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
@@ -277,7 +264,7 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testing" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_function" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -305,8 +292,6 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.app" />
-      <item itemvalue="Python.my.json." />
       <item itemvalue="Python tests.Python tests for test_mymodule.test_if_file_not_empty_then_shut_return_dictionary" />
       <item itemvalue="Python tests.Python tests for test_mymodule.test_1_line_file_shut_retur_1_itiems" />
       <item itemvalue="Python tests.Python tests for test_mymodule.test_5_line_file_shut_retur_5_itiems" />
@@ -314,17 +299,19 @@
       <item itemvalue="Python tests.pytest in /test" />
       <item itemvalue="Python tests.Python tests in test_division_function.py" />
       <item itemvalue="Python tests.pytest in PycharmProjects" />
-      <item itemvalue="Python tests.Python tests for test_app.test_index_contain_staff_shift_week_day" />
-      <item itemvalue="Python tests.Python tests for test_mymodule.test_3_line_file_shut_retur_3_itiems" />
-      <item itemvalue="Python tests.Python tests for test_mymodule.test_not_emthy_file_shut_retur_not_emthy_dictionary" />
+      <item itemvalue="Python tests.Python tests for test_mymodule_json.test_1_line_file_shut_retur_1_itiems" />
+      <item itemvalue="Python tests.Python tests for test_mymodule_json.test_1_line_json_shut_retur_1_itiems" />
+      <item itemvalue="Python tests.Python tests for test_mymodule_json.test_3_line_file_shut_retur_3_itiems" />
+      <item itemvalue="Python tests.Python tests for test_mymodule_json.test_delimiter_comma_shut_retur_valid_dictionary" />
+      <item itemvalue="Python tests.Python tests for test_mymodule_json.test_json_shut_retur_valid_dictionary" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.my.json." />
-        <item itemvalue="Python tests.Python tests for test_mymodule.test_3_line_file_shut_retur_3_itiems" />
-        <item itemvalue="Python.app" />
-        <item itemvalue="Python tests.Python tests for test_app.test_index_contain_staff_shift_week_day" />
-        <item itemvalue="Python tests.Python tests for test_mymodule.test_not_emthy_file_shut_retur_not_emthy_dictionary" />
+        <item itemvalue="Python tests.Python tests for test_mymodule_json.test_1_line_json_shut_retur_1_itiems" />
+        <item itemvalue="Python tests.Python tests for test_mymodule_json.test_1_line_file_shut_retur_1_itiems" />
+        <item itemvalue="Python tests.Python tests for test_mymodule_json.test_3_line_file_shut_retur_3_itiems" />
+        <item itemvalue="Python tests.Python tests for test_mymodule_json.test_json_shut_retur_valid_dictionary" />
+        <item itemvalue="Python tests.Python tests for test_mymodule_json.test_delimiter_comma_shut_retur_valid_dictionary" />
       </list>
     </recent_temporary>
   </component>
@@ -575,7 +562,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671015421275</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="add json file with staff shift data">
+      <created>1671015799687</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1671015799687</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -613,22 +607,22 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/my_function.py</url>
+          <url>file://$PROJECT_DIR$/test_function/my_function.py</url>
           <line>3</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_function.py</url>
+          <url>file://$PROJECT_DIR$/test_function/test_function.py</url>
           <line>24</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_function.py</url>
+          <url>file://$PROJECT_DIR$/test_function/test_function.py</url>
           <line>23</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_function.py</url>
+          <url>file://$PROJECT_DIR$/test_function/test_function.py</url>
           <line>32</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>

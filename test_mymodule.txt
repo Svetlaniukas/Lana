@@ -38,10 +38,6 @@ def test_3_line_file_shut_retur_3_itiems():
     assert len(line_test) == 3
 
 
-
-
-
-
 def test_1_line_file_shut_retur_1_itiems():
     test_1_line = len(mymodule.open_staff_file("testing/staff_position.txt", '/'))
     assert test_1_line == 1
