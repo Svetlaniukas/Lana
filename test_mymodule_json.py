@@ -27,7 +27,7 @@ def test_json_shut_retur_valid_dictionary():
     assert valid_dictionary['Tomas'] == 'web developer'
 
 
-def test_json_not_valid__shud_trow_error():
+def test_json_not_root__should_return_empty_dict():
     dict = mymodule.work_with_db_json_staff_shift("staff_position.json", ':::')
     assert len(dict) == 0
 

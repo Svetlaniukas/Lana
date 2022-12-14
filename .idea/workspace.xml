@@ -85,7 +85,7 @@
       <recent name="$PROJECT_DIR$/templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_mymodule_json.test_1_line_json_shut_retur_1_itiems">
+  <component name="RunManager" selected="Python tests.Python tests for test_mymodule_json.test_empty_json_shut_return_empty_dictionary">
     <configuration default="true" type="Tox" factoryName="Tox">
       <module name="PycharmProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -145,7 +145,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_mymodule_json.test_delimiter_comma_shut_retur_valid_dictionary" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_mymodule_json.test_empty_json_shut_return_empty_dictionary" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="PycharmProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -155,7 +155,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_mymodule_json.test_delimiter_comma_shut_retur_valid_dictionary&quot;" />
+      <option name="_new_target" value="&quot;test_mymodule_json.test_empty_json_shut_return_empty_dictionary&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -302,16 +302,16 @@
       <item itemvalue="Python tests.Python tests for test_mymodule_json.test_1_line_file_shut_retur_1_itiems" />
       <item itemvalue="Python tests.Python tests for test_mymodule_json.test_1_line_json_shut_retur_1_itiems" />
       <item itemvalue="Python tests.Python tests for test_mymodule_json.test_3_line_file_shut_retur_3_itiems" />
-      <item itemvalue="Python tests.Python tests for test_mymodule_json.test_delimiter_comma_shut_retur_valid_dictionary" />
+      <item itemvalue="Python tests.Python tests for test_mymodule_json.test_empty_json_shut_return_empty_dictionary" />
       <item itemvalue="Python tests.Python tests for test_mymodule_json.test_json_shut_retur_valid_dictionary" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for test_mymodule_json.test_empty_json_shut_return_empty_dictionary" />
         <item itemvalue="Python tests.Python tests for test_mymodule_json.test_1_line_json_shut_retur_1_itiems" />
         <item itemvalue="Python tests.Python tests for test_mymodule_json.test_1_line_file_shut_retur_1_itiems" />
         <item itemvalue="Python tests.Python tests for test_mymodule_json.test_3_line_file_shut_retur_3_itiems" />
         <item itemvalue="Python tests.Python tests for test_mymodule_json.test_json_shut_retur_valid_dictionary" />
-        <item itemvalue="Python tests.Python tests for test_mymodule_json.test_delimiter_comma_shut_retur_valid_dictionary" />
       </list>
     </recent_temporary>
   </component>
@@ -569,7 +569,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671015799687</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="add json file with json staff testing shift and new staff model">
+      <created>1671037079715</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1671037079715</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -601,7 +608,8 @@
     <MESSAGE value="fixed file test.mymodel" />
     <MESSAGE value="fixed val/key '\n'" />
     <MESSAGE value="add json file with staff shift data" />
-    <option name="LAST_COMMIT_MESSAGE" value="add json file with staff shift data" />
+    <MESSAGE value="add json file with json staff testing shift and new staff model" />
+    <option name="LAST_COMMIT_MESSAGE" value="add json file with json staff testing shift and new staff model" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
