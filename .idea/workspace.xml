@@ -568,7 +568,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670940638000</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="add json file with staff shift data">
+      <created>1671015421275</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1671015421275</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -599,7 +606,8 @@
     <MESSAGE value="try to fixt \n" />
     <MESSAGE value="fixed file test.mymodel" />
     <MESSAGE value="fixed val/key '\n'" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed val/key '\n'" />
+    <MESSAGE value="add json file with staff shift data" />
+    <option name="LAST_COMMIT_MESSAGE" value="add json file with staff shift data" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -26,3 +26,4 @@ for staff_shift in data['response']:
 
 with open('my.json', 'w') as file:
     json.dump(data, file, indent=3)
+print(data)
