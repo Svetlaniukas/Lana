@@ -23,14 +23,16 @@ def open_staff_file(file_name, file_delimiter):
     return dict_staff
 
 
-def work_with_db_xml_staff_shift(file_name, root_node_name):
+def work_with_db_xml_staff_shift(file_name, root):
     dict_staff_xml = {}
-    file_object = ElementTree.parse(file_name)
+    tree = ElementTree.parse(file_name)
+    root = tree.getroot()
+    xmldict = XmlDictConfig(root_node_name)
     try:
-        dict_staff_xml = file_object
+        dict_staff_xml = tree
     except SyntaxError as error_code:
         return {}
-    return dict_staff_xml[root_node_name]
+    return dict_staff_xml[root]
 
 
 class XmlDictConfig(dict):
