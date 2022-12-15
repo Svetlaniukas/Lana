@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+    "weekday":
+    <weekday>"Monday": "10.am-4.pm"</weekday>
+    <weekday>"Tuesday": "9.am-3.pm"</weekday>
+    <weekday>"Wednesday": "10.am-5.pm"</weekday>
+    <weekday>"Thursday": "10am-4pm"</weekday>
+    <weekday>"Friday": "8am-4pm"</weekday>
+
+    "weekend":
+    <weekend>"Saturday": "10.am-5.pm"</weekend>
+    <weekend>"Sunday": "8am- 4pm"</weekend>
+
+</root>

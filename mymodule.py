@@ -1,5 +1,8 @@
 import json
 from json import JSONDecodeError
+from xml.etree import ElementTree
+
+from _pytest._code import source
 
 NAME = "mymodule"
 
@@ -18,6 +21,36 @@ def open_staff_file(file_name, file_delimiter):
         if len(dict_staff) == 0:
             raise Exception("not able to parse the file")
     return dict_staff
+
+
+def work_with_db_xml_staff_shift(file_name, root_node_name):
+    dict_staff_xml = {}
+    file_object = ElementTree.parse(file_name)
+    try:
+        dict_staff_xml = file_object
+    except SyntaxError as error_code:
+        return {}
+    return dict_staff_xml[root_node_name]
+
+
+class XmlDictConfig(dict):
+
+    tree = ElementTree.parse('.xml')
+    root = tree.getroot()
+    xmldict = XmlDictConfig(root)
+
+
+
+   root = ElementTree.XML(xml_string)
+   xmldict = XmlDictConfig(root)
+
+
+
+
+
+
+
+
 
 
 def work_with_db_json_staff_shift(file_name, root_node_name):
