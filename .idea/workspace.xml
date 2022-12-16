@@ -24,6 +24,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
       <GitPushTagMode>
@@ -37,6 +44,8 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="groupByToolId" value="true" />
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2IJPFB5NKNsiPAzMhPybDI5RMkr" />
@@ -76,17 +85,18 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/test_function" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/test_function" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/testing" />
       <recent name="$PROJECT_DIR$/test" />
       <recent name="$PROJECT_DIR$/templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_mymodul_xml.test_not_empty_xml_shut_retur_not_emthy_dictionary">
-    <configuration name="mymodule" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Python tests for test_mymodule_json.test_empty_json_shut_return_empty_dictionary">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" singleton="false" nameIsGenerated="true">
       <module name="PycharmProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -98,7 +108,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mymodule.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="my_xml_testing" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true" nameIsGenerated="true">
+      <module name="PycharmProjects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_function" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_function/my_xml_testing.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -122,6 +153,20 @@
       <runOnlyEnvs>
         <array />
       </runOnlyEnvs>
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_mymodul_xml.test_empty_json_shut_return_empty_dictionary" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="PycharmProjects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_mymodul_xml.test_empty_json_shut_return_empty_dictionary&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="Python tests for test_mymodul_xml.test_empty_xml_shut_return_empty_dictionary" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
@@ -149,20 +194,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_mymodul_xml.test_not_empty_xml_shut_retur_not_emthy_dictionary&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_mymodule_json.test_1_line_json_shut_retur_1_itiems" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="PycharmProjects" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_mymodule_json.test_1_line_json_shut_retur_1_itiems&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -299,7 +330,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.mymodule" />
+      <item itemvalue="Python.app" />
+      <item itemvalue="Python.my_xml_testing" />
       <item itemvalue="Python tests.Python tests for test_mymodule.test_if_file_not_empty_then_shut_return_dictionary" />
       <item itemvalue="Python tests.Python tests for test_mymodule.test_1_line_file_shut_retur_1_itiems" />
       <item itemvalue="Python tests.Python tests for test_mymodule.test_5_line_file_shut_retur_5_itiems" />
@@ -307,18 +339,18 @@
       <item itemvalue="Python tests.pytest in /test" />
       <item itemvalue="Python tests.Python tests in test_division_function.py" />
       <item itemvalue="Python tests.pytest in PycharmProjects" />
+      <item itemvalue="Python tests.Python tests for test_mymodul_xml.test_empty_json_shut_return_empty_dictionary" />
       <item itemvalue="Python tests.Python tests for test_mymodul_xml.test_empty_xml_shut_return_empty_dictionary" />
       <item itemvalue="Python tests.Python tests for test_mymodul_xml.test_not_empty_xml_shut_retur_not_emthy_dictionary" />
-      <item itemvalue="Python tests.Python tests for test_mymodule_json.test_1_line_json_shut_retur_1_itiems" />
       <item itemvalue="Python tests.Python tests for test_mymodule_json.test_empty_json_shut_return_empty_dictionary" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for test_mymodul_xml.test_not_empty_xml_shut_retur_not_emthy_dictionary" />
-        <item itemvalue="Python tests.Python tests for test_mymodul_xml.test_empty_xml_shut_return_empty_dictionary" />
-        <item itemvalue="Python.mymodule" />
         <item itemvalue="Python tests.Python tests for test_mymodule_json.test_empty_json_shut_return_empty_dictionary" />
-        <item itemvalue="Python tests.Python tests for test_mymodule_json.test_1_line_json_shut_retur_1_itiems" />
+        <item itemvalue="Python tests.Python tests for test_mymodul_xml.test_empty_json_shut_return_empty_dictionary" />
+        <item itemvalue="Python tests.Python tests for test_mymodul_xml.test_not_empty_xml_shut_retur_not_emthy_dictionary" />
+        <item itemvalue="Python.my_xml_testing" />
+        <item itemvalue="Python tests.Python tests for test_mymodul_xml.test_empty_xml_shut_return_empty_dictionary" />
       </list>
     </recent_temporary>
   </component>
@@ -597,7 +629,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671045954458</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="not working xml modul">
+      <created>1671124752191</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1671124752191</updated>
+    </task>
+    <task id="LOCAL-00040" summary="not working xml modul">
+      <created>1671125055631</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1671125055631</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -632,7 +678,8 @@
     <MESSAGE value="add json file with json staff testing shift and new staff model" />
     <MESSAGE value="add more functional with Exception" />
     <MESSAGE value="add pass json tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="add pass json tests" />
+    <MESSAGE value="not working xml modul" />
+    <option name="LAST_COMMIT_MESSAGE" value="not working xml modul" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -667,7 +714,15 @@
           <line>4</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/mymodule.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
       </breakpoints>
+      <breakpoints-defaults>
+        <breakpoint type="python-line" />
+      </breakpoints-defaults>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">

@@ -26,6 +26,6 @@ print(value_week)
 value_week1 = data['weekend']['Sunday']
 print(value_week1)
 
-with open('staff.json', 'w') as file:
+with open('../staff.json', 'w') as file:
     json.dump(data, file, indent=3)
 

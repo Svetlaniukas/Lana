@@ -1,6 +1,6 @@
-<root>
+<?xml version="1.0" encoding="UTF-8" ?>
 
-    <name>Tomas</name>
-    <position>web developer</position>
+<root name="Staff Shift">
+    <person name="Tomas" position="web developer"></person>
 
 </root>

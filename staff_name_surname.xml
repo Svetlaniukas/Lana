@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<root>
-    <name>Denis</name><surname>Petrov</surname>
-    <name>Tania</name><surname>Bal</surname>
-    <name>Lana</name><surname>Mel</surname>
+<root name="Staff Shift">
+    <person>
+        <person name="Denis" surname="Petrov"></person>
+        <person name="Tania" surname="Bal"></person>
+        <person name="Lana" surname="Mel"></person>
+    </person>
 </root>

@@ -221,6 +221,8 @@
           <option value="str.formatyear" />
           <option value="mymodule.staff_file.list" />
           <option value="mymodule.open_staff_file.file_name" />
+          <option value="xml.sax.make_parser" />
+          <option value="xml.sax.handler" />
         </list>
       </option>
     </inspection_tool>

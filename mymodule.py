@@ -1,8 +1,7 @@
-import json
+from xml.etree.ElementTree import ParseError
 from json import JSONDecodeError
 from xml.etree import ElementTree
-
-from _pytest._code import source
+from flask import json
 
 NAME = "mymodule"
 
@@ -23,36 +22,16 @@ def open_staff_file(file_name, file_delimiter):
     return dict_staff
 
 
-def work_with_db_xml_staff_shift(file_name, root):
-    dict_staff_xml = {}
-    tree = ElementTree.parse(file_name)
+def work_with_db_xml_staff_shift(file_name, root, child):
+    dict = {}
+    tree = ElementTree.parse(file_name, 'r')
     root = tree.getroot()
-    xmldict = XmlDictConfig(root_node_name)
-    try:
-        dict_staff_xml = tree
-    except SyntaxError as error_code:
-        return {}
-    return dict_staff_xml[root]
-
-
-class XmlDictConfig(dict):
-
-    tree = ElementTree.parse('.xml')
-    root = tree.getroot()
-    xmldict = XmlDictConfig(root)
-
-
-
-   root = ElementTree.XML(xml_string)
-   xmldict = XmlDictConfig(root)
-
-
-
-
-
-
-
-
+    for line in dict:
+        return line
+    for element in root:
+        return element[0].attrib
+    for element in child.tag:
+        return element[3][1].tag
 
 
 def work_with_db_json_staff_shift(file_name, root_node_name):
