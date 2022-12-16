@@ -10,18 +10,18 @@ def work_with_db_json_staff_shift():
 
 
 def test_empty_json_shut_return_empty_dictionary():
-    dict_empty = mymodule.work_with_db_xml_staff_shift("staff_empty_file.txt", '')
+    dict_empty = mymodule.work_with_db_xml_staff_shift("staff_empty_file.txt")
     assert len(dict_empty) == 0
 
 def test_xml_valid_shut_return_valid_dictionary():
-    persons = mymodule.work_with_db_xml_staff_shift("staff_name_surname.xml",'name','surname' )
+    persons = mymodule.work_with_db_xml_staff_shift("staff_name_surname.xml", 'surname')
     assert persons['Denis'] == 'Petrov'
     assert persons['Tania'] == 'Bal'
     assert persons['Lana'] == 'Mel'
 
 
 def test_xml_shut_retur_valid_dictionary():
-    valid_dictionary = mymodule.work_with_db_xml_staff_shift("staff_position.xml",'name', 'position')
+    valid_dictionary = mymodule.work_with_db_xml_staff_shift("staff_position.xml", 'position')
     assert valid_dictionary['Tomas'] == 'web developer'
 
 

@@ -22,7 +22,7 @@ def open_staff_file(file_name, file_delimiter):
     return dict_staff
 
 
-def work_with_db_xml_staff_shift(file_name, root, child):
+def work_with_db_xml_staff_shift(file_name, child, subchild):
     dict = {}
     tree = ElementTree.parse(file_name, 'r')
     root = tree.getroot()
@@ -32,6 +32,8 @@ def work_with_db_xml_staff_shift(file_name, root, child):
         return element[0].attrib
     for element in child.tag:
         return element[3][1].tag
+    for element in subchild:
+        return element[0][1].subchild
 
 
 def work_with_db_json_staff_shift(file_name, root_node_name):
