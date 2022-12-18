@@ -1,6 +1,5 @@
 import xml.etree.ElementTree
 from json import JSONDecodeError
-from xml.dom.minidom import Document
 
 from flask import json
 
@@ -23,22 +22,19 @@ def open_staff_file(file_name, file_delimiter):
     return dict_staff
 
 
-class XElement:
-    @classmethod
-    def Parse(cls, root):
-        pass
-
-
 def work_with_db_xml_staff_shift(file_name, key_name, val_name, child):
     dict = {}
     tree = xml.etree.ElementTree.parse(file_name)
     root = tree.getroot()
-    root.tag = Document.getElementsByTagName()
+    for_root = root.tag()
+    if key_name in root:
+        return root.tag
+    tag = xml.etree.ElementTree.SubElement()
     if key_name in child.attrib.keys() and val_name in child.attrib.keys():
         key = child.attrib[key_name]
         val = child.attrib[val_name]
         dict[key] = val
-    return dict
+    return dict[tree]
 
 
 def work_with_db_json_staff_shift(file_name, root_node_name):
