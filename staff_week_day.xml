@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<root name="Staff Shift">
+<root file="Staff Shift">
     <weekday>
         <week day="Monday" time="10.am-4.pm"></week>
         <week day="Tuesday" time="9.am-3.pm"></week>

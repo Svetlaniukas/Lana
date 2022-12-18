@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<root name="Staff Shift">
-    <person>
+<root file="Staff Shift">
+    <persons>
         <person name="Denis" surname="Petrov"></person>
         <person name="Tania" surname="Bal"></person>
         <person name="Lana" surname="Mel"></person>
-    </person>
+    </persons>
 </root>

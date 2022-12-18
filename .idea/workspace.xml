@@ -70,8 +70,6 @@
       "directory"
     ],
     "GitStage.ChangesTree.GroupingKeys": [
-      "directory",
-      "module",
       "repository"
     ]
   }
@@ -95,7 +93,7 @@
       <recent name="$PROJECT_DIR$/templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_mymodule_json.test_empty_json_shut_return_empty_dictionary">
+  <component name="RunManager" selected="Python tests.Python tests for test_mymodul_xml.test_empty_json_shut_return_empty_dictionary">
     <configuration name="app" type="PythonConfigurationType" factoryName="Python" singleton="false" nameIsGenerated="true">
       <module name="PycharmProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -117,10 +115,10 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="my_xml_testing" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true" nameIsGenerated="true">
+    <configuration name="my_xml_testing" type="PythonConfigurationType" factoryName="Python" singleton="false" nameIsGenerated="true">
       <module name="PycharmProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
+      <option name="PARENT_ENVS" value="false" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
@@ -194,6 +192,20 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_mymodul_xml.test_not_empty_xml_shut_retur_not_emthy_dictionary&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_mymodul_xml.test_xml_valid_shut_return_valid_dictionary" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="PycharmProjects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_mymodul_xml.test_xml_valid_shut_return_valid_dictionary&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -339,6 +351,7 @@
       <item itemvalue="Python tests.pytest in /test" />
       <item itemvalue="Python tests.Python tests in test_division_function.py" />
       <item itemvalue="Python tests.pytest in PycharmProjects" />
+      <item itemvalue="Python tests.Python tests for test_mymodul_xml.test_xml_valid_shut_return_valid_dictionary" />
       <item itemvalue="Python tests.Python tests for test_mymodul_xml.test_empty_json_shut_return_empty_dictionary" />
       <item itemvalue="Python tests.Python tests for test_mymodul_xml.test_empty_xml_shut_return_empty_dictionary" />
       <item itemvalue="Python tests.Python tests for test_mymodul_xml.test_not_empty_xml_shut_retur_not_emthy_dictionary" />
@@ -346,11 +359,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for test_mymodule_json.test_empty_json_shut_return_empty_dictionary" />
         <item itemvalue="Python tests.Python tests for test_mymodul_xml.test_empty_json_shut_return_empty_dictionary" />
-        <item itemvalue="Python tests.Python tests for test_mymodul_xml.test_not_empty_xml_shut_retur_not_emthy_dictionary" />
+        <item itemvalue="Python tests.Python tests for test_mymodul_xml.test_xml_valid_shut_return_valid_dictionary" />
         <item itemvalue="Python.my_xml_testing" />
-        <item itemvalue="Python tests.Python tests for test_mymodul_xml.test_empty_xml_shut_return_empty_dictionary" />
+        <item itemvalue="Python tests.Python tests for test_mymodule_json.test_empty_json_shut_return_empty_dictionary" />
+        <item itemvalue="Python tests.Python tests for test_mymodul_xml.test_not_empty_xml_shut_retur_not_emthy_dictionary" />
       </list>
     </recent_temporary>
   </component>
@@ -687,6 +700,8 @@
     <MESSAGE value="add pass json tests" />
     <MESSAGE value="not working xml modul" />
     <option name="LAST_COMMIT_MESSAGE" value="not working xml modul" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -721,6 +736,11 @@
           <line>4</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/mymodule.py</url>
+          <line>47</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-defaults>
         <breakpoint type="python-line" />
@@ -733,5 +753,10 @@
         </breakpoint>
       </default-breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <inline-watch fileUrl="file://$PROJECT_DIR$/test_mymodul_xml.py" line="2">
+        <watch expression="__exception__" language="Python" />
+      </inline-watch>
+    </watches-manager>
   </component>
 </project>
