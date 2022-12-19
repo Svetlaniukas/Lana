@@ -1,4 +1,4 @@
-# from bs4 import BeautifulSoup, element
+# from bs4 import BeautifulSoupas bs, element
 
 
 import xml
@@ -9,13 +9,34 @@ root = tree.getroot()
 
 while True:
     try:
-        for name in root.iter():
+        for name in root.iter("Monday"):
             print(root.tag, name.text)
     except xml.etree.ElementTree.ParseError:
         pass
 
-        for name in root.iter():
+        for name in root.iter("Friday"):
             print(name.text)
+
+content = []
+
+with open("models.xml", "r") as file:
+    # Read each line in the file, readlines() returns a list of lines
+    content = file.readlines()
+    # Combine the lines in the list into a string
+    content = "".join(content)
+    bs_content = bs(content, "lxml")
+result = bs_content.find("data")
+
+result = bs_content.find("Monday")
+print(result)
+
+result = bs_content.find("Tuesday")
+
+print(result)
+
+result = bs_content.find("Friday")
+
+print(result)
 
 # with open('models.xml', 'r') as f:
 #     data = f.read()
