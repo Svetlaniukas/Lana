@@ -1,8 +1,9 @@
 import calendar
 from datetime import datetime
-from flask import Flask, render_template
-import mymodule
 
+from flask import Flask, render_template
+
+import mymodule
 
 app = Flask(__name__)
 
@@ -22,7 +23,7 @@ def home():
 @app.route('/staff')
 def staff():
     for_week_days_shift = mymodule.work_with_db_json_staff_shift("staff.json", 'weekday')
-    for_staff_weekend_shift = mymodule.work_with_db_xml_staff_shift("staff_week_day.xml")
+    for_staff_weekend_shift = mymodule.work_with_db_xml_staff_shift("staff_week_day.xml"'key_name', 'val_name', 'child')
     page_content = render_template("staff.html",
                                    for_week_days_shift=for_week_days_shift,
                                    for_staff_weekend_shift=for_staff_weekend_shift

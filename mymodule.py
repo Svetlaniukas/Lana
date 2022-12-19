@@ -27,8 +27,8 @@ def work_with_db_xml_staff_shift(file_name, key_name, val_name, child):
     tree = ET.parse(file_name)
     root = tree.getroot()
     element = tree.iter()
-    for child in root:
-        return child.tag, child.attrib
+    for element in root:
+        return element.tag, element.attrib
 
     for child in element:
         if key_name in child.attrib.keys() and val_name in child.attrib.keys():
