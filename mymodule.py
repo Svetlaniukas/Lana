@@ -1,7 +1,9 @@
-import xml.etree.ElementTree
+import xml.etree.ElementTree as ET
 from json import JSONDecodeError
 
 from flask import json
+
+from my_xml_testing import elem, text
 
 NAME = "mymodule"
 
@@ -22,19 +24,23 @@ def open_staff_file(file_name, file_delimiter):
     return dict_staff
 
 
-def work_with_db_xml_staff_shift(file_name, key_name, val_name, child):
+def work_with_db_xml_staff_shift(file_name, key_name, val_name, child, node=None):
     dict = {}
-    tree = xml.etree.ElementTree.parse(file_name)
+    tree = ET.parse(file_name)
     root = tree.getroot()
-    for_root = root.tag()
-    if key_name in root:
-        return root.tag
-    tag = xml.etree.ElementTree.SubElement()
+    allelem = ET.XML(text)
+    for node in elem.find(root):
+        return node.attrib[elem]
+    # Create sub elements
+    # if node.attrib['topic']=="sys/phoneNumber/1":
+    #     tag = ET.SubElement(node, 'TagName')
+    #     tag.attrib['attr'] = 'AttribValue'
+
     if key_name in child.attrib.keys() and val_name in child.attrib.keys():
         key = child.attrib[key_name]
         val = child.attrib[val_name]
         dict[key] = val
-    return dict[tree]
+    return dict
 
 
 def work_with_db_json_staff_shift(file_name, root_node_name):

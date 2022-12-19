@@ -670,7 +670,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671401869045</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="not working xml modul">
+      <created>1671404931015</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1671404931016</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -742,11 +749,6 @@
           <url>file://$PROJECT_DIR$/test_app.py</url>
           <line>4</line>
           <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/mymodule.py</url>
-          <line>40</line>
-          <option name="timeStamp" value="31" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-defaults>
