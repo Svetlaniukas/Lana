@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<root name="Staff Shift">
+    <weekday>
+        <week day="Monday" time="10.am-4.pm"></week>
+        <week day="Tuesday" time="9.am-3.pm"></week>
+        <week day="Wednesday" time="10.am-5.pm"></week>
+        <week day="Thursday" time="10am-4pm"></week>
+        <week day="Friday" time="8am-4pm"></week>
+    </weekday>
+
+    <weekend>
+        <week day="Saturday" time="10.am-5.pm"></week>
+        <week day="Sunday" time="8am- 4pm"></week>
+    </weekend>
+
+
+</root>

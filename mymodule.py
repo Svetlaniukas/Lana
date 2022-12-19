@@ -25,18 +25,20 @@ def open_staff_file(file_name, file_delimiter):
 
 def work_with_db_xml_staff_shift(file_name: xml, key_name: str, val_name: str):
     dict = {}
-    tree = ET.parse(file_name)
-    root = tree.getroot()
-    element = tree.iter()
-    for element in root:
-        return element.tag, element.attrib
+    try:
+        tree = ET.parse(file_name)
+        root = tree.getroot()
+        element = tree.iter()
 
-    for child in element:
-        if key_name in child.attrib.keys() and val_name in child.attrib.keys():
-            key = child.attrib[key_name]
-            val = child.attrib[val_name]
-            dict[key] = val
-            return dict
+        for child in element:
+            keys = child.attrib.keys()
+            if key_name in keys and val_name in keys:
+                key = child.attrib[key_name]
+                val = child.attrib[val_name]
+                dict[key] = val
+    except:
+        print("FileExistsError")
+    return dict
 
 
 def work_with_db_json_staff_shift(file_name, root_node_name):
