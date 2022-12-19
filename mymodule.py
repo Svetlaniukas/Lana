@@ -3,7 +3,7 @@ from json import JSONDecodeError
 
 from flask import json
 
-from my_xml_testing import elem, text
+from my_xml_testing import text
 
 NAME = "mymodule"
 
@@ -24,17 +24,20 @@ def open_staff_file(file_name, file_delimiter):
     return dict_staff
 
 
-def work_with_db_xml_staff_shift(file_name, key_name, val_name, child, node=None):
+def work_with_db_xml_staff_shift(file_name, key_name, val_name, child, elem, node=None):
     dict = {}
     tree = ET.parse(file_name)
     root = tree.getroot()
-    allelem = ET.XML(text)
+    alem = ET.XML(text)
     for node in elem.find(root):
         return node.attrib[elem]
-    # Create sub elements
-    # if node.attrib['topic']=="sys/phoneNumber/1":
-    #     tag = ET.SubElement(node, 'TagName')
-    #     tag.attrib['attr'] = 'AttribValue'
+    elem = ET.XML(text)
+    for node in elem.find('phoneNumbers'):
+        return node.attrib['topic']
+        # Create sub elements
+    if node.attrib[''] == "":
+        tag = ET.SubElement(node, 'TagName')
+        tag.attrib['attr'] = 'AttribValue'
 
     if key_name in child.attrib.keys() and val_name in child.attrib.keys():
         key = child.attrib[key_name]
