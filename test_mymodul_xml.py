@@ -7,7 +7,7 @@ def work_with_db_xml_staff_shift():
 
 def test_empty_xml_shut_return_empty_dictionary():
     dict_empty = mymodule.work_with_db_xml_staff_shift("staff_empty_file.txt", 'key_name', 'val_name')
-    assert dict_empty.__iter__('persons', {})
+    assert dict_empty({}) == 0
     assert dict_empty
 
 

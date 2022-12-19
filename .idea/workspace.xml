@@ -167,7 +167,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_mymodul_xml.test_empty_json_shut_return_empty_dictionary" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_mymodul_xml.test_3_line_xml_shut_retur_3_itiems" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="PycharmProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -177,7 +177,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_mymodul_xml.test_empty_json_shut_return_empty_dictionary&quot;" />
+      <option name="_new_target" value="&quot;test_mymodul_xml.test_3_line_xml_shut_retur_3_itiems&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -195,7 +195,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_mymodul_xml.test_xml_valid_shut_return_valid_dictionary" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_mymodul_xml.test_xml_root_should_return_empty_dict" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="PycharmProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -205,11 +205,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_mymodul_xml.test_xml_valid_shut_return_valid_dictionary&quot;" />
+      <option name="_new_target" value="&quot;test_mymodul_xml.test_xml_root_should_return_empty_dict&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_mymodule_json.test_empty_json_shut_return_empty_dictionary" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_mymodul_xml.test_xml_shut_retur_valid_dictionary" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="PycharmProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -219,7 +219,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_mymodule_json.test_empty_json_shut_return_empty_dictionary&quot;" />
+      <option name="_new_target" value="&quot;test_mymodul_xml.test_xml_shut_retur_valid_dictionary&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -352,18 +352,18 @@
       <item itemvalue="Python tests.Python tests in test_division_function.py" />
       <item itemvalue="Python tests.pytest in PycharmProjects" />
       <item itemvalue="Python tests.Python tests for test_mymodul_xml.test_1_line_xml_shut_retur_1_itiems" />
-      <item itemvalue="Python tests.Python tests for test_mymodul_xml.test_xml_valid_shut_return_valid_dictionary" />
-      <item itemvalue="Python tests.Python tests for test_mymodul_xml.test_empty_json_shut_return_empty_dictionary" />
+      <item itemvalue="Python tests.Python tests for test_mymodul_xml.test_3_line_xml_shut_retur_3_itiems" />
+      <item itemvalue="Python tests.Python tests for test_mymodul_xml.test_xml_root_should_return_empty_dict" />
+      <item itemvalue="Python tests.Python tests for test_mymodul_xml.test_xml_shut_retur_valid_dictionary" />
       <item itemvalue="Python tests.Python tests for test_mymodul_xml.test_empty_xml_shut_return_empty_dictionary" />
-      <item itemvalue="Python tests.Python tests for test_mymodule_json.test_empty_json_shut_return_empty_dictionary" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Python tests for test_mymodul_xml.test_empty_xml_shut_return_empty_dictionary" />
+        <item itemvalue="Python tests.Python tests for test_mymodul_xml.test_xml_shut_retur_valid_dictionary" />
+        <item itemvalue="Python tests.Python tests for test_mymodul_xml.test_3_line_xml_shut_retur_3_itiems" />
         <item itemvalue="Python tests.Python tests for test_mymodul_xml.test_1_line_xml_shut_retur_1_itiems" />
-        <item itemvalue="Python tests.Python tests for test_mymodul_xml.test_xml_valid_shut_return_valid_dictionary" />
-        <item itemvalue="Python tests.Python tests for test_mymodul_xml.test_empty_json_shut_return_empty_dictionary" />
-        <item itemvalue="Python.my_xml_testing" />
+        <item itemvalue="Python tests.Python tests for test_mymodul_xml.test_xml_root_should_return_empty_dict" />
       </list>
     </recent_temporary>
   </component>
@@ -705,7 +705,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671450620924</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="not working xml modul">
+      <created>1671465109279</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1671465109279</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -791,8 +798,11 @@
       </default-breakpoints>
     </breakpoint-manager>
     <watches-manager>
-      <inline-watch fileUrl="file://$PROJECT_DIR$/test_mymodul_xml.py" line="2">
+      <inline-watch fileUrl="file://$PROJECT_DIR$/test_mymodul_xml.py" line="0">
         <watch expression="__exception__" language="Python" />
+      </inline-watch>
+      <inline-watch fileUrl="file://$PROJECT_DIR$/mymodule.py" line="26">
+        <watch expression="dict" language="Python" />
       </inline-watch>
     </watches-manager>
   </component>

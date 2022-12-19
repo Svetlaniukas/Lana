@@ -1,6 +1,21 @@
 # from bs4 import BeautifulSoup, element
 
 
+import xml
+import xml.etree.ElementTree as ET
+
+tree = ET.parse('models.xml')
+root = tree.getroot()
+
+while True:
+    try:
+        for name in root.iter():
+            print(root.tag, name.text)
+    except xml.etree.ElementTree.ParseError:
+        pass
+
+        for name in root.iter():
+            print(name.text)
 
 # with open('models.xml', 'r') as f:
 #     data = f.read()

@@ -36,7 +36,12 @@ def work_with_db_xml_staff_shift(file_name: xml, key_name: str, val_name: str):
             key = child.attrib[key_name]
             val = child.attrib[val_name]
             dict[key] = val
-    return dict
+            if len(dict) == 0:
+
+except xml.etree.ElementTree.ParseError:
+pass
+
+return dict
 
 
 def work_with_db_json_staff_shift(file_name, root_node_name):
