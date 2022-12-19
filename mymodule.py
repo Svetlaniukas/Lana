@@ -1,3 +1,4 @@
+import xml
 import xml.etree.ElementTree as ET
 from json import JSONDecodeError
 
@@ -22,7 +23,7 @@ def open_staff_file(file_name, file_delimiter):
     return dict_staff
 
 
-def work_with_db_xml_staff_shift(file_name, key_name, val_name, child):
+def work_with_db_xml_staff_shift(file_name: xml, key_name: str, val_name: str):
     dict = {}
     tree = ET.parse(file_name)
     root = tree.getroot()
