@@ -49,6 +49,7 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2IJPFB5NKNsiPAzMhPybDI5RMkr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="compactDirectories" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -375,20 +376,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669896606224</updated>
-    </task>
-    <task id="LOCAL-00002" summary="add work with some function -/*">
-      <created>1669904612842</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1669904612842</updated>
-    </task>
-    <task id="LOCAL-00003" summary="add work with some function">
-      <created>1669913608355</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1669913608355</updated>
     </task>
     <task id="LOCAL-00004" summary="fixt function my object math">
       <created>1669982432510</created>
@@ -719,7 +706,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671470801399</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="not working xml modul">
+      <created>1671478580699</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1671478580699</updated>
+    </task>
+    <task id="LOCAL-00052" summary="not working xml modul">
+      <created>1671478590102</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1671478590102</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
