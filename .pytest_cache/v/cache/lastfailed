@@ -1,0 +1,6 @@
+{
+  "test_app.py::test_index_contain_staff_shift_weekend[Saturday]": true,
+  "test_app.py::test_index_contain_staff_shift_weekend[Sunday]": true,
+  "test_mymodul_xml.py::test_xml_shut_return_exist_day_and_time": true,
+  "test_mymodul_xml.py::test_1_line_xml_shut_retur_1_itiems": true
+}

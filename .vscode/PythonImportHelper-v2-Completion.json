@@ -1,0 +1,554 @@
+[
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "JSONDecodeError",
+        "importPath": "json",
+        "description": "json",
+        "isExtraImport": true,
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "pytest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
+        "documentation": {}
+    },
+    {
+        "label": "my_function",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "my_function",
+        "description": "my_function",
+        "detail": "my_function",
+        "documentation": {}
+    },
+    {
+        "label": "calendar",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "calendar",
+        "description": "calendar",
+        "detail": "calendar",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "mymodule",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "mymodule",
+        "description": "mymodule",
+        "detail": "mymodule",
+        "documentation": {}
+    },
+    {
+        "label": "xml",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "xml",
+        "description": "xml",
+        "detail": "xml",
+        "documentation": {}
+    },
+    {
+        "label": "xml.etree.ElementTree",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "xml.etree.ElementTree",
+        "description": "xml.etree.ElementTree",
+        "detail": "xml.etree.ElementTree",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "app",
+        "description": "app",
+        "isExtraImport": true,
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "cinema",
+        "kind": 2,
+        "importPath": "test_function.my_function",
+        "description": "test_function.my_function",
+        "peekOfCode": "def cinema(actor, stars):\n    result = f'Movie: \"{actor}\", rating: {stars}'\n    print(result)\n    return result\ndef cinema_tomorrow(movie, rating):\n    result = f'Movie: \"{movie}\", rating: {rating}'\n    print(result)\n    return result\ndef cinema_today(movie, rating):\n    result = f'Movie: \"{movie}\", rating: {rating}'",
+        "detail": "test_function.my_function",
+        "documentation": {}
+    },
+    {
+        "label": "cinema_tomorrow",
+        "kind": 2,
+        "importPath": "test_function.my_function",
+        "description": "test_function.my_function",
+        "peekOfCode": "def cinema_tomorrow(movie, rating):\n    result = f'Movie: \"{movie}\", rating: {rating}'\n    print(result)\n    return result\ndef cinema_today(movie, rating):\n    result = f'Movie: \"{movie}\", rating: {rating}'\n    print(result)\n    return result\ndef staff_id(actor, surname, stars):\n    result = f'name: \"{actor}\", surname: {surname}, rating: {stars}'",
+        "detail": "test_function.my_function",
+        "documentation": {}
+    },
+    {
+        "label": "cinema_today",
+        "kind": 2,
+        "importPath": "test_function.my_function",
+        "description": "test_function.my_function",
+        "peekOfCode": "def cinema_today(movie, rating):\n    result = f'Movie: \"{movie}\", rating: {rating}'\n    print(result)\n    return result\ndef staff_id(actor, surname, stars):\n    result = f'name: \"{actor}\", surname: {surname}, rating: {stars}'\n    print(result)\n    return result\ndef plius(a, b):\n    result = int(a + b)",
+        "detail": "test_function.my_function",
+        "documentation": {}
+    },
+    {
+        "label": "staff_id",
+        "kind": 2,
+        "importPath": "test_function.my_function",
+        "description": "test_function.my_function",
+        "peekOfCode": "def staff_id(actor, surname, stars):\n    result = f'name: \"{actor}\", surname: {surname}, rating: {stars}'\n    print(result)\n    return result\ndef plius(a, b):\n    result = int(a + b)\n    print(result)\n    return result\ndef minus(b, c):\n    result = f'summa:', int(b - c)",
+        "detail": "test_function.my_function",
+        "documentation": {}
+    },
+    {
+        "label": "plius",
+        "kind": 2,
+        "importPath": "test_function.my_function",
+        "description": "test_function.my_function",
+        "peekOfCode": "def plius(a, b):\n    result = int(a + b)\n    print(result)\n    return result\ndef minus(b, c):\n    result = f'summa:', int(b - c)\n    print(result)\n    return result\ndef multi(a, c):\n    result = f'result:', int(a * c)",
+        "detail": "test_function.my_function",
+        "documentation": {}
+    },
+    {
+        "label": "minus",
+        "kind": 2,
+        "importPath": "test_function.my_function",
+        "description": "test_function.my_function",
+        "peekOfCode": "def minus(b, c):\n    result = f'summa:', int(b - c)\n    print(result)\n    return result\ndef multi(a, c):\n    result = f'result:', int(a * c)\n    print(result)\n    return result\ndef divide(a, b):\n    result = f'result:', int(a / b)",
+        "detail": "test_function.my_function",
+        "documentation": {}
+    },
+    {
+        "label": "multi",
+        "kind": 2,
+        "importPath": "test_function.my_function",
+        "description": "test_function.my_function",
+        "peekOfCode": "def multi(a, c):\n    result = f'result:', int(a * c)\n    print(result)\n    return result\ndef divide(a, b):\n    result = f'result:', int(a / b)\n    print(result)\n    return result\ndef staff_book(name, surname, telephone):\n    result = f'First name:\"{name}\", Second name:\"{surname}\", Phone numbers:{telephone}'",
+        "detail": "test_function.my_function",
+        "documentation": {}
+    },
+    {
+        "label": "divide",
+        "kind": 2,
+        "importPath": "test_function.my_function",
+        "description": "test_function.my_function",
+        "peekOfCode": "def divide(a, b):\n    result = f'result:', int(a / b)\n    print(result)\n    return result\ndef staff_book(name, surname, telephone):\n    result = f'First name:\"{name}\", Second name:\"{surname}\", Phone numbers:{telephone}'\n    print(result, int(telephone))\n    return result\ndef sum_not_exist():\n    result =(a + b) + 12",
+        "detail": "test_function.my_function",
+        "documentation": {}
+    },
+    {
+        "label": "staff_book",
+        "kind": 2,
+        "importPath": "test_function.my_function",
+        "description": "test_function.my_function",
+        "peekOfCode": "def staff_book(name, surname, telephone):\n    result = f'First name:\"{name}\", Second name:\"{surname}\", Phone numbers:{telephone}'\n    print(result, int(telephone))\n    return result\ndef sum_not_exist():\n    result =(a + b) + 12\n    print(result)\n    return result",
+        "detail": "test_function.my_function",
+        "documentation": {}
+    },
+    {
+        "label": "sum_not_exist",
+        "kind": 2,
+        "importPath": "test_function.my_function",
+        "description": "test_function.my_function",
+        "peekOfCode": "def sum_not_exist():\n    result =(a + b) + 12\n    print(result)\n    return result",
+        "detail": "test_function.my_function",
+        "documentation": {}
+    },
+    {
+        "label": "str_json",
+        "kind": 5,
+        "importPath": "test_function.my_json_testing",
+        "description": "test_function.my_json_testing",
+        "peekOfCode": "str_json = \"\"\"\n{\n  \"weekday\": {\n    \"Monday\": \"10.am-4.pm\",\n    \"Tuesday\": \"9.am-3.pm\",\n    \"Wednesday\": \"10.am-5.pm\",\n    \"Thursday\": \"10am-4pm\",\n    \"Friday\": \"8am-4pm\"\n},\n  \"weekend\": {",
+        "detail": "test_function.my_json_testing",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "test_function.my_json_testing",
+        "description": "test_function.my_json_testing",
+        "peekOfCode": "data = json.loads(str_json)\nprint(type(data))\nvalue_week = data['weekday']['Monday']\nprint(value_week)\nvalue_week1 = data['weekend']['Sunday']\nprint(value_week1)\nwith open('../staff.json', 'w') as file:\n    json.dump(data, file, indent=3)",
+        "detail": "test_function.my_json_testing",
+        "documentation": {}
+    },
+    {
+        "label": "value_week",
+        "kind": 5,
+        "importPath": "test_function.my_json_testing",
+        "description": "test_function.my_json_testing",
+        "peekOfCode": "value_week = data['weekday']['Monday']\nprint(value_week)\nvalue_week1 = data['weekend']['Sunday']\nprint(value_week1)\nwith open('../staff.json', 'w') as file:\n    json.dump(data, file, indent=3)",
+        "detail": "test_function.my_json_testing",
+        "documentation": {}
+    },
+    {
+        "label": "value_week1",
+        "kind": 5,
+        "importPath": "test_function.my_json_testing",
+        "description": "test_function.my_json_testing",
+        "peekOfCode": "value_week1 = data['weekend']['Sunday']\nprint(value_week1)\nwith open('../staff.json', 'w') as file:\n    json.dump(data, file, indent=3)",
+        "detail": "test_function.my_json_testing",
+        "documentation": {}
+    },
+    {
+        "label": "test_cinema_movie_name_rating",
+        "kind": 2,
+        "importPath": "test_function.test_function",
+        "description": "test_function.test_function",
+        "peekOfCode": "def test_cinema_movie_name_rating():\n    assert my_function.cinema('Alien', 200) == 'Movie: \"Alien\", rating: 200'\n    assert my_function.cinema('Big', 10) == 'Movie: \"Big\", rating: 10'\n    assert my_function.cinema('Booo', 20) == 'Movie: \"Booo\", rating: 20'\n    assert my_function.cinema('', 40) != 'Movie: \"Big\", rating: 10'\ndef test_cinema_today():\n    assert my_function.cinema_today('Terminator', 30) == 'Movie: \"Terminator\", rating: 30'\n    assert my_function.cinema_today('Hello friend', 200) == 'Movie: \"Hello friend\", rating: 200'\n    assert my_function.cinema_today('', 45) != 'Movie: \"Big\", rating: 80'\ndef test_movie_tomorrow():",
+        "detail": "test_function.test_function",
+        "documentation": {}
+    },
+    {
+        "label": "test_cinema_today",
+        "kind": 2,
+        "importPath": "test_function.test_function",
+        "description": "test_function.test_function",
+        "peekOfCode": "def test_cinema_today():\n    assert my_function.cinema_today('Terminator', 30) == 'Movie: \"Terminator\", rating: 30'\n    assert my_function.cinema_today('Hello friend', 200) == 'Movie: \"Hello friend\", rating: 200'\n    assert my_function.cinema_today('', 45) != 'Movie: \"Big\", rating: 80'\ndef test_movie_tomorrow():\n    assert my_function.cinema_tomorrow('Sunny', 300) == 'Movie: \"Sunny\", rating: 300'\n    assert my_function.cinema_tomorrow('Sunny', 400) != 'Movie: \"Sunny\", rating: 300'\ndef test_sum_plius():\n    assert my_function.plius(5, 7) == 12\n    assert my_function.plius(10, 20) == 30",
+        "detail": "test_function.test_function",
+        "documentation": {}
+    },
+    {
+        "label": "test_movie_tomorrow",
+        "kind": 2,
+        "importPath": "test_function.test_function",
+        "description": "test_function.test_function",
+        "peekOfCode": "def test_movie_tomorrow():\n    assert my_function.cinema_tomorrow('Sunny', 300) == 'Movie: \"Sunny\", rating: 300'\n    assert my_function.cinema_tomorrow('Sunny', 400) != 'Movie: \"Sunny\", rating: 300'\ndef test_sum_plius():\n    assert my_function.plius(5, 7) == 12\n    assert my_function.plius(10, 20) == 30\n    assert my_function.plius(10, 20) != 12\ndef test_sum_minus():\n    assert my_function.minus(10, 2) == ('summa:', 8)\n    assert my_function.minus(9, 2) != ('summa:', 12)",
+        "detail": "test_function.test_function",
+        "documentation": {}
+    },
+    {
+        "label": "test_sum_plius",
+        "kind": 2,
+        "importPath": "test_function.test_function",
+        "description": "test_function.test_function",
+        "peekOfCode": "def test_sum_plius():\n    assert my_function.plius(5, 7) == 12\n    assert my_function.plius(10, 20) == 30\n    assert my_function.plius(10, 20) != 12\ndef test_sum_minus():\n    assert my_function.minus(10, 2) == ('summa:', 8)\n    assert my_function.minus(9, 2) != ('summa:', 12)\ndef test_sum_multiplay():\n    assert my_function.multi(10, 5) == ('result:', 50)\n    assert my_function.multi(9, 2) != ('result:', 20)",
+        "detail": "test_function.test_function",
+        "documentation": {}
+    },
+    {
+        "label": "test_sum_minus",
+        "kind": 2,
+        "importPath": "test_function.test_function",
+        "description": "test_function.test_function",
+        "peekOfCode": "def test_sum_minus():\n    assert my_function.minus(10, 2) == ('summa:', 8)\n    assert my_function.minus(9, 2) != ('summa:', 12)\ndef test_sum_multiplay():\n    assert my_function.multi(10, 5) == ('result:', 50)\n    assert my_function.multi(9, 2) != ('result:', 20)\n    assert my_function.multi(1, 5) != 'result:', 50\ndef test_num_divide():\n    assert my_function.divide(10, 2) == ('result:', 5)\n    assert my_function.divide(20, 2) == ('result:', 10)",
+        "detail": "test_function.test_function",
+        "documentation": {}
+    },
+    {
+        "label": "test_sum_multiplay",
+        "kind": 2,
+        "importPath": "test_function.test_function",
+        "description": "test_function.test_function",
+        "peekOfCode": "def test_sum_multiplay():\n    assert my_function.multi(10, 5) == ('result:', 50)\n    assert my_function.multi(9, 2) != ('result:', 20)\n    assert my_function.multi(1, 5) != 'result:', 50\ndef test_num_divide():\n    assert my_function.divide(10, 2) == ('result:', 5)\n    assert my_function.divide(20, 2) == ('result:', 10)\ndef test_staff_book():\n    assert my_function.staff_book('Tania', 'Bal', 20) == 'First name:\"Tania\", Second name:\"Bal\", Phone numbers:20'\n    assert my_function.staff_book('Lena', 'Ross', 34) == 'First name:\"Lena\", Second name:\"Ross\", Phone numbers:34'",
+        "detail": "test_function.test_function",
+        "documentation": {}
+    },
+    {
+        "label": "test_num_divide",
+        "kind": 2,
+        "importPath": "test_function.test_function",
+        "description": "test_function.test_function",
+        "peekOfCode": "def test_num_divide():\n    assert my_function.divide(10, 2) == ('result:', 5)\n    assert my_function.divide(20, 2) == ('result:', 10)\ndef test_staff_book():\n    assert my_function.staff_book('Tania', 'Bal', 20) == 'First name:\"Tania\", Second name:\"Bal\", Phone numbers:20'\n    assert my_function.staff_book('Lena', 'Ross', 34) == 'First name:\"Lena\", Second name:\"Ross\", Phone numbers:34'\ndef Test_string_should_failed():\n    with pytest.raises(ZeroDivisionError):\n        assert my_function.staff_book(\"A\", \"B\")",
+        "detail": "test_function.test_function",
+        "documentation": {}
+    },
+    {
+        "label": "test_staff_book",
+        "kind": 2,
+        "importPath": "test_function.test_function",
+        "description": "test_function.test_function",
+        "peekOfCode": "def test_staff_book():\n    assert my_function.staff_book('Tania', 'Bal', 20) == 'First name:\"Tania\", Second name:\"Bal\", Phone numbers:20'\n    assert my_function.staff_book('Lena', 'Ross', 34) == 'First name:\"Lena\", Second name:\"Ross\", Phone numbers:34'\ndef Test_string_should_failed():\n    with pytest.raises(ZeroDivisionError):\n        assert my_function.staff_book(\"A\", \"B\")",
+        "detail": "test_function.test_function",
+        "documentation": {}
+    },
+    {
+        "label": "Test_string_should_failed",
+        "kind": 2,
+        "importPath": "test_function.test_function",
+        "description": "test_function.test_function",
+        "peekOfCode": "def Test_string_should_failed():\n    with pytest.raises(ZeroDivisionError):\n        assert my_function.staff_book(\"A\", \"B\")",
+        "detail": "test_function.test_function",
+        "documentation": {}
+    },
+    {
+        "label": "home",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def home():\n    date_time = datetime.now()\n    calendar_year = calendar.TextCalendar()\n    page_content = render_template(\"home.html\",\n                                   current_time=date_time,\n                                   calendar_year=calendar_year.formatyear(2023, w=2, l=1, c=6, m=3)\n                                   )\n    return page_content\n@app.route('/staff')\ndef staff():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "staff",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def staff():\n    for_week_days_shift = mymodule.work_with_db_json_staff_shift(\"staff.json\", 'weekday')\n    for_staff_weekend_shift = mymodule.work_with_db_xml_staff_shift(\"staff_week_day.xml\"'key_name', 'val_name', 'child')\n    page_content = render_template(\"staff.html\",\n                                   for_week_days_shift=for_week_days_shift,\n                                   for_staff_weekend_shift=for_staff_weekend_shift\n                                   )\n    return page_content\nif __name__ == \"__main__\":\n    app.run(debug=True)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app = Flask(__name__)\n@app.route('/')\n@app.route('/home')\ndef home():\n    date_time = datetime.now()\n    calendar_year = calendar.TextCalendar()\n    page_content = render_template(\"home.html\",\n                                   current_time=date_time,\n                                   calendar_year=calendar_year.formatyear(2023, w=2, l=1, c=6, m=3)\n                                   )",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "open_staff_file",
+        "kind": 2,
+        "importPath": "mymodule",
+        "description": "mymodule",
+        "peekOfCode": "def open_staff_file(file_name, file_delimiter):\n    dict_staff = {}\n    for_staff_file = open(file_name, 'r')\n    for line in for_staff_file:\n        if file_delimiter in line:\n            (key, val) = line.split(file_delimiter)\n            key.strip()\n            val.strip('\\n')\n            key.strip()\n            val.strip('\\n')",
+        "detail": "mymodule",
+        "documentation": {}
+    },
+    {
+        "label": "work_with_db_xml_staff_shift",
+        "kind": 2,
+        "importPath": "mymodule",
+        "description": "mymodule",
+        "peekOfCode": "def work_with_db_xml_staff_shift(file_name: xml, key_name: str, val_name: str):\n    dict = {}\n    try:\n        tree = ET.parse(file_name)\n        root = tree.getroot()\n        element = tree.iter()\n        for child in element:\n            keys = child.attrib.keys()\n            if key_name in keys and val_name in keys:\n                key = child.attrib[key_name]",
+        "detail": "mymodule",
+        "documentation": {}
+    },
+    {
+        "label": "work_with_db_json_staff_shift",
+        "kind": 2,
+        "importPath": "mymodule",
+        "description": "mymodule",
+        "peekOfCode": "def work_with_db_json_staff_shift(file_name, root_node_name):\n    dict_staff_json = {}\n    file_object = open(file_name)\n    try:\n        dict_staff_json = json.load(file_object)\n    except JSONDecodeError as error_code:\n        return {}\n    if not root_node_name in dict_staff_json.keys():\n        return {}\n    return dict_staff_json[root_node_name]",
+        "detail": "mymodule",
+        "documentation": {}
+    },
+    {
+        "label": "NAME",
+        "kind": 5,
+        "importPath": "mymodule",
+        "description": "mymodule",
+        "peekOfCode": "NAME = \"mymodule\"\ndef open_staff_file(file_name, file_delimiter):\n    dict_staff = {}\n    for_staff_file = open(file_name, 'r')\n    for line in for_staff_file:\n        if file_delimiter in line:\n            (key, val) = line.split(file_delimiter)\n            key.strip()\n            val.strip('\\n')\n            key.strip()",
+        "detail": "mymodule",
+        "documentation": {}
+    },
+    {
+        "label": "test_index_contain_route",
+        "kind": 2,
+        "importPath": "test_app",
+        "description": "test_app",
+        "peekOfCode": "def test_index_contain_route():\n    response = app.test_client().get('/')\n    assert 'A lot of people ask where we got our name' in response.data.decode('utf-8')\ndef test_index_contain_main_title_name():\n    response = app.test_client().get('/home')\n    print(response.data)\n    assert response.status_code == 200\n    assert 'New Look Hair Design' in response.data.decode('utf-8')\n@pytest.mark.parametrize(\"day\", ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'])\ndef test_index_contain_staff_shift_week_day(day):",
+        "detail": "test_app",
+        "documentation": {}
+    },
+    {
+        "label": "test_index_contain_main_title_name",
+        "kind": 2,
+        "importPath": "test_app",
+        "description": "test_app",
+        "peekOfCode": "def test_index_contain_main_title_name():\n    response = app.test_client().get('/home')\n    print(response.data)\n    assert response.status_code == 200\n    assert 'New Look Hair Design' in response.data.decode('utf-8')\n@pytest.mark.parametrize(\"day\", ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'])\ndef test_index_contain_staff_shift_week_day(day):\n    response = app.test_client().get('/staff')\n    print(f'\"{day}\"')\n    assert day in response.data.decode('utf-8')",
+        "detail": "test_app",
+        "documentation": {}
+    },
+    {
+        "label": "test_index_contain_staff_shift_week_day",
+        "kind": 2,
+        "importPath": "test_app",
+        "description": "test_app",
+        "peekOfCode": "def test_index_contain_staff_shift_week_day(day):\n    response = app.test_client().get('/staff')\n    print(f'\"{day}\"')\n    assert day in response.data.decode('utf-8')\n@pytest.mark.parametrize(\"weekend\", ['Saturday', 'Sunday'])\ndef test_index_contain_staff_shift_weekend(weekend):\n    response = app.test_client().get('/staff')\n    print(f'\"{weekend}\"')\n    assert weekend in response.data.decode('utf-8')",
+        "detail": "test_app",
+        "documentation": {}
+    },
+    {
+        "label": "test_index_contain_staff_shift_weekend",
+        "kind": 2,
+        "importPath": "test_app",
+        "description": "test_app",
+        "peekOfCode": "def test_index_contain_staff_shift_weekend(weekend):\n    response = app.test_client().get('/staff')\n    print(f'\"{weekend}\"')\n    assert weekend in response.data.decode('utf-8')",
+        "detail": "test_app",
+        "documentation": {}
+    },
+    {
+        "label": "work_with_db_xml_staff_shift",
+        "kind": 2,
+        "importPath": "test_mymodul_xml",
+        "description": "test_mymodul_xml",
+        "peekOfCode": "def work_with_db_xml_staff_shift():\n    assert mymodule.NAME == \"mymodule\"\ndef test_empty_xml_shut_return_empty_dictionary():\n    dict_empty = mymodule.work_with_db_xml_staff_shift(\"staff_empty_file.xml\", 'key_name', 'val_name')\n    assert len(dict_empty) == 0\ndef test_xml_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_db_xml_staff_shift(\"staff_name_surname.xml\", 'name', 'surname')\n    assert len(persons) == 3\ndef test_xml_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_db_xml_staff_shift(\"staff_position.xml\", 'name', 'position')",
+        "detail": "test_mymodul_xml",
+        "documentation": {}
+    },
+    {
+        "label": "test_empty_xml_shut_return_empty_dictionary",
+        "kind": 2,
+        "importPath": "test_mymodul_xml",
+        "description": "test_mymodul_xml",
+        "peekOfCode": "def test_empty_xml_shut_return_empty_dictionary():\n    dict_empty = mymodule.work_with_db_xml_staff_shift(\"staff_empty_file.xml\", 'key_name', 'val_name')\n    assert len(dict_empty) == 0\ndef test_xml_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_db_xml_staff_shift(\"staff_name_surname.xml\", 'name', 'surname')\n    assert len(persons) == 3\ndef test_xml_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_db_xml_staff_shift(\"staff_position.xml\", 'name', 'position')\n    assert len(valid_dictionary) == 1\ndef test_xml_shut_return_exist_day_and_time():",
+        "detail": "test_mymodul_xml",
+        "documentation": {}
+    },
+    {
+        "label": "test_xml_valid_shut_return_valid_dictionary",
+        "kind": 2,
+        "importPath": "test_mymodul_xml",
+        "description": "test_mymodul_xml",
+        "peekOfCode": "def test_xml_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_db_xml_staff_shift(\"staff_name_surname.xml\", 'name', 'surname')\n    assert len(persons) == 3\ndef test_xml_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_db_xml_staff_shift(\"staff_position.xml\", 'name', 'position')\n    assert len(valid_dictionary) == 1\ndef test_xml_shut_return_exist_day_and_time():\n    file_with_data = mymodule.work_with_db_xml_staff_shift(\"staff_shift_days.xml.\", 'day' ' time', 'week')\n    assert file_with_data[\"Wednesday\"] == \"10.am-5.pm\"\ndef test_3_line_xml_shut_retur_3_itiems():",
+        "detail": "test_mymodul_xml",
+        "documentation": {}
+    },
+    {
+        "label": "test_xml_shut_retur_valid_dictionary",
+        "kind": 2,
+        "importPath": "test_mymodul_xml",
+        "description": "test_mymodul_xml",
+        "peekOfCode": "def test_xml_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_db_xml_staff_shift(\"staff_position.xml\", 'name', 'position')\n    assert len(valid_dictionary) == 1\ndef test_xml_shut_return_exist_day_and_time():\n    file_with_data = mymodule.work_with_db_xml_staff_shift(\"staff_shift_days.xml.\", 'day' ' time', 'week')\n    assert file_with_data[\"Wednesday\"] == \"10.am-5.pm\"\ndef test_3_line_xml_shut_retur_3_itiems():\n    line_test = mymodule.work_with_db_xml_staff_shift(\"staff_name_surname.xml\", 'name', 'surname')\n    assert len(line_test) == 3\ndef test_1_line_xml_shut_retur_1_itiems():",
+        "detail": "test_mymodul_xml",
+        "documentation": {}
+    },
+    {
+        "label": "test_xml_shut_return_exist_day_and_time",
+        "kind": 2,
+        "importPath": "test_mymodul_xml",
+        "description": "test_mymodul_xml",
+        "peekOfCode": "def test_xml_shut_return_exist_day_and_time():\n    file_with_data = mymodule.work_with_db_xml_staff_shift(\"staff_shift_days.xml.\", 'day' ' time', 'week')\n    assert file_with_data[\"Wednesday\"] == \"10.am-5.pm\"\ndef test_3_line_xml_shut_retur_3_itiems():\n    line_test = mymodule.work_with_db_xml_staff_shift(\"staff_name_surname.xml\", 'name', 'surname')\n    assert len(line_test) == 3\ndef test_1_line_xml_shut_retur_1_itiems():\n    test_line = mymodule.work_with_db_xml_staff_shift(\"staff_position.xml\", 'name', 'surname')\n    assert len(test_line) == 1",
+        "detail": "test_mymodul_xml",
+        "documentation": {}
+    },
+    {
+        "label": "test_3_line_xml_shut_retur_3_itiems",
+        "kind": 2,
+        "importPath": "test_mymodul_xml",
+        "description": "test_mymodul_xml",
+        "peekOfCode": "def test_3_line_xml_shut_retur_3_itiems():\n    line_test = mymodule.work_with_db_xml_staff_shift(\"staff_name_surname.xml\", 'name', 'surname')\n    assert len(line_test) == 3\ndef test_1_line_xml_shut_retur_1_itiems():\n    test_line = mymodule.work_with_db_xml_staff_shift(\"staff_position.xml\", 'name', 'surname')\n    assert len(test_line) == 1",
+        "detail": "test_mymodul_xml",
+        "documentation": {}
+    },
+    {
+        "label": "test_1_line_xml_shut_retur_1_itiems",
+        "kind": 2,
+        "importPath": "test_mymodul_xml",
+        "description": "test_mymodul_xml",
+        "peekOfCode": "def test_1_line_xml_shut_retur_1_itiems():\n    test_line = mymodule.work_with_db_xml_staff_shift(\"staff_position.xml\", 'name', 'surname')\n    assert len(test_line) == 1",
+        "detail": "test_mymodul_xml",
+        "documentation": {}
+    },
+    {
+        "label": "work_with_db_json_staff_shift",
+        "kind": 2,
+        "importPath": "test_mymodule_json",
+        "description": "test_mymodule_json",
+        "peekOfCode": "def work_with_db_json_staff_shift():\n    assert mymodule.NAME == \"mymodule\"\ndef test_empty_json_shut_return_empty_dictionary():\n    dict_empty = mymodule.work_with_db_json_staff_shift(\"staff_empty_file.json\", '')\n    assert len(dict_empty) == 0\ndef test_not_empty_json_shut_retur_not_emthy_dictionary():\n    file_with_data = mymodule.work_with_db_json_staff_shift(\"staff.json\", 'weekday')\n    assert file_with_data['Wednesday'] == '10.am-5.pm'\ndef test_json_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_db_json_staff_shift(\"staff_name_surname.json\", 'person')",
+        "detail": "test_mymodule_json",
+        "documentation": {}
+    },
+    {
+        "label": "test_empty_json_shut_return_empty_dictionary",
+        "kind": 2,
+        "importPath": "test_mymodule_json",
+        "description": "test_mymodule_json",
+        "peekOfCode": "def test_empty_json_shut_return_empty_dictionary():\n    dict_empty = mymodule.work_with_db_json_staff_shift(\"staff_empty_file.json\", '')\n    assert len(dict_empty) == 0\ndef test_not_empty_json_shut_retur_not_emthy_dictionary():\n    file_with_data = mymodule.work_with_db_json_staff_shift(\"staff.json\", 'weekday')\n    assert file_with_data['Wednesday'] == '10.am-5.pm'\ndef test_json_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_db_json_staff_shift(\"staff_name_surname.json\", 'person')\n    assert persons['Denis'] == 'Petrov'\n    assert persons['Tania'] == 'Bal'",
+        "detail": "test_mymodule_json",
+        "documentation": {}
+    },
+    {
+        "label": "test_not_empty_json_shut_retur_not_emthy_dictionary",
+        "kind": 2,
+        "importPath": "test_mymodule_json",
+        "description": "test_mymodule_json",
+        "peekOfCode": "def test_not_empty_json_shut_retur_not_emthy_dictionary():\n    file_with_data = mymodule.work_with_db_json_staff_shift(\"staff.json\", 'weekday')\n    assert file_with_data['Wednesday'] == '10.am-5.pm'\ndef test_json_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_db_json_staff_shift(\"staff_name_surname.json\", 'person')\n    assert persons['Denis'] == 'Petrov'\n    assert persons['Tania'] == 'Bal'\n    assert persons['Lana'] == 'Mel'\ndef test_json_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_db_json_staff_shift(\"staff_position.json\", 'person')",
+        "detail": "test_mymodule_json",
+        "documentation": {}
+    },
+    {
+        "label": "test_json_valid_shut_return_valid_dictionary",
+        "kind": 2,
+        "importPath": "test_mymodule_json",
+        "description": "test_mymodule_json",
+        "peekOfCode": "def test_json_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_db_json_staff_shift(\"staff_name_surname.json\", 'person')\n    assert persons['Denis'] == 'Petrov'\n    assert persons['Tania'] == 'Bal'\n    assert persons['Lana'] == 'Mel'\ndef test_json_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_db_json_staff_shift(\"staff_position.json\", 'person')\n    assert valid_dictionary['Tomas'] == 'web developer'\ndef test_json_not_root__should_return_empty_dict():\n    dict = mymodule.work_with_db_json_staff_shift(\"staff_position.json\", ':::')",
+        "detail": "test_mymodule_json",
+        "documentation": {}
+    },
+    {
+        "label": "test_json_shut_retur_valid_dictionary",
+        "kind": 2,
+        "importPath": "test_mymodule_json",
+        "description": "test_mymodule_json",
+        "peekOfCode": "def test_json_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_db_json_staff_shift(\"staff_position.json\", 'person')\n    assert valid_dictionary['Tomas'] == 'web developer'\ndef test_json_not_root__should_return_empty_dict():\n    dict = mymodule.work_with_db_json_staff_shift(\"staff_position.json\", ':::')\n    assert len(dict) == 0\ndef test_3_line_json_shut_retur_3_itiems():\n    line_test = mymodule.work_with_db_json_staff_shift(\"staff_name_surname.json\", 'person')\n    assert len(line_test) == 3\ndef test_1_line_json_shut_retur_1_itiems():",
+        "detail": "test_mymodule_json",
+        "documentation": {}
+    },
+    {
+        "label": "test_json_not_root__should_return_empty_dict",
+        "kind": 2,
+        "importPath": "test_mymodule_json",
+        "description": "test_mymodule_json",
+        "peekOfCode": "def test_json_not_root__should_return_empty_dict():\n    dict = mymodule.work_with_db_json_staff_shift(\"staff_position.json\", ':::')\n    assert len(dict) == 0\ndef test_3_line_json_shut_retur_3_itiems():\n    line_test = mymodule.work_with_db_json_staff_shift(\"staff_name_surname.json\", 'person')\n    assert len(line_test) == 3\ndef test_1_line_json_shut_retur_1_itiems():\n    test_1_line = len(mymodule.work_with_db_json_staff_shift(\"staff_position.json\", 'person'))\n    assert test_1_line == 1",
+        "detail": "test_mymodule_json",
+        "documentation": {}
+    },
+    {
+        "label": "test_3_line_json_shut_retur_3_itiems",
+        "kind": 2,
+        "importPath": "test_mymodule_json",
+        "description": "test_mymodule_json",
+        "peekOfCode": "def test_3_line_json_shut_retur_3_itiems():\n    line_test = mymodule.work_with_db_json_staff_shift(\"staff_name_surname.json\", 'person')\n    assert len(line_test) == 3\ndef test_1_line_json_shut_retur_1_itiems():\n    test_1_line = len(mymodule.work_with_db_json_staff_shift(\"staff_position.json\", 'person'))\n    assert test_1_line == 1",
+        "detail": "test_mymodule_json",
+        "documentation": {}
+    },
+    {
+        "label": "test_1_line_json_shut_retur_1_itiems",
+        "kind": 2,
+        "importPath": "test_mymodule_json",
+        "description": "test_mymodule_json",
+        "peekOfCode": "def test_1_line_json_shut_retur_1_itiems():\n    test_1_line = len(mymodule.work_with_db_json_staff_shift(\"staff_position.json\", 'person'))\n    assert test_1_line == 1",
+        "detail": "test_mymodule_json",
+        "documentation": {}
+    }
+]
