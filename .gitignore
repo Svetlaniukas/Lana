@@ -1,1 +1,5 @@
 /venv
+.vscode/launch.json
+.vscode/settings.json
+__pycache__/app.cpython-39.py
+__pycache__/test_mymodul_xml.cpython-39-pytest-7.1.2.pyc

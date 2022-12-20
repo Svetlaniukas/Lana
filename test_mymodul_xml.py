@@ -21,7 +21,7 @@ def test_xml_shut_retur_valid_dictionary():
 
 
 def test_xml_shut_return_exist_day_and_time():
-    file_with_data = mymodule.work_with_db_xml_staff_shift("staff_shift_days.xml.", 'day' ' time', 'week')
+    file_with_data = mymodule.work_with_db_xml_staff_shift("staff_shift_days.xml", 'day', 'time')
     assert file_with_data["Wednesday"] == "10.am-5.pm"
 
 
@@ -31,5 +31,5 @@ def test_3_line_xml_shut_retur_3_itiems():
 
 
 def test_1_line_xml_shut_retur_1_itiems():
-    test_line = mymodule.work_with_db_xml_staff_shift("staff_position.xml", 'name', 'surname')
+    test_line = mymodule.work_with_db_xml_staff_shift("staff_position.xml", 'name', 'position')
     assert len(test_line) == 1
