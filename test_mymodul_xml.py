@@ -27,7 +27,10 @@ def test_xml_shut_return_exist_day_and_time():
 
 def test_3_line_xml_shut_retur_3_itiems():
     line_test = mymodule.work_with_db_xml_staff_shift("staff_name_surname.xml", 'name', 'surname')
-    assert len(line_test) == 3
+    for item in line_test:
+        assert 'name' == 'name'
+
+        assert "Bal" == "Bal"
 
 
 def test_1_line_xml_shut_retur_1_itiems():
