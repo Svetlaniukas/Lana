@@ -10,14 +10,19 @@ def test_cinema_movie_name_rating():
 
 
 def test_cinema_today():
-    assert my_function.cinema_today('Terminator', 30) == 'Movie: "Terminator", rating: 30'
-    assert my_function.cinema_today('Hello friend', 200) == 'Movie: "Hello friend", rating: 200'
-    assert my_function.cinema_today('', 45) != 'Movie: "Big", rating: 80'
+    assert my_function.cinema_today(
+        'Terminator', 30) == 'Movie: "Terminator", rating: 30'
+    assert my_function.cinema_today(
+        'Hello friend', 200) == 'Movie: "Hello friend", rating: 200'
+    assert my_function.cinema_today(
+        '', 45) != 'Movie: "Big", rating: 80'
 
 
 def test_movie_tomorrow():
-    assert my_function.cinema_tomorrow('Sunny', 300) == 'Movie: "Sunny", rating: 300'
-    assert my_function.cinema_tomorrow('Sunny', 400) != 'Movie: "Sunny", rating: 300'
+    assert my_function.cinema_tomorrow(
+        'Sunny', 300) == 'Movie: "Sunny", rating: 300'
+    assert my_function.cinema_tomorrow(
+        'Sunny', 400) != 'Movie: "Sunny", rating: 300'
 
 
 def test_sum_plius():
@@ -43,9 +48,13 @@ def test_num_divide():
 
 
 def test_staff_book():
-    assert my_function.staff_book('Tania', 'Bal', 20) == 'First name:"Tania", Second name:"Bal", Phone numbers:20'
+    assert my_function.staff_book(
+        'Tania', 'Bal', 20
+        ) == 'First name:"Tania", Second name:"Bal", Phone numbers:20'
 
-    assert my_function.staff_book('Lena', 'Ross', 34) == 'First name:"Lena", Second name:"Ross", Phone numbers:34'
+    assert my_function.staff_book(
+        'Lena', 'Ross', 34
+        ) == 'First name:"Lena", Second name:"Ross", Phone numbers:34'
 
 
 def Test_string_should_failed():

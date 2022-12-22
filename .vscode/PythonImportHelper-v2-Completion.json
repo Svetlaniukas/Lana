@@ -233,7 +233,7 @@
         "kind": 2,
         "importPath": "test_function.test_function",
         "description": "test_function.test_function",
-        "peekOfCode": "def test_cinema_movie_name_rating():\n    assert my_function.cinema('Alien', 200) == 'Movie: \"Alien\", rating: 200'\n    assert my_function.cinema('Big', 10) == 'Movie: \"Big\", rating: 10'\n    assert my_function.cinema('Booo', 20) == 'Movie: \"Booo\", rating: 20'\n    assert my_function.cinema('', 40) != 'Movie: \"Big\", rating: 10'\ndef test_cinema_today():\n    assert my_function.cinema_today('Terminator', 30) == 'Movie: \"Terminator\", rating: 30'\n    assert my_function.cinema_today('Hello friend', 200) == 'Movie: \"Hello friend\", rating: 200'\n    assert my_function.cinema_today('', 45) != 'Movie: \"Big\", rating: 80'\ndef test_movie_tomorrow():",
+        "peekOfCode": "def test_cinema_movie_name_rating():\n    assert my_function.cinema('Alien', 200) == 'Movie: \"Alien\", rating: 200'\n    assert my_function.cinema('Big', 10) == 'Movie: \"Big\", rating: 10'\n    assert my_function.cinema('Booo', 20) == 'Movie: \"Booo\", rating: 20'\n    assert my_function.cinema('', 40) != 'Movie: \"Big\", rating: 10'\ndef test_cinema_today():\n    assert my_function.cinema_today(\n        'Terminator', 30) == 'Movie: \"Terminator\", rating: 30'\n    assert my_function.cinema_today(\n        'Hello friend', 200) == 'Movie: \"Hello friend\", rating: 200'",
         "detail": "test_function.test_function",
         "documentation": {}
     },
@@ -242,7 +242,7 @@
         "kind": 2,
         "importPath": "test_function.test_function",
         "description": "test_function.test_function",
-        "peekOfCode": "def test_cinema_today():\n    assert my_function.cinema_today('Terminator', 30) == 'Movie: \"Terminator\", rating: 30'\n    assert my_function.cinema_today('Hello friend', 200) == 'Movie: \"Hello friend\", rating: 200'\n    assert my_function.cinema_today('', 45) != 'Movie: \"Big\", rating: 80'\ndef test_movie_tomorrow():\n    assert my_function.cinema_tomorrow('Sunny', 300) == 'Movie: \"Sunny\", rating: 300'\n    assert my_function.cinema_tomorrow('Sunny', 400) != 'Movie: \"Sunny\", rating: 300'\ndef test_sum_plius():\n    assert my_function.plius(5, 7) == 12\n    assert my_function.plius(10, 20) == 30",
+        "peekOfCode": "def test_cinema_today():\n    assert my_function.cinema_today(\n        'Terminator', 30) == 'Movie: \"Terminator\", rating: 30'\n    assert my_function.cinema_today(\n        'Hello friend', 200) == 'Movie: \"Hello friend\", rating: 200'\n    assert my_function.cinema_today(\n        '', 45) != 'Movie: \"Big\", rating: 80'\ndef test_movie_tomorrow():\n    assert my_function.cinema_tomorrow(\n        'Sunny', 300) == 'Movie: \"Sunny\", rating: 300'",
         "detail": "test_function.test_function",
         "documentation": {}
     },
@@ -251,7 +251,7 @@
         "kind": 2,
         "importPath": "test_function.test_function",
         "description": "test_function.test_function",
-        "peekOfCode": "def test_movie_tomorrow():\n    assert my_function.cinema_tomorrow('Sunny', 300) == 'Movie: \"Sunny\", rating: 300'\n    assert my_function.cinema_tomorrow('Sunny', 400) != 'Movie: \"Sunny\", rating: 300'\ndef test_sum_plius():\n    assert my_function.plius(5, 7) == 12\n    assert my_function.plius(10, 20) == 30\n    assert my_function.plius(10, 20) != 12\ndef test_sum_minus():\n    assert my_function.minus(10, 2) == ('summa:', 8)\n    assert my_function.minus(9, 2) != ('summa:', 12)",
+        "peekOfCode": "def test_movie_tomorrow():\n    assert my_function.cinema_tomorrow(\n        'Sunny', 300) == 'Movie: \"Sunny\", rating: 300'\n    assert my_function.cinema_tomorrow(\n        'Sunny', 400) != 'Movie: \"Sunny\", rating: 300'\ndef test_sum_plius():\n    assert my_function.plius(5, 7) == 12\n    assert my_function.plius(10, 20) == 30\n    assert my_function.plius(10, 20) != 12\ndef test_sum_minus():",
         "detail": "test_function.test_function",
         "documentation": {}
     },
@@ -278,7 +278,7 @@
         "kind": 2,
         "importPath": "test_function.test_function",
         "description": "test_function.test_function",
-        "peekOfCode": "def test_sum_multiplay():\n    assert my_function.multi(10, 5) == ('result:', 50)\n    assert my_function.multi(9, 2) != ('result:', 20)\n    assert my_function.multi(1, 5) != 'result:', 50\ndef test_num_divide():\n    assert my_function.divide(10, 2) == ('result:', 5)\n    assert my_function.divide(20, 2) == ('result:', 10)\ndef test_staff_book():\n    assert my_function.staff_book('Tania', 'Bal', 20) == 'First name:\"Tania\", Second name:\"Bal\", Phone numbers:20'\n    assert my_function.staff_book('Lena', 'Ross', 34) == 'First name:\"Lena\", Second name:\"Ross\", Phone numbers:34'",
+        "peekOfCode": "def test_sum_multiplay():\n    assert my_function.multi(10, 5) == ('result:', 50)\n    assert my_function.multi(9, 2) != ('result:', 20)\n    assert my_function.multi(1, 5) != 'result:', 50\ndef test_num_divide():\n    assert my_function.divide(10, 2) == ('result:', 5)\n    assert my_function.divide(20, 2) == ('result:', 10)\ndef test_staff_book():\n    assert my_function.staff_book(\n        'Tania', 'Bal', 20",
         "detail": "test_function.test_function",
         "documentation": {}
     },
@@ -287,7 +287,7 @@
         "kind": 2,
         "importPath": "test_function.test_function",
         "description": "test_function.test_function",
-        "peekOfCode": "def test_num_divide():\n    assert my_function.divide(10, 2) == ('result:', 5)\n    assert my_function.divide(20, 2) == ('result:', 10)\ndef test_staff_book():\n    assert my_function.staff_book('Tania', 'Bal', 20) == 'First name:\"Tania\", Second name:\"Bal\", Phone numbers:20'\n    assert my_function.staff_book('Lena', 'Ross', 34) == 'First name:\"Lena\", Second name:\"Ross\", Phone numbers:34'\ndef Test_string_should_failed():\n    with pytest.raises(ZeroDivisionError):\n        assert my_function.staff_book(\"A\", \"B\")",
+        "peekOfCode": "def test_num_divide():\n    assert my_function.divide(10, 2) == ('result:', 5)\n    assert my_function.divide(20, 2) == ('result:', 10)\ndef test_staff_book():\n    assert my_function.staff_book(\n        'Tania', 'Bal', 20\n        ) == 'First name:\"Tania\", Second name:\"Bal\", Phone numbers:20'\n    assert my_function.staff_book(\n        'Lena', 'Ross', 34\n        ) == 'First name:\"Lena\", Second name:\"Ross\", Phone numbers:34'",
         "detail": "test_function.test_function",
         "documentation": {}
     },
@@ -296,7 +296,7 @@
         "kind": 2,
         "importPath": "test_function.test_function",
         "description": "test_function.test_function",
-        "peekOfCode": "def test_staff_book():\n    assert my_function.staff_book('Tania', 'Bal', 20) == 'First name:\"Tania\", Second name:\"Bal\", Phone numbers:20'\n    assert my_function.staff_book('Lena', 'Ross', 34) == 'First name:\"Lena\", Second name:\"Ross\", Phone numbers:34'\ndef Test_string_should_failed():\n    with pytest.raises(ZeroDivisionError):\n        assert my_function.staff_book(\"A\", \"B\")",
+        "peekOfCode": "def test_staff_book():\n    assert my_function.staff_book(\n        'Tania', 'Bal', 20\n        ) == 'First name:\"Tania\", Second name:\"Bal\", Phone numbers:20'\n    assert my_function.staff_book(\n        'Lena', 'Ross', 34\n        ) == 'First name:\"Lena\", Second name:\"Ross\", Phone numbers:34'\ndef Test_string_should_failed():\n    with pytest.raises(ZeroDivisionError):\n        assert my_function.staff_book(\"A\", \"B\")",
         "detail": "test_function.test_function",
         "documentation": {}
     },
