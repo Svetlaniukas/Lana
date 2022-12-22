@@ -1,8 +1,7 @@
 import xml
 import xml.etree.ElementTree as ET
 from json import JSONDecodeError
-
-from flask import json
+import json
 
 NAME = "mymodule"
 
@@ -25,29 +24,30 @@ def open_staff_file(file_name, file_delimiter):
 
 def work_with_db_xml_staff_shift(file_name: xml, key_name: str, val_name: str):
     dict = {}
-    try:
-        tree = ET.parse(file_name)
-        root = tree.getroot()
-        element = tree.iter()
+    # try:
+    tree = ET.parse(file_name)
+    root = tree.getroot()
+    element = tree.iter()
 
-        for child in element:
-            keys = child.attrib.keys()
-            if key_name in keys and val_name in keys:
-                key = child.attrib[key_name]
-                val = child.attrib[val_name]
-                dict[key] = val
-    except:
-        print("FileExistsError")
+    for child in element:
+        keys = child.attrib.keys()
+        if key_name in keys and val_name in keys:
+            key = child.attrib[key_name]
+            val = child.attrib[val_name]
+            dict[key] = val
+    # 'except:'
+    # 'print("FileExistsError")'
     return dict
 
 
 def work_with_db_json_staff_shift(file_name, root_node_name):
+    pass
     dict_staff_json = {}
     file_object = open(file_name)
     try:
         dict_staff_json = json.load(file_object)
-    except JSONDecodeError as error_code:
+    except JSONDecodeError:
         return {}
-    if not root_node_name in dict_staff_json.keys():
+    if root_node_name not in dict_staff_json.keys():
         return {}
     return dict_staff_json[root_node_name]

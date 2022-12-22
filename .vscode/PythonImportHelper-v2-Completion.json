@@ -68,14 +68,6 @@
         "documentation": {}
     },
     {
-        "label": "json",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
         "label": "mymodule",
         "kind": 6,
         "isExtraImport": true,
@@ -322,7 +314,7 @@
         "kind": 2,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "def home():\n    date_time = datetime.now()\n    calendar_year = calendar.TextCalendar()\n    page_content = render_template(\"home.html\",\n                                   current_time=date_time,\n                                   calendar_year=calendar_year.formatyear(2023, w=2, l=1, c=6, m=3)\n                                   )\n    return page_content\n@app.route('/staff')\ndef staff():",
+        "peekOfCode": "def home():\n    date_time = datetime.now()\n    calendar_year = calendar.TextCalendar()\n    page_content = render_template(\"home.html\",\n                                   current_time=date_time,\n                                   calendar_year=calendar_year.formatyear(\n                                       2023, w=2, l=1, c=6, m=3)\n                                   )\n    return page_content\n@app.route('/staff')",
         "detail": "app",
         "documentation": {}
     },
@@ -331,7 +323,7 @@
         "kind": 2,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "def staff():\n    for_week_days_shift = mymodule.work_with_db_json_staff_shift(\"staff.json\", 'weekday')\n    for_staff_weekend_shift = mymodule.work_with_db_xml_staff_shift(\"staff_week_day.xml\",'day', 'time')\n    page_content = render_template(\"staff.html\",\n                                   for_week_days_shift=for_week_days_shift,\n                                   for_staff_weekend_shift=for_staff_weekend_shift\n                                   )\n    return page_content\nif __name__ == \"__main__\":\n    app.run(debug=True)",
+        "peekOfCode": "def staff():\n    for_week_days_shift = mymodule.work_with_db_json_staff_shift(\n        \"staff.json\", 'weekday')\n    for_staff_weekend_shift = mymodule.work_with_db_xml_staff_shift(\n        \"staff_weekend.xml\", 'day', 'time')\n    page_content = render_template(\n        \"staff.html\",\n        for_week_days_shift=for_week_days_shift,\n        for_staff_weekend_shift=for_staff_weekend_shift\n        )",
         "detail": "app",
         "documentation": {}
     },
@@ -340,7 +332,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "app = Flask(__name__)\n@app.route('/')\n@app.route('/home')\ndef home():\n    date_time = datetime.now()\n    calendar_year = calendar.TextCalendar()\n    page_content = render_template(\"home.html\",\n                                   current_time=date_time,\n                                   calendar_year=calendar_year.formatyear(2023, w=2, l=1, c=6, m=3)\n                                   )",
+        "peekOfCode": "app = Flask(__name__)\n@app.route('/')\n@app.route('/home')\ndef home():\n    date_time = datetime.now()\n    calendar_year = calendar.TextCalendar()\n    page_content = render_template(\"home.html\",\n                                   current_time=date_time,\n                                   calendar_year=calendar_year.formatyear(\n                                       2023, w=2, l=1, c=6, m=3)",
         "detail": "app",
         "documentation": {}
     },
@@ -358,7 +350,7 @@
         "kind": 2,
         "importPath": "mymodule",
         "description": "mymodule",
-        "peekOfCode": "def work_with_db_xml_staff_shift(file_name: xml, key_name: str, val_name: str):\n    dict = {}\n    try:\n        tree = ET.parse(file_name)\n        root = tree.getroot()\n        element = tree.iter()\n        for child in element:\n            keys = child.attrib.keys()\n            if key_name in keys and val_name in keys:\n                key = child.attrib[key_name]",
+        "peekOfCode": "def work_with_db_xml_staff_shift(file_name: xml, key_name: str, val_name: str):\n    dict = {}\n    # try:\n    tree = ET.parse(file_name)\n    root = tree.getroot()\n    element = tree.iter()\n    for child in element:\n        keys = child.attrib.keys()\n        if key_name in keys and val_name in keys:\n            key = child.attrib[key_name]",
         "detail": "mymodule",
         "documentation": {}
     },
@@ -367,7 +359,7 @@
         "kind": 2,
         "importPath": "mymodule",
         "description": "mymodule",
-        "peekOfCode": "def work_with_db_json_staff_shift(file_name, root_node_name):\n    dict_staff_json = {}\n    file_object = open(file_name)\n    try:\n        dict_staff_json = json.load(file_object)\n    except JSONDecodeError as error_code:\n        return {}\n    if not root_node_name in dict_staff_json.keys():\n        return {}\n    return dict_staff_json[root_node_name]",
+        "peekOfCode": "def work_with_db_json_staff_shift(file_name, root_node_name):\n    pass\n    dict_staff_json = {}\n    file_object = open(file_name)\n    try:\n        dict_staff_json = json.load(file_object)\n    except JSONDecodeError:\n        return {}\n    if root_node_name not in dict_staff_json.keys():\n        return {}",
         "detail": "mymodule",
         "documentation": {}
     },
@@ -385,7 +377,7 @@
         "kind": 2,
         "importPath": "test_app",
         "description": "test_app",
-        "peekOfCode": "def test_index_contain_route():\n    response = app.test_client().get('/')\n    assert 'A lot of people ask where we got our name' in response.data.decode('utf-8')\ndef test_index_contain_main_title_name():\n    response = app.test_client().get('/home')\n    print(response.data)\n    assert response.status_code == 200\n    assert 'New Look Hair Design' in response.data.decode('utf-8')\n@pytest.mark.parametrize(\"day\", ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'])\ndef test_index_contain_staff_shift_week_day(day):",
+        "peekOfCode": "def test_index_contain_route():\n    response = app.test_client().get('/')\n    assert 'A lot of people ask where we got our name' in response.data.decode(\n        'utf-8')\ndef test_index_contain_main_title_name():\n    response = app.test_client().get('/home')\n    print(response.data)\n    assert response.status_code == 200\n    assert 'New Look Hair Design' in response.data.decode('utf-8')\n@pytest.mark.parametrize(",
         "detail": "test_app",
         "documentation": {}
     },
@@ -394,7 +386,7 @@
         "kind": 2,
         "importPath": "test_app",
         "description": "test_app",
-        "peekOfCode": "def test_index_contain_main_title_name():\n    response = app.test_client().get('/home')\n    print(response.data)\n    assert response.status_code == 200\n    assert 'New Look Hair Design' in response.data.decode('utf-8')\n@pytest.mark.parametrize(\"day\", ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'])\ndef test_index_contain_staff_shift_week_day(day):\n    response = app.test_client().get('/staff')\n    print(f'\"{day}\"')\n    assert day in response.data.decode('utf-8')",
+        "peekOfCode": "def test_index_contain_main_title_name():\n    response = app.test_client().get('/home')\n    print(response.data)\n    assert response.status_code == 200\n    assert 'New Look Hair Design' in response.data.decode('utf-8')\n@pytest.mark.parametrize(\n    \"day\", ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']\n    )\ndef test_index_contain_staff_shift_week_day(day):\n    response = app.test_client().get('/staff')",
         "detail": "test_app",
         "documentation": {}
     },
@@ -403,7 +395,7 @@
         "kind": 2,
         "importPath": "test_app",
         "description": "test_app",
-        "peekOfCode": "def test_index_contain_staff_shift_week_day(day):\n    response = app.test_client().get('/staff')\n    print(f'\"{day}\"')\n    assert day in response.data.decode('utf-8')\n@pytest.mark.parametrize(\"weekend\", ['Saturday', 'Sunday'])\ndef test_index_contain_staff_shift_weekend(weekend):\n    response = app.test_client().get('/staff')\n    print(f'\"{weekend}\"')\n    assert weekend in response.data.decode('utf-8')",
+        "peekOfCode": "def test_index_contain_staff_shift_week_day(day):\n    response = app.test_client().get('/staff')\n    print(f'\"{day}\"')\n    assert 'Monday' in response.data.decode('utf-8')\n@pytest.mark.parametrize(\"weekend\", ['Saturday', 'Sunday'])\ndef test_index_contain_staff_shift_weekend(weekend):\n    response = app.test_client().get('/staff')\n    print(f'\"{weekend}\"')\n    assert 'Sunday' in response.data.decode('utf-8')",
         "detail": "test_app",
         "documentation": {}
     },
@@ -412,7 +404,7 @@
         "kind": 2,
         "importPath": "test_app",
         "description": "test_app",
-        "peekOfCode": "def test_index_contain_staff_shift_weekend(weekend):\n    response = app.test_client().get('/staff')\n    print(f'\"{weekend}\"')\n    assert weekend in response.data.decode('utf-8')",
+        "peekOfCode": "def test_index_contain_staff_shift_weekend(weekend):\n    response = app.test_client().get('/staff')\n    print(f'\"{weekend}\"')\n    assert 'Sunday' in response.data.decode('utf-8')",
         "detail": "test_app",
         "documentation": {}
     },
@@ -421,7 +413,7 @@
         "kind": 2,
         "importPath": "test_mymodul_xml",
         "description": "test_mymodul_xml",
-        "peekOfCode": "def work_with_db_xml_staff_shift():\n    assert mymodule.NAME == \"mymodule\"\ndef test_empty_xml_shut_return_empty_dictionary():\n    dict_empty = mymodule.work_with_db_xml_staff_shift(\"staff_empty_file.xml\", 'key_name', 'val_name')\n    assert len(dict_empty) == 0\ndef test_xml_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_db_xml_staff_shift(\"staff_name_surname.xml\", 'name', 'surname')\n    assert len(persons) == 3\ndef test_xml_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_db_xml_staff_shift(\"staff_position.xml\", 'name', 'position')",
+        "peekOfCode": "def work_with_db_xml_staff_shift():\n    assert mymodule.NAME == \"mymodule\"\ndef test_empty_xml_shut_return_empty_dictionary():\n    dict_empty = mymodule.work_with_db_xml_staff_shift(\n        \"staff_empty_file.xml\", 'key_name', 'val_name')\n    assert len(dict_empty) == 0\ndef test_xml_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_db_xml_staff_shift(\n        \"staff_name_surname.xml\", 'name', 'surname')\n    assert len(persons) == 3",
         "detail": "test_mymodul_xml",
         "documentation": {}
     },
@@ -430,7 +422,7 @@
         "kind": 2,
         "importPath": "test_mymodul_xml",
         "description": "test_mymodul_xml",
-        "peekOfCode": "def test_empty_xml_shut_return_empty_dictionary():\n    dict_empty = mymodule.work_with_db_xml_staff_shift(\"staff_empty_file.xml\", 'key_name', 'val_name')\n    assert len(dict_empty) == 0\ndef test_xml_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_db_xml_staff_shift(\"staff_name_surname.xml\", 'name', 'surname')\n    assert len(persons) == 3\ndef test_xml_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_db_xml_staff_shift(\"staff_position.xml\", 'name', 'position')\n    assert len(valid_dictionary) == 1\ndef test_xml_shut_return_exist_day_and_time():",
+        "peekOfCode": "def test_empty_xml_shut_return_empty_dictionary():\n    dict_empty = mymodule.work_with_db_xml_staff_shift(\n        \"staff_empty_file.xml\", 'key_name', 'val_name')\n    assert len(dict_empty) == 0\ndef test_xml_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_db_xml_staff_shift(\n        \"staff_name_surname.xml\", 'name', 'surname')\n    assert len(persons) == 3\ndef test_xml_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_db_xml_staff_shift(",
         "detail": "test_mymodul_xml",
         "documentation": {}
     },
@@ -439,7 +431,7 @@
         "kind": 2,
         "importPath": "test_mymodul_xml",
         "description": "test_mymodul_xml",
-        "peekOfCode": "def test_xml_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_db_xml_staff_shift(\"staff_name_surname.xml\", 'name', 'surname')\n    assert len(persons) == 3\ndef test_xml_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_db_xml_staff_shift(\"staff_position.xml\", 'name', 'position')\n    assert len(valid_dictionary) == 1\ndef test_xml_shut_return_exist_day_and_time():\n    file_with_data = mymodule.work_with_db_xml_staff_shift(\"staff_shift_days.xml\", 'day', 'time')\n    assert file_with_data[\"Wednesday\"] == \"10.am-5.pm\"\ndef test_3_line_xml_shut_retur_3_itiems():",
+        "peekOfCode": "def test_xml_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_db_xml_staff_shift(\n        \"staff_name_surname.xml\", 'name', 'surname')\n    assert len(persons) == 3\ndef test_xml_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_db_xml_staff_shift(\n        \"staff_position.xml\", 'name', 'position')\n    assert len(valid_dictionary) == 1\ndef test_xml_shut_return_exist_day_and_time():\n    file_with_data = mymodule.work_with_db_xml_staff_shift(",
         "detail": "test_mymodul_xml",
         "documentation": {}
     },
@@ -448,7 +440,7 @@
         "kind": 2,
         "importPath": "test_mymodul_xml",
         "description": "test_mymodul_xml",
-        "peekOfCode": "def test_xml_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_db_xml_staff_shift(\"staff_position.xml\", 'name', 'position')\n    assert len(valid_dictionary) == 1\ndef test_xml_shut_return_exist_day_and_time():\n    file_with_data = mymodule.work_with_db_xml_staff_shift(\"staff_shift_days.xml\", 'day', 'time')\n    assert file_with_data[\"Wednesday\"] == \"10.am-5.pm\"\ndef test_3_line_xml_shut_retur_3_itiems():\n    line_test = mymodule.work_with_db_xml_staff_shift(\"staff_name_surname.xml\", 'name', 'surname')\n    assert len(line_test) == 3\ndef test_1_line_xml_shut_retur_1_itiems():",
+        "peekOfCode": "def test_xml_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_db_xml_staff_shift(\n        \"staff_position.xml\", 'name', 'position')\n    assert len(valid_dictionary) == 1\ndef test_xml_shut_return_exist_day_and_time():\n    file_with_data = mymodule.work_with_db_xml_staff_shift(\n        \"staff_weekend.xml\", 'day', 'time')\n    assert len(file_with_data) == 2\ndef test_7_line_xml_shut_retur_7_itiems():\n    line_test = mymodule.work_with_db_xml_staff_shift(",
         "detail": "test_mymodul_xml",
         "documentation": {}
     },
@@ -457,16 +449,16 @@
         "kind": 2,
         "importPath": "test_mymodul_xml",
         "description": "test_mymodul_xml",
-        "peekOfCode": "def test_xml_shut_return_exist_day_and_time():\n    file_with_data = mymodule.work_with_db_xml_staff_shift(\"staff_shift_days.xml\", 'day', 'time')\n    assert file_with_data[\"Wednesday\"] == \"10.am-5.pm\"\ndef test_3_line_xml_shut_retur_3_itiems():\n    line_test = mymodule.work_with_db_xml_staff_shift(\"staff_name_surname.xml\", 'name', 'surname')\n    assert len(line_test) == 3\ndef test_1_line_xml_shut_retur_1_itiems():\n    test_line = mymodule.work_with_db_xml_staff_shift(\"staff_position.xml\", 'name', 'position')\n    assert len(test_line) == 1",
+        "peekOfCode": "def test_xml_shut_return_exist_day_and_time():\n    file_with_data = mymodule.work_with_db_xml_staff_shift(\n        \"staff_weekend.xml\", 'day', 'time')\n    assert len(file_with_data) == 2\ndef test_7_line_xml_shut_retur_7_itiems():\n    line_test = mymodule.work_with_db_xml_staff_shift(\n        \"staff_week_day.xml\", 'day', 'time')\n    assert len(line_test) == 7\ndef test_1_line_xml_shut_retur_1_itiems():\n    line_test = mymodule.work_with_db_xml_staff_shift(",
         "detail": "test_mymodul_xml",
         "documentation": {}
     },
     {
-        "label": "test_3_line_xml_shut_retur_3_itiems",
+        "label": "test_7_line_xml_shut_retur_7_itiems",
         "kind": 2,
         "importPath": "test_mymodul_xml",
         "description": "test_mymodul_xml",
-        "peekOfCode": "def test_3_line_xml_shut_retur_3_itiems():\n    line_test = mymodule.work_with_db_xml_staff_shift(\"staff_name_surname.xml\", 'name', 'surname')\n    assert len(line_test) == 3\ndef test_1_line_xml_shut_retur_1_itiems():\n    test_line = mymodule.work_with_db_xml_staff_shift(\"staff_position.xml\", 'name', 'position')\n    assert len(test_line) == 1",
+        "peekOfCode": "def test_7_line_xml_shut_retur_7_itiems():\n    line_test = mymodule.work_with_db_xml_staff_shift(\n        \"staff_week_day.xml\", 'day', 'time')\n    assert len(line_test) == 7\ndef test_1_line_xml_shut_retur_1_itiems():\n    line_test = mymodule.work_with_db_xml_staff_shift(\n        \"staff_position.xml\", 'name', 'position'\n    )\n    assert len(line_test) == 1",
         "detail": "test_mymodul_xml",
         "documentation": {}
     },
@@ -475,7 +467,7 @@
         "kind": 2,
         "importPath": "test_mymodul_xml",
         "description": "test_mymodul_xml",
-        "peekOfCode": "def test_1_line_xml_shut_retur_1_itiems():\n    test_line = mymodule.work_with_db_xml_staff_shift(\"staff_position.xml\", 'name', 'position')\n    assert len(test_line) == 1",
+        "peekOfCode": "def test_1_line_xml_shut_retur_1_itiems():\n    line_test = mymodule.work_with_db_xml_staff_shift(\n        \"staff_position.xml\", 'name', 'position'\n    )\n    assert len(line_test) == 1",
         "detail": "test_mymodul_xml",
         "documentation": {}
     },
@@ -484,7 +476,7 @@
         "kind": 2,
         "importPath": "test_mymodule_json",
         "description": "test_mymodule_json",
-        "peekOfCode": "def work_with_db_json_staff_shift():\n    assert mymodule.NAME == \"mymodule\"\ndef test_empty_json_shut_return_empty_dictionary():\n    dict_empty = mymodule.work_with_db_json_staff_shift(\"staff_empty_file.json\", '')\n    assert len(dict_empty) == 0\ndef test_not_empty_json_shut_retur_not_emthy_dictionary():\n    file_with_data = mymodule.work_with_db_json_staff_shift(\"staff.json\", 'weekday')\n    assert file_with_data['Wednesday'] == '10.am-5.pm'\ndef test_json_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_db_json_staff_shift(\"staff_name_surname.json\", 'person')",
+        "peekOfCode": "def work_with_db_json_staff_shift():\n    assert mymodule.NAME == \"mymodule\"\ndef test_empty_json_shut_return_empty_dictionary():\n    dict_empty = mymodule.work_with_db_json_staff_shift(\n        \"staff_empty_file.json\", ''\n        )\n    assert len(dict_empty) == 0\ndef test_not_empty_json_shut_retur_not_emthy_dictionary():\n    pass\n    file_with_data = mymodule.work_with_db_json_staff_shift(",
         "detail": "test_mymodule_json",
         "documentation": {}
     },
@@ -493,7 +485,7 @@
         "kind": 2,
         "importPath": "test_mymodule_json",
         "description": "test_mymodule_json",
-        "peekOfCode": "def test_empty_json_shut_return_empty_dictionary():\n    dict_empty = mymodule.work_with_db_json_staff_shift(\"staff_empty_file.json\", '')\n    assert len(dict_empty) == 0\ndef test_not_empty_json_shut_retur_not_emthy_dictionary():\n    file_with_data = mymodule.work_with_db_json_staff_shift(\"staff.json\", 'weekday')\n    assert file_with_data['Wednesday'] == '10.am-5.pm'\ndef test_json_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_db_json_staff_shift(\"staff_name_surname.json\", 'person')\n    assert persons['Denis'] == 'Petrov'\n    assert persons['Tania'] == 'Bal'",
+        "peekOfCode": "def test_empty_json_shut_return_empty_dictionary():\n    dict_empty = mymodule.work_with_db_json_staff_shift(\n        \"staff_empty_file.json\", ''\n        )\n    assert len(dict_empty) == 0\ndef test_not_empty_json_shut_retur_not_emthy_dictionary():\n    pass\n    file_with_data = mymodule.work_with_db_json_staff_shift(\n        \"staff.json\", 'weekday'\n    )",
         "detail": "test_mymodule_json",
         "documentation": {}
     },
@@ -502,7 +494,7 @@
         "kind": 2,
         "importPath": "test_mymodule_json",
         "description": "test_mymodule_json",
-        "peekOfCode": "def test_not_empty_json_shut_retur_not_emthy_dictionary():\n    file_with_data = mymodule.work_with_db_json_staff_shift(\"staff.json\", 'weekday')\n    assert file_with_data['Wednesday'] == '10.am-5.pm'\ndef test_json_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_db_json_staff_shift(\"staff_name_surname.json\", 'person')\n    assert persons['Denis'] == 'Petrov'\n    assert persons['Tania'] == 'Bal'\n    assert persons['Lana'] == 'Mel'\ndef test_json_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_db_json_staff_shift(\"staff_position.json\", 'person')",
+        "peekOfCode": "def test_not_empty_json_shut_retur_not_emthy_dictionary():\n    pass\n    file_with_data = mymodule.work_with_db_json_staff_shift(\n        \"staff.json\", 'weekday'\n    )\n    assert len(file_with_data) == 5\ndef test_json_valid_shut_return_valid_dictionary():\n    pass\n    persons = mymodule.work_with_db_json_staff_shift(\"staff_name_surname.json\",\n                                                     'person')",
         "detail": "test_mymodule_json",
         "documentation": {}
     },
@@ -511,7 +503,7 @@
         "kind": 2,
         "importPath": "test_mymodule_json",
         "description": "test_mymodule_json",
-        "peekOfCode": "def test_json_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_db_json_staff_shift(\"staff_name_surname.json\", 'person')\n    assert persons['Denis'] == 'Petrov'\n    assert persons['Tania'] == 'Bal'\n    assert persons['Lana'] == 'Mel'\ndef test_json_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_db_json_staff_shift(\"staff_position.json\", 'person')\n    assert valid_dictionary['Tomas'] == 'web developer'\ndef test_json_not_root__should_return_empty_dict():\n    dict = mymodule.work_with_db_json_staff_shift(\"staff_position.json\", ':::')",
+        "peekOfCode": "def test_json_valid_shut_return_valid_dictionary():\n    pass\n    persons = mymodule.work_with_db_json_staff_shift(\"staff_name_surname.json\",\n                                                     'person')\n    assert persons['Denis'] == 'Petrov'\n    assert persons['Tania'] == 'Bal'\n    assert persons['Lana'] == 'Mel'\ndef test_json_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_db_json_staff_shift(\n        \"staff_position.json\", 'person'",
         "detail": "test_mymodule_json",
         "documentation": {}
     },
@@ -520,7 +512,7 @@
         "kind": 2,
         "importPath": "test_mymodule_json",
         "description": "test_mymodule_json",
-        "peekOfCode": "def test_json_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_db_json_staff_shift(\"staff_position.json\", 'person')\n    assert valid_dictionary['Tomas'] == 'web developer'\ndef test_json_not_root__should_return_empty_dict():\n    dict = mymodule.work_with_db_json_staff_shift(\"staff_position.json\", ':::')\n    assert len(dict) == 0\ndef test_3_line_json_shut_retur_3_itiems():\n    line_test = mymodule.work_with_db_json_staff_shift(\"staff_name_surname.json\", 'person')\n    assert len(line_test) == 3\ndef test_1_line_json_shut_retur_1_itiems():",
+        "peekOfCode": "def test_json_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_db_json_staff_shift(\n        \"staff_position.json\", 'person'\n        )\n    assert len(valid_dictionary) == 1\ndef test_json_not_root__should_return_empty_dict():\n    pass\n    dict = mymodule.work_with_db_json_staff_shift(\n        \"staff_position.json\", ':::')\n    assert len(dict) == 0",
         "detail": "test_mymodule_json",
         "documentation": {}
     },
@@ -529,7 +521,7 @@
         "kind": 2,
         "importPath": "test_mymodule_json",
         "description": "test_mymodule_json",
-        "peekOfCode": "def test_json_not_root__should_return_empty_dict():\n    dict = mymodule.work_with_db_json_staff_shift(\"staff_position.json\", ':::')\n    assert len(dict) == 0\ndef test_3_line_json_shut_retur_3_itiems():\n    line_test = mymodule.work_with_db_json_staff_shift(\"staff_name_surname.json\", 'person')\n    assert len(line_test) == 3\ndef test_1_line_json_shut_retur_1_itiems():\n    test_1_line = len(mymodule.work_with_db_json_staff_shift(\"staff_position.json\", 'person'))\n    assert test_1_line == 1",
+        "peekOfCode": "def test_json_not_root__should_return_empty_dict():\n    pass\n    dict = mymodule.work_with_db_json_staff_shift(\n        \"staff_position.json\", ':::')\n    assert len(dict) == 0\ndef test_3_line_json_shut_retur_3_itiems():\n    line_test = mymodule.work_with_db_json_staff_shift(\n        \"staff_name_surname.json\", 'person')\n    assert len(line_test) == 3\ndef test_1_line_json_shut_retur_1_itiems():",
         "detail": "test_mymodule_json",
         "documentation": {}
     },
@@ -538,7 +530,7 @@
         "kind": 2,
         "importPath": "test_mymodule_json",
         "description": "test_mymodule_json",
-        "peekOfCode": "def test_3_line_json_shut_retur_3_itiems():\n    line_test = mymodule.work_with_db_json_staff_shift(\"staff_name_surname.json\", 'person')\n    assert len(line_test) == 3\ndef test_1_line_json_shut_retur_1_itiems():\n    test_1_line = len(mymodule.work_with_db_json_staff_shift(\"staff_position.json\", 'person'))\n    assert test_1_line == 1",
+        "peekOfCode": "def test_3_line_json_shut_retur_3_itiems():\n    line_test = mymodule.work_with_db_json_staff_shift(\n        \"staff_name_surname.json\", 'person')\n    assert len(line_test) == 3\ndef test_1_line_json_shut_retur_1_itiems():\n    test_1_line = mymodule.work_with_db_json_staff_shift(\n        \"staff_position.json\", 'person'\n        )\n    assert len(test_1_line) == 1",
         "detail": "test_mymodule_json",
         "documentation": {}
     },
@@ -547,7 +539,7 @@
         "kind": 2,
         "importPath": "test_mymodule_json",
         "description": "test_mymodule_json",
-        "peekOfCode": "def test_1_line_json_shut_retur_1_itiems():\n    test_1_line = len(mymodule.work_with_db_json_staff_shift(\"staff_position.json\", 'person'))\n    assert test_1_line == 1",
+        "peekOfCode": "def test_1_line_json_shut_retur_1_itiems():\n    test_1_line = mymodule.work_with_db_json_staff_shift(\n        \"staff_position.json\", 'person'\n        )\n    assert len(test_1_line) == 1",
         "detail": "test_mymodule_json",
         "documentation": {}
     }
