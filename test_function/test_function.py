@@ -32,29 +32,29 @@ def test_sum_plius():
 
 
 def test_sum_minus():
-    assert my_function.minus(10, 2) == ('summa:', 8)
-    assert my_function.minus(9, 2) != ('summa:', 12)
+    assert my_function.minus(10, 2) == 8
+    assert my_function.minus(9, 2) != 12
 
 
 def test_sum_multiplay():
-    assert my_function.multi(10, 5) == ('result:', 50)
-    assert my_function.multi(9, 2) != ('result:', 20)
-    assert my_function.multi(1, 5) != 'result:', 50
+    assert my_function.multi(10, 5) == 50
+    assert my_function.multi(9, 2) != 20
+    assert my_function.multi(1, 5) != 50
 
 
 def test_num_divide():
-    assert my_function.divide(10, 2) == ('result:', 5)
-    assert my_function.divide(20, 2) == ('result:', 10)
+    assert my_function.divide(10, 2) == 5
+    assert my_function.divide(20, 2) == 10
 
 
 def test_staff_book():
     assert my_function.staff_book(
-        'Tania', 'Bal', 20
-        ) == 'First name:"Tania", Second name:"Bal", Phone numbers:20'
+        'Tania', 'Bal'
+    ) == 'First name:"Tania", Second name:"Bal"'
 
     assert my_function.staff_book(
-        'Lena', 'Ross', 34
-        ) == 'First name:"Lena", Second name:"Ross", Phone numbers:34'
+        'Lena', 'Ross'
+        ) == 'First name:"Lena", Second name:"Ross"'
 
 
 def Test_string_should_failed():

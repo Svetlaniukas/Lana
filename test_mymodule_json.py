@@ -8,13 +8,11 @@ def work_with_db_json_staff_shift():
 def test_empty_json_shut_return_empty_dictionary():
     dict_empty = mymodule.work_with_db_json_staff_shift(
         "staff_empty_file.json", ''
-        )
+    )
     assert len(dict_empty) == 0
 
 
-
 def test_not_empty_json_shut_retur_not_emthy_dictionary():
-    pass
     file_with_data = mymodule.work_with_db_json_staff_shift(
         "staff.json", 'weekday'
     )
@@ -33,9 +31,8 @@ def test_json_valid_shut_return_valid_dictionary():
 def test_json_shut_retur_valid_dictionary():
     valid_dictionary = mymodule.work_with_db_json_staff_shift(
         "staff_position.json", 'person'
-        )
+    )
     assert len(valid_dictionary) == 1
-
 
 
 def test_json_not_root__should_return_empty_dict():
@@ -43,7 +40,6 @@ def test_json_not_root__should_return_empty_dict():
     dict = mymodule.work_with_db_json_staff_shift(
         "staff_position.json", ':::')
     assert len(dict) == 0
-
 
 
 def test_3_line_json_shut_retur_3_itiems():
@@ -55,5 +51,5 @@ def test_3_line_json_shut_retur_3_itiems():
 def test_1_line_json_shut_retur_1_itiems():
     test_1_line = mymodule.work_with_db_json_staff_shift(
         "staff_position.json", 'person'
-        )
+    )
     assert len(test_1_line) == 1

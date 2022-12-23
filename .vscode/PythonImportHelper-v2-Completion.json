@@ -134,7 +134,7 @@
         "kind": 2,
         "importPath": "test_function.my_function",
         "description": "test_function.my_function",
-        "peekOfCode": "def staff_id(actor, surname, stars):\n    result = f'name: \"{actor}\", surname: {surname}, rating: {stars}'\n    print(result)\n    return result\ndef plius(a, b):\n    result = int(a + b)\n    print(result)\n    return result\ndef minus(b, c):\n    result = f'summa:', int(b - c)",
+        "peekOfCode": "def staff_id(actor, surname, stars):\n    result = f'name: \"{actor}\", surname: {surname}, rating: {stars}'\n    print(result)\n    return result\ndef plius(a, b):\n    result = int(a + b)\n    print(result)\n    return result\ndef minus(a, c):\n    result = int(a - c)",
         "detail": "test_function.my_function",
         "documentation": {}
     },
@@ -143,7 +143,7 @@
         "kind": 2,
         "importPath": "test_function.my_function",
         "description": "test_function.my_function",
-        "peekOfCode": "def plius(a, b):\n    result = int(a + b)\n    print(result)\n    return result\ndef minus(b, c):\n    result = f'summa:', int(b - c)\n    print(result)\n    return result\ndef multi(a, c):\n    result = f'result:', int(a * c)",
+        "peekOfCode": "def plius(a, b):\n    result = int(a + b)\n    print(result)\n    return result\ndef minus(a, c):\n    result = int(a - c)\n    print(result)\n    return result\ndef multi(a, c):\n    result = int(a * c)",
         "detail": "test_function.my_function",
         "documentation": {}
     },
@@ -152,7 +152,7 @@
         "kind": 2,
         "importPath": "test_function.my_function",
         "description": "test_function.my_function",
-        "peekOfCode": "def minus(b, c):\n    result = f'summa:', int(b - c)\n    print(result)\n    return result\ndef multi(a, c):\n    result = f'result:', int(a * c)\n    print(result)\n    return result\ndef divide(a, b):\n    result = f'result:', int(a / b)",
+        "peekOfCode": "def minus(a, c):\n    result = int(a - c)\n    print(result)\n    return result\ndef multi(a, c):\n    result = int(a * c)\n    print(result)\n    return result\ndef divide(a, b):\n    result = int(a / b)",
         "detail": "test_function.my_function",
         "documentation": {}
     },
@@ -161,7 +161,7 @@
         "kind": 2,
         "importPath": "test_function.my_function",
         "description": "test_function.my_function",
-        "peekOfCode": "def multi(a, c):\n    result = f'result:', int(a * c)\n    print(result)\n    return result\ndef divide(a, b):\n    result = f'result:', int(a / b)\n    print(result)\n    return result\ndef staff_book(name, surname, telephone):\n    result = f'First name:\"{name}\", Second name:\"{surname}\", Phone numbers:{telephone}'",
+        "peekOfCode": "def multi(a, c):\n    result = int(a * c)\n    print(result)\n    return result\ndef divide(a, b):\n    result = int(a / b)\n    print(result)\n    return result\ndef staff_book(name, surname):\n    result = f'First name:\"{name}\", Second name:\"{surname}\"'",
         "detail": "test_function.my_function",
         "documentation": {}
     },
@@ -170,7 +170,7 @@
         "kind": 2,
         "importPath": "test_function.my_function",
         "description": "test_function.my_function",
-        "peekOfCode": "def divide(a, b):\n    result = f'result:', int(a / b)\n    print(result)\n    return result\ndef staff_book(name, surname, telephone):\n    result = f'First name:\"{name}\", Second name:\"{surname}\", Phone numbers:{telephone}'\n    print(result, int(telephone))\n    return result\ndef sum_not_exist():\n    result =(a + b) + 12",
+        "peekOfCode": "def divide(a, b):\n    result = int(a / b)\n    print(result)\n    return result\ndef staff_book(name, surname):\n    result = f'First name:\"{name}\", Second name:\"{surname}\"'\n    print(result)\n    return result\ndef sum_not_exist(a, b):\n    result = (a + b) + 12",
         "detail": "test_function.my_function",
         "documentation": {}
     },
@@ -179,7 +179,7 @@
         "kind": 2,
         "importPath": "test_function.my_function",
         "description": "test_function.my_function",
-        "peekOfCode": "def staff_book(name, surname, telephone):\n    result = f'First name:\"{name}\", Second name:\"{surname}\", Phone numbers:{telephone}'\n    print(result, int(telephone))\n    return result\ndef sum_not_exist():\n    result =(a + b) + 12\n    print(result)\n    return result",
+        "peekOfCode": "def staff_book(name, surname):\n    result = f'First name:\"{name}\", Second name:\"{surname}\"'\n    print(result)\n    return result\ndef sum_not_exist(a, b):\n    result = (a + b) + 12\n    print(result)\n    return result",
         "detail": "test_function.my_function",
         "documentation": {}
     },
@@ -188,7 +188,7 @@
         "kind": 2,
         "importPath": "test_function.my_function",
         "description": "test_function.my_function",
-        "peekOfCode": "def sum_not_exist():\n    result =(a + b) + 12\n    print(result)\n    return result",
+        "peekOfCode": "def sum_not_exist(a, b):\n    result = (a + b) + 12\n    print(result)\n    return result",
         "detail": "test_function.my_function",
         "documentation": {}
     },
@@ -206,7 +206,7 @@
         "kind": 5,
         "importPath": "test_function.my_json_testing",
         "description": "test_function.my_json_testing",
-        "peekOfCode": "data = json.loads(str_json)\nprint(type(data))\nvalue_week = data['weekday']['Monday']\nprint(value_week)\nvalue_week1 = data['weekend']['Sunday']\nprint(value_week1)\nwith open('../staff.json', 'w') as file:\n    json.dump(data, file, indent=3)",
+        "peekOfCode": "data = json.loads(str_json)\nprint(type(data))\nvalue_week = data['weekday']['Monday']\nprint(value_week)\nvalue_week1 = data['weekend']['Sunday']\nprint(value_week1)\nwith open('../staff.json', 'r') as file:\n    json.dump(data, file, indent=3)",
         "detail": "test_function.my_json_testing",
         "documentation": {}
     },
@@ -215,7 +215,7 @@
         "kind": 5,
         "importPath": "test_function.my_json_testing",
         "description": "test_function.my_json_testing",
-        "peekOfCode": "value_week = data['weekday']['Monday']\nprint(value_week)\nvalue_week1 = data['weekend']['Sunday']\nprint(value_week1)\nwith open('../staff.json', 'w') as file:\n    json.dump(data, file, indent=3)",
+        "peekOfCode": "value_week = data['weekday']['Monday']\nprint(value_week)\nvalue_week1 = data['weekend']['Sunday']\nprint(value_week1)\nwith open('../staff.json', 'r') as file:\n    json.dump(data, file, indent=3)",
         "detail": "test_function.my_json_testing",
         "documentation": {}
     },
@@ -224,7 +224,7 @@
         "kind": 5,
         "importPath": "test_function.my_json_testing",
         "description": "test_function.my_json_testing",
-        "peekOfCode": "value_week1 = data['weekend']['Sunday']\nprint(value_week1)\nwith open('../staff.json', 'w') as file:\n    json.dump(data, file, indent=3)",
+        "peekOfCode": "value_week1 = data['weekend']['Sunday']\nprint(value_week1)\nwith open('../staff.json', 'r') as file:\n    json.dump(data, file, indent=3)",
         "detail": "test_function.my_json_testing",
         "documentation": {}
     },
@@ -260,7 +260,7 @@
         "kind": 2,
         "importPath": "test_function.test_function",
         "description": "test_function.test_function",
-        "peekOfCode": "def test_sum_plius():\n    assert my_function.plius(5, 7) == 12\n    assert my_function.plius(10, 20) == 30\n    assert my_function.plius(10, 20) != 12\ndef test_sum_minus():\n    assert my_function.minus(10, 2) == ('summa:', 8)\n    assert my_function.minus(9, 2) != ('summa:', 12)\ndef test_sum_multiplay():\n    assert my_function.multi(10, 5) == ('result:', 50)\n    assert my_function.multi(9, 2) != ('result:', 20)",
+        "peekOfCode": "def test_sum_plius():\n    assert my_function.plius(5, 7) == 12\n    assert my_function.plius(10, 20) == 30\n    assert my_function.plius(10, 20) != 12\ndef test_sum_minus():\n    assert my_function.minus(10, 2) == 8\n    assert my_function.minus(9, 2) != 12\ndef test_sum_multiplay():\n    assert my_function.multi(10, 5) == 50\n    assert my_function.multi(9, 2) != 20",
         "detail": "test_function.test_function",
         "documentation": {}
     },
@@ -269,7 +269,7 @@
         "kind": 2,
         "importPath": "test_function.test_function",
         "description": "test_function.test_function",
-        "peekOfCode": "def test_sum_minus():\n    assert my_function.minus(10, 2) == ('summa:', 8)\n    assert my_function.minus(9, 2) != ('summa:', 12)\ndef test_sum_multiplay():\n    assert my_function.multi(10, 5) == ('result:', 50)\n    assert my_function.multi(9, 2) != ('result:', 20)\n    assert my_function.multi(1, 5) != 'result:', 50\ndef test_num_divide():\n    assert my_function.divide(10, 2) == ('result:', 5)\n    assert my_function.divide(20, 2) == ('result:', 10)",
+        "peekOfCode": "def test_sum_minus():\n    assert my_function.minus(10, 2) == 8\n    assert my_function.minus(9, 2) != 12\ndef test_sum_multiplay():\n    assert my_function.multi(10, 5) == 50\n    assert my_function.multi(9, 2) != 20\n    assert my_function.multi(1, 5) != 50\ndef test_num_divide():\n    assert my_function.divide(10, 2) == 5\n    assert my_function.divide(20, 2) == 10",
         "detail": "test_function.test_function",
         "documentation": {}
     },
@@ -278,7 +278,7 @@
         "kind": 2,
         "importPath": "test_function.test_function",
         "description": "test_function.test_function",
-        "peekOfCode": "def test_sum_multiplay():\n    assert my_function.multi(10, 5) == ('result:', 50)\n    assert my_function.multi(9, 2) != ('result:', 20)\n    assert my_function.multi(1, 5) != 'result:', 50\ndef test_num_divide():\n    assert my_function.divide(10, 2) == ('result:', 5)\n    assert my_function.divide(20, 2) == ('result:', 10)\ndef test_staff_book():\n    assert my_function.staff_book(\n        'Tania', 'Bal', 20",
+        "peekOfCode": "def test_sum_multiplay():\n    assert my_function.multi(10, 5) == 50\n    assert my_function.multi(9, 2) != 20\n    assert my_function.multi(1, 5) != 50\ndef test_num_divide():\n    assert my_function.divide(10, 2) == 5\n    assert my_function.divide(20, 2) == 10\ndef test_staff_book():\n    assert my_function.staff_book(\n        'Tania', 'Bal'",
         "detail": "test_function.test_function",
         "documentation": {}
     },
@@ -287,7 +287,7 @@
         "kind": 2,
         "importPath": "test_function.test_function",
         "description": "test_function.test_function",
-        "peekOfCode": "def test_num_divide():\n    assert my_function.divide(10, 2) == ('result:', 5)\n    assert my_function.divide(20, 2) == ('result:', 10)\ndef test_staff_book():\n    assert my_function.staff_book(\n        'Tania', 'Bal', 20\n        ) == 'First name:\"Tania\", Second name:\"Bal\", Phone numbers:20'\n    assert my_function.staff_book(\n        'Lena', 'Ross', 34\n        ) == 'First name:\"Lena\", Second name:\"Ross\", Phone numbers:34'",
+        "peekOfCode": "def test_num_divide():\n    assert my_function.divide(10, 2) == 5\n    assert my_function.divide(20, 2) == 10\ndef test_staff_book():\n    assert my_function.staff_book(\n        'Tania', 'Bal'\n    ) == 'First name:\"Tania\", Second name:\"Bal\"'\n    assert my_function.staff_book(\n        'Lena', 'Ross'\n        ) == 'First name:\"Lena\", Second name:\"Ross\"'",
         "detail": "test_function.test_function",
         "documentation": {}
     },
@@ -296,7 +296,7 @@
         "kind": 2,
         "importPath": "test_function.test_function",
         "description": "test_function.test_function",
-        "peekOfCode": "def test_staff_book():\n    assert my_function.staff_book(\n        'Tania', 'Bal', 20\n        ) == 'First name:\"Tania\", Second name:\"Bal\", Phone numbers:20'\n    assert my_function.staff_book(\n        'Lena', 'Ross', 34\n        ) == 'First name:\"Lena\", Second name:\"Ross\", Phone numbers:34'\ndef Test_string_should_failed():\n    with pytest.raises(ZeroDivisionError):\n        assert my_function.staff_book(\"A\", \"B\")",
+        "peekOfCode": "def test_staff_book():\n    assert my_function.staff_book(\n        'Tania', 'Bal'\n    ) == 'First name:\"Tania\", Second name:\"Bal\"'\n    assert my_function.staff_book(\n        'Lena', 'Ross'\n        ) == 'First name:\"Lena\", Second name:\"Ross\"'\ndef Test_string_should_failed():\n    with pytest.raises(ZeroDivisionError):\n        assert my_function.staff_book(\"A\", \"B\")",
         "detail": "test_function.test_function",
         "documentation": {}
     },
@@ -341,7 +341,7 @@
         "kind": 2,
         "importPath": "mymodule",
         "description": "mymodule",
-        "peekOfCode": "def open_staff_file(file_name, file_delimiter):\n    dict_staff = {}\n    for_staff_file = open(file_name, 'r')\n    for line in for_staff_file:\n        if file_delimiter in line:\n            (key, val) = line.split(file_delimiter)\n            key.strip()\n            val.strip('\\n')\n            key.strip()\n            val.strip('\\n')",
+        "peekOfCode": "def open_staff_file(file_name, file_delimiter):\n    dict_staff = {}\n    try:\n        for_staff_file = open(file_name, \"r\", encoding=\"utf-8\")\n        for line in for_staff_file:\n            if file_delimiter in line:\n                (key, val) = line.split(file_delimiter)\n                key.strip()\n                val.strip('\\n')\n                key.strip()",
         "detail": "mymodule",
         "documentation": {}
     },
@@ -350,7 +350,7 @@
         "kind": 2,
         "importPath": "mymodule",
         "description": "mymodule",
-        "peekOfCode": "def work_with_db_xml_staff_shift(file_name: xml, key_name: str, val_name: str):\n    dict = {}\n    # try:\n    tree = ET.parse(file_name)\n    root = tree.getroot()\n    element = tree.iter()\n    for child in element:\n        keys = child.attrib.keys()\n        if key_name in keys and val_name in keys:\n            key = child.attrib[key_name]",
+        "peekOfCode": "def work_with_db_xml_staff_shift(file_name, key_name, val_name):\n    xml_dict = {}\n    try:\n        tree = ET.parse(file_name)\n        element = tree.iter()\n        for child in element:\n            keys = child.attrib.keys()\n            if key_name in keys and val_name in keys:\n                key = child.attrib[key_name]\n                val = child.attrib[val_name]",
         "detail": "mymodule",
         "documentation": {}
     },
@@ -359,7 +359,7 @@
         "kind": 2,
         "importPath": "mymodule",
         "description": "mymodule",
-        "peekOfCode": "def work_with_db_json_staff_shift(file_name, root_node_name):\n    pass\n    dict_staff_json = {}\n    file_object = open(file_name)\n    try:\n        dict_staff_json = json.load(file_object)\n    except JSONDecodeError:\n        return {}\n    if root_node_name not in dict_staff_json.keys():\n        return {}",
+        "peekOfCode": "def work_with_db_json_staff_shift(file_name, root_node_name):\n    json_dict = {}\n    file_object = open(file_name, encoding=\"utf-8\")\n    try:\n        json_dict = json.load(file_object)\n    except JSONDecodeError:\n        return {}\n    if root_node_name not in json_dict.keys():\n        return {}\n    return json_dict[root_node_name]",
         "detail": "mymodule",
         "documentation": {}
     },
@@ -368,7 +368,7 @@
         "kind": 5,
         "importPath": "mymodule",
         "description": "mymodule",
-        "peekOfCode": "NAME = \"mymodule\"\ndef open_staff_file(file_name, file_delimiter):\n    dict_staff = {}\n    for_staff_file = open(file_name, 'r')\n    for line in for_staff_file:\n        if file_delimiter in line:\n            (key, val) = line.split(file_delimiter)\n            key.strip()\n            val.strip('\\n')\n            key.strip()",
+        "peekOfCode": "NAME = \"mymodule\"\n\"\"\"\n    function is open files an return dictionary\n\"\"\"\ndef open_staff_file(file_name, file_delimiter):\n    dict_staff = {}\n    try:\n        for_staff_file = open(file_name, \"r\", encoding=\"utf-8\")\n        for line in for_staff_file:\n            if file_delimiter in line:",
         "detail": "mymodule",
         "documentation": {}
     },
@@ -476,7 +476,7 @@
         "kind": 2,
         "importPath": "test_mymodule_json",
         "description": "test_mymodule_json",
-        "peekOfCode": "def work_with_db_json_staff_shift():\n    assert mymodule.NAME == \"mymodule\"\ndef test_empty_json_shut_return_empty_dictionary():\n    dict_empty = mymodule.work_with_db_json_staff_shift(\n        \"staff_empty_file.json\", ''\n        )\n    assert len(dict_empty) == 0\ndef test_not_empty_json_shut_retur_not_emthy_dictionary():\n    pass\n    file_with_data = mymodule.work_with_db_json_staff_shift(",
+        "peekOfCode": "def work_with_db_json_staff_shift():\n    assert mymodule.NAME == \"mymodule\"\ndef test_empty_json_shut_return_empty_dictionary():\n    dict_empty = mymodule.work_with_db_json_staff_shift(\n        \"staff_empty_file.json\", ''\n    )\n    assert len(dict_empty) == 0\ndef test_not_empty_json_shut_retur_not_emthy_dictionary():\n    file_with_data = mymodule.work_with_db_json_staff_shift(\n        \"staff.json\", 'weekday'",
         "detail": "test_mymodule_json",
         "documentation": {}
     },
@@ -485,7 +485,7 @@
         "kind": 2,
         "importPath": "test_mymodule_json",
         "description": "test_mymodule_json",
-        "peekOfCode": "def test_empty_json_shut_return_empty_dictionary():\n    dict_empty = mymodule.work_with_db_json_staff_shift(\n        \"staff_empty_file.json\", ''\n        )\n    assert len(dict_empty) == 0\ndef test_not_empty_json_shut_retur_not_emthy_dictionary():\n    pass\n    file_with_data = mymodule.work_with_db_json_staff_shift(\n        \"staff.json\", 'weekday'\n    )",
+        "peekOfCode": "def test_empty_json_shut_return_empty_dictionary():\n    dict_empty = mymodule.work_with_db_json_staff_shift(\n        \"staff_empty_file.json\", ''\n    )\n    assert len(dict_empty) == 0\ndef test_not_empty_json_shut_retur_not_emthy_dictionary():\n    file_with_data = mymodule.work_with_db_json_staff_shift(\n        \"staff.json\", 'weekday'\n    )\n    assert len(file_with_data) == 5",
         "detail": "test_mymodule_json",
         "documentation": {}
     },
@@ -494,7 +494,7 @@
         "kind": 2,
         "importPath": "test_mymodule_json",
         "description": "test_mymodule_json",
-        "peekOfCode": "def test_not_empty_json_shut_retur_not_emthy_dictionary():\n    pass\n    file_with_data = mymodule.work_with_db_json_staff_shift(\n        \"staff.json\", 'weekday'\n    )\n    assert len(file_with_data) == 5\ndef test_json_valid_shut_return_valid_dictionary():\n    pass\n    persons = mymodule.work_with_db_json_staff_shift(\"staff_name_surname.json\",\n                                                     'person')",
+        "peekOfCode": "def test_not_empty_json_shut_retur_not_emthy_dictionary():\n    file_with_data = mymodule.work_with_db_json_staff_shift(\n        \"staff.json\", 'weekday'\n    )\n    assert len(file_with_data) == 5\ndef test_json_valid_shut_return_valid_dictionary():\n    pass\n    persons = mymodule.work_with_db_json_staff_shift(\"staff_name_surname.json\",\n                                                     'person')\n    assert persons['Denis'] == 'Petrov'",
         "detail": "test_mymodule_json",
         "documentation": {}
     },
@@ -512,7 +512,7 @@
         "kind": 2,
         "importPath": "test_mymodule_json",
         "description": "test_mymodule_json",
-        "peekOfCode": "def test_json_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_db_json_staff_shift(\n        \"staff_position.json\", 'person'\n        )\n    assert len(valid_dictionary) == 1\ndef test_json_not_root__should_return_empty_dict():\n    pass\n    dict = mymodule.work_with_db_json_staff_shift(\n        \"staff_position.json\", ':::')\n    assert len(dict) == 0",
+        "peekOfCode": "def test_json_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_db_json_staff_shift(\n        \"staff_position.json\", 'person'\n    )\n    assert len(valid_dictionary) == 1\ndef test_json_not_root__should_return_empty_dict():\n    pass\n    dict = mymodule.work_with_db_json_staff_shift(\n        \"staff_position.json\", ':::')\n    assert len(dict) == 0",
         "detail": "test_mymodule_json",
         "documentation": {}
     },
@@ -530,7 +530,7 @@
         "kind": 2,
         "importPath": "test_mymodule_json",
         "description": "test_mymodule_json",
-        "peekOfCode": "def test_3_line_json_shut_retur_3_itiems():\n    line_test = mymodule.work_with_db_json_staff_shift(\n        \"staff_name_surname.json\", 'person')\n    assert len(line_test) == 3\ndef test_1_line_json_shut_retur_1_itiems():\n    test_1_line = mymodule.work_with_db_json_staff_shift(\n        \"staff_position.json\", 'person'\n        )\n    assert len(test_1_line) == 1",
+        "peekOfCode": "def test_3_line_json_shut_retur_3_itiems():\n    line_test = mymodule.work_with_db_json_staff_shift(\n        \"staff_name_surname.json\", 'person')\n    assert len(line_test) == 3\ndef test_1_line_json_shut_retur_1_itiems():\n    test_1_line = mymodule.work_with_db_json_staff_shift(\n        \"staff_position.json\", 'person'\n    )\n    assert len(test_1_line) == 1",
         "detail": "test_mymodule_json",
         "documentation": {}
     },
@@ -539,8 +539,80 @@
         "kind": 2,
         "importPath": "test_mymodule_json",
         "description": "test_mymodule_json",
-        "peekOfCode": "def test_1_line_json_shut_retur_1_itiems():\n    test_1_line = mymodule.work_with_db_json_staff_shift(\n        \"staff_position.json\", 'person'\n        )\n    assert len(test_1_line) == 1",
+        "peekOfCode": "def test_1_line_json_shut_retur_1_itiems():\n    test_1_line = mymodule.work_with_db_json_staff_shift(\n        \"staff_position.json\", 'person'\n    )\n    assert len(test_1_line) == 1",
         "detail": "test_mymodule_json",
+        "documentation": {}
+    },
+    {
+        "label": "test_modul_name_is_valid",
+        "kind": 2,
+        "importPath": "test_mymodule_txt",
+        "description": "test_mymodule_txt",
+        "peekOfCode": "def test_modul_name_is_valid():\n    assert mymodule.NAME == \"mymodule\"\ndef test_empty_file_shut_return_empty_dictionary():\n    dict_empty = mymodule.open_staff_file(\n        \"test_function/staff_empty_file.txt\", ':')\n    assert len(dict_empty) == 0\ndef test_not_emthy_file_shut_retur_not_emthy_dictionary():\n    file_with_data = mymodule.open_staff_file(\"staff_week_day.txt\", ':')\n    assert file_with_data['Wednesday'] == '10.am-5.pm\\n'\ndef test_delimiter_comma_shut_retur_valid_dictionary():",
+        "detail": "test_mymodule_txt",
+        "documentation": {}
+    },
+    {
+        "label": "test_empty_file_shut_return_empty_dictionary",
+        "kind": 2,
+        "importPath": "test_mymodule_txt",
+        "description": "test_mymodule_txt",
+        "peekOfCode": "def test_empty_file_shut_return_empty_dictionary():\n    dict_empty = mymodule.open_staff_file(\n        \"test_function/staff_empty_file.txt\", ':')\n    assert len(dict_empty) == 0\ndef test_not_emthy_file_shut_retur_not_emthy_dictionary():\n    file_with_data = mymodule.open_staff_file(\"staff_week_day.txt\", ':')\n    assert file_with_data['Wednesday'] == '10.am-5.pm\\n'\ndef test_delimiter_comma_shut_retur_valid_dictionary():\n    persons = mymodule.open_staff_file(\n        \"test_function/staff_name_surname.txt\", ','",
+        "detail": "test_mymodule_txt",
+        "documentation": {}
+    },
+    {
+        "label": "test_not_emthy_file_shut_retur_not_emthy_dictionary",
+        "kind": 2,
+        "importPath": "test_mymodule_txt",
+        "description": "test_mymodule_txt",
+        "peekOfCode": "def test_not_emthy_file_shut_retur_not_emthy_dictionary():\n    file_with_data = mymodule.open_staff_file(\"staff_week_day.txt\", ':')\n    assert file_with_data['Wednesday'] == '10.am-5.pm\\n'\ndef test_delimiter_comma_shut_retur_valid_dictionary():\n    persons = mymodule.open_staff_file(\n        \"test_function/staff_name_surname.txt\", ','\n        )\n    assert persons.get(\"Denis\") == \"Petrov\\n\"\n    assert persons.get(\"Tania\") == \"Bal\\n\"\n    assert persons.get(\"Lana\") == \"Mel\"",
+        "detail": "test_mymodule_txt",
+        "documentation": {}
+    },
+    {
+        "label": "test_delimiter_comma_shut_retur_valid_dictionary",
+        "kind": 2,
+        "importPath": "test_mymodule_txt",
+        "description": "test_mymodule_txt",
+        "peekOfCode": "def test_delimiter_comma_shut_retur_valid_dictionary():\n    persons = mymodule.open_staff_file(\n        \"test_function/staff_name_surname.txt\", ','\n        )\n    assert persons.get(\"Denis\") == \"Petrov\\n\"\n    assert persons.get(\"Tania\") == \"Bal\\n\"\n    assert persons.get(\"Lana\") == \"Mel\"\ndef test_delimiter_slash_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.open_staff_file(\n        \"test_function/staff_position.txt\", '/'",
+        "detail": "test_mymodule_txt",
+        "documentation": {}
+    },
+    {
+        "label": "test_delimiter_slash_shut_retur_valid_dictionary",
+        "kind": 2,
+        "importPath": "test_mymodule_txt",
+        "description": "test_mymodule_txt",
+        "peekOfCode": "def test_delimiter_slash_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.open_staff_file(\n        \"test_function/staff_position.txt\", '/'\n        )\n    assert valid_dictionary['Tomas'] == 'web developer'\ndef test_not_valid_delimiter_shud_trow_error():\n    dict = mymodule.open_staff_file(\"test_function/staff_position.txt\", ':::')\n    assert len(dict) == 0\ndef test_3_line_file_shut_retur_3_itiems():\n    line_test = mymodule.open_staff_file(",
+        "detail": "test_mymodule_txt",
+        "documentation": {}
+    },
+    {
+        "label": "test_not_valid_delimiter_shud_trow_error",
+        "kind": 2,
+        "importPath": "test_mymodule_txt",
+        "description": "test_mymodule_txt",
+        "peekOfCode": "def test_not_valid_delimiter_shud_trow_error():\n    dict = mymodule.open_staff_file(\"test_function/staff_position.txt\", ':::')\n    assert len(dict) == 0\ndef test_3_line_file_shut_retur_3_itiems():\n    line_test = mymodule.open_staff_file(\n        \"test_function/staff_name_surname.txt\", ',')\n    assert len(line_test) == 3\ndef test_1_line_file_shut_retur_1_itiems():\n    test_1_line = len(mymodule.open_staff_file(\n        \"test_function/staff_position.txt\", '/')",
+        "detail": "test_mymodule_txt",
+        "documentation": {}
+    },
+    {
+        "label": "test_3_line_file_shut_retur_3_itiems",
+        "kind": 2,
+        "importPath": "test_mymodule_txt",
+        "description": "test_mymodule_txt",
+        "peekOfCode": "def test_3_line_file_shut_retur_3_itiems():\n    line_test = mymodule.open_staff_file(\n        \"test_function/staff_name_surname.txt\", ',')\n    assert len(line_test) == 3\ndef test_1_line_file_shut_retur_1_itiems():\n    test_1_line = len(mymodule.open_staff_file(\n        \"test_function/staff_position.txt\", '/')\n                      )\n    assert test_1_line == 1",
+        "detail": "test_mymodule_txt",
+        "documentation": {}
+    },
+    {
+        "label": "test_1_line_file_shut_retur_1_itiems",
+        "kind": 2,
+        "importPath": "test_mymodule_txt",
+        "description": "test_mymodule_txt",
+        "peekOfCode": "def test_1_line_file_shut_retur_1_itiems():\n    test_1_line = len(mymodule.open_staff_file(\n        \"test_function/staff_position.txt\", '/')\n                      )\n    assert test_1_line == 1",
+        "detail": "test_mymodule_txt",
         "documentation": {}
     }
 ]

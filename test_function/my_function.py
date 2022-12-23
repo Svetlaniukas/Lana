@@ -28,32 +28,31 @@ def plius(a, b):
     return result
 
 
-def minus(b, c):
-    result = f'summa:', int(b - c)
+def minus(a, c):
+    result = int(a - c)
     print(result)
     return result
 
 
 def multi(a, c):
-    result = f'result:', int(a * c)
+    result = int(a * c)
     print(result)
     return result
 
 
 def divide(a, b):
-    result = f'result:', int(a / b)
+    result = int(a / b)
     print(result)
     return result
 
 
-def staff_book(name, surname, telephone):
-    result = f'First name:"{name}", Second name:"{surname}", Phone numbers:{telephone}'
-    print(result, int(telephone))
-    return result
-
-
-def sum_not_exist():
-    result =(a + b) + 12
+def staff_book(name, surname):
+    result = f'First name:"{name}", Second name:"{surname}"'
     print(result)
     return result
 
+
+def sum_not_exist(a, b):
+    result = (a + b) + 12
+    print(result)
+    return result
