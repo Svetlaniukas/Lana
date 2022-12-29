@@ -77,6 +77,15 @@
         "documentation": {}
     },
     {
+        "label": "sqlite3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlite3",
+        "description": "sqlite3",
+        "detail": "sqlite3",
+        "documentation": {}
+    },
+    {
         "label": "xml",
         "kind": 6,
         "isExtraImport": true,
@@ -337,6 +346,15 @@
         "documentation": {}
     },
     {
+        "label": "shift",
+        "kind": 5,
+        "importPath": "my_sql_lite_db",
+        "description": "my_sql_lite_db",
+        "peekOfCode": "shift = [\n         (\"Monday\", \"10.am-4.pm\"),\n         (\"Tuesday\", \"9.am-3.pm\"),\n         (\"Wednesday\", \"10.am-5.pm\"),\n         (\"Thursday\", \"10am-4pm\"),\n         (\"Friday\", \"8am-4pm\")\n         (\"Saturday\", \"10.am-5.pm\"),\n         (\"Sunday\", \"8am- 4pm\")\n]\nwith sqlite3.connect(\"staff_shift.db\") as con:",
+        "detail": "my_sql_lite_db",
+        "documentation": {}
+    },
+    {
         "label": "open_staff_file",
         "kind": 2,
         "importPath": "mymodule",
@@ -406,6 +424,69 @@
         "description": "test_app",
         "peekOfCode": "def test_index_contain_staff_shift_weekend(weekend):\n    response = app.test_client().get('/staff')\n    print(f'\"{weekend}\"')\n    assert 'Sunday' in response.data.decode('utf-8')",
         "detail": "test_app",
+        "documentation": {}
+    },
+    {
+        "label": "work_with_db_json_staff_shift",
+        "kind": 2,
+        "importPath": "test_mymodul_sql_lite",
+        "description": "test_mymodul_sql_lite",
+        "peekOfCode": "def work_with_db_json_staff_shift():\n    assert mymodule.NAME == \"mymodule\"\ndef test_not_empty_json_shut_retur_not_emthy_dictionary():\n    file_with_data = mymodule.work_with_db_json_staff_shift(\n        \"\"\n    )\n    assert len(file_with_data) == 5\ndef test_json_valid_shut_return_valid_dictionary():\n    pass\n    persons = mymodule.work_with_db_json_staff_shift(\"staff_name_surname.json\",",
+        "detail": "test_mymodul_sql_lite",
+        "documentation": {}
+    },
+    {
+        "label": "test_not_empty_json_shut_retur_not_emthy_dictionary",
+        "kind": 2,
+        "importPath": "test_mymodul_sql_lite",
+        "description": "test_mymodul_sql_lite",
+        "peekOfCode": "def test_not_empty_json_shut_retur_not_emthy_dictionary():\n    file_with_data = mymodule.work_with_db_json_staff_shift(\n        \"\"\n    )\n    assert len(file_with_data) == 5\ndef test_json_valid_shut_return_valid_dictionary():\n    pass\n    persons = mymodule.work_with_db_json_staff_shift(\"staff_name_surname.json\",\n                                                     'person')\n    assert persons['Denis'] == 'Petrov'",
+        "detail": "test_mymodul_sql_lite",
+        "documentation": {}
+    },
+    {
+        "label": "test_json_valid_shut_return_valid_dictionary",
+        "kind": 2,
+        "importPath": "test_mymodul_sql_lite",
+        "description": "test_mymodul_sql_lite",
+        "peekOfCode": "def test_json_valid_shut_return_valid_dictionary():\n    pass\n    persons = mymodule.work_with_db_json_staff_shift(\"staff_name_surname.json\",\n                                                     'person')\n    assert persons['Denis'] == 'Petrov'\n    assert persons['Tania'] == 'Bal'\n    assert persons['Lana'] == 'Mel'\ndef test_json_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_db_json_staff_shift(\n        \"staff_position.json\", 'person'",
+        "detail": "test_mymodul_sql_lite",
+        "documentation": {}
+    },
+    {
+        "label": "test_json_shut_retur_valid_dictionary",
+        "kind": 2,
+        "importPath": "test_mymodul_sql_lite",
+        "description": "test_mymodul_sql_lite",
+        "peekOfCode": "def test_json_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_db_json_staff_shift(\n        \"staff_position.json\", 'person'\n    )\n    assert len(valid_dictionary) == 1\ndef test_json_not_root__should_return_empty_dict():\n    pass\n    dict = mymodule.work_with_db_json_staff_shift(\n        \"staff_position.json\", ':::')\n    assert len(dict) == 0",
+        "detail": "test_mymodul_sql_lite",
+        "documentation": {}
+    },
+    {
+        "label": "test_json_not_root__should_return_empty_dict",
+        "kind": 2,
+        "importPath": "test_mymodul_sql_lite",
+        "description": "test_mymodul_sql_lite",
+        "peekOfCode": "def test_json_not_root__should_return_empty_dict():\n    pass\n    dict = mymodule.work_with_db_json_staff_shift(\n        \"staff_position.json\", ':::')\n    assert len(dict) == 0\ndef test_3_line_json_shut_retur_3_itiems():\n    line_test = mymodule.work_with_db_json_staff_shift(\n        \"staff_name_surname.json\", 'person')\n    assert len(line_test) == 3\ndef test_1_line_json_shut_retur_1_itiems():",
+        "detail": "test_mymodul_sql_lite",
+        "documentation": {}
+    },
+    {
+        "label": "test_3_line_json_shut_retur_3_itiems",
+        "kind": 2,
+        "importPath": "test_mymodul_sql_lite",
+        "description": "test_mymodul_sql_lite",
+        "peekOfCode": "def test_3_line_json_shut_retur_3_itiems():\n    line_test = mymodule.work_with_db_json_staff_shift(\n        \"staff_name_surname.json\", 'person')\n    assert len(line_test) == 3\ndef test_1_line_json_shut_retur_1_itiems():\n    test_1_line = mymodule.work_with_db_json_staff_shift(\n        \"staff_position.json\", 'person'\n    )\n    assert len(test_1_line) == 1",
+        "detail": "test_mymodul_sql_lite",
+        "documentation": {}
+    },
+    {
+        "label": "test_1_line_json_shut_retur_1_itiems",
+        "kind": 2,
+        "importPath": "test_mymodul_sql_lite",
+        "description": "test_mymodul_sql_lite",
+        "peekOfCode": "def test_1_line_json_shut_retur_1_itiems():\n    test_1_line = mymodule.work_with_db_json_staff_shift(\n        \"staff_position.json\", 'person'\n    )\n    assert len(test_1_line) == 1",
+        "detail": "test_mymodul_sql_lite",
         "documentation": {}
     },
     {
