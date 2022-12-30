@@ -1,10 +1,13 @@
 """
     module is open different types of files and return dictionary
 """
+import configparser
 import xml
 import xml.etree.ElementTree as ET
 from json import JSONDecodeError
 import json
+import sqlite3
+
 
 NAME = "mymodule"
 
@@ -67,3 +70,30 @@ def work_with_db_json_staff_shift(file_name, root_node_name):
     if root_node_name not in json_dict.keys():
         return {}
     return json_dict[root_node_name]
+
+
+"""
+    function is open sql_lite_db_files and return dictionary
+"""
+
+
+def work_with_sql_lite_db_files(file_db, key_name, val_name):
+    db_dict = {}
+    try:
+        con_db = sqlite3.connect('file_db', uri=True)
+        file_db = con_db.configparser()
+        for key_name in file_db:
+            keys = file_db.fetchall.keys()()
+            if key_name in file_db and val_name in keys():
+               key = [key_name]
+               val = [val_name]
+            db_dict[key] = val
+    except AttributeError:
+        print('exceptation')
+    return db_dict
+
+
+def work_with_sql1_lite_db_files():
+    con_db = sqlite3.connect('db_file')
+    configparser.commit()
+    return con_db
