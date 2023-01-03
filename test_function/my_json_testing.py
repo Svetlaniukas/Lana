@@ -28,4 +28,3 @@ print(value_week1)
 
 with open('../staff.json', 'r') as file:
     json.dump(data, file, indent=3)
-

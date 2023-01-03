@@ -1,12 +1,12 @@
 """
     module is open different types of files and return dictionary
 """
-import configparser
+
+import sqlite3
 import xml
 import xml.etree.ElementTree as ET
 from json import JSONDecodeError
 import json
-import sqlite3
 
 
 NAME = "mymodule"
@@ -77,23 +77,23 @@ def work_with_db_json_staff_shift(file_name, root_node_name):
 """
 
 
-def work_with_sql_lite_db_files(file_db, key_name, val_name):
+def work_with_sql_lite_db_files(file_name, key_name, val_name):
     db_dict = {}
     try:
-        con_db = sqlite3.connect('file_db', uri=True)
-        file_db = con_db.configparser()
-        for key_name in file_db:
-            keys = file_db.fetchall.keys()()
-            if key_name in file_db and val_name in keys():
-               key = [key_name]
-               val = [val_name]
-            db_dict[key] = val
-    except AttributeError:
+        con = sqlite3.connect(file_name)
+        con.row_factory = sqlite3.Row
+        cur = con.cursor()
+        for keys in cur:
+            dict = cur.execute()
+            if key_name in dict and val_name in dict():
+                key = keys[key_name]
+                val = keys[val_name]
+                db_dict[key] = val
+    except AssertionError:
         print('exceptation')
     return db_dict
 
 
 def work_with_sql1_lite_db_files():
-    con_db = sqlite3.connect('db_file')
-    configparser.commit()
-    return con_db
+    con_db = sqlite3.connect()
+    return con_db.fetchall()
