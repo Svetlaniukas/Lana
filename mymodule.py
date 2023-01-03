@@ -84,8 +84,8 @@ def work_with_sql_lite_db_files(file_name, key_name, val_name):
         con.row_factory = sqlite3.Row
         cur = con.cursor()
         for keys in cur:
-            dict = cur.execute()
-            if key_name in dict and val_name in dict():
+            dict = cur.fetchall()
+            if key_name and val_name in dict():
                 key = keys[key_name]
                 val = keys[val_name]
                 db_dict[key] = val

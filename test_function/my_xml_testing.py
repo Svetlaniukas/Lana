@@ -2,16 +2,37 @@
 import sqlite3
 
 
-def work_with_sql_lite_db_files(file_db, key_name, val_name):
+def work_with_sql_lite_db_files(file_name, key_name, val_name):
+    db_dict = {}
+    try:
+        con = sqlite3.connect('staft_shift.db')
+        con.row_factory = sqlite3.Row
+        cur = con.cursor()
+        for keys in cur:
+            dict = cur.execute()
+            if key_name in dict and val_name in dict():
+                key = keys[key_name]
+                val = keys[val_name]
+                db_dict[key] = val
+    except AssertionError:
+        print('exceptation')
+    return db_dict
+
+
+
+
+
+
+def work1_with_sql_lite_db_files(key_name, val_name):
     db_dict = {}
     try:
         con = sqlite3.connect('staff_sfift.db')
         con.row_factory = sqlite3.Row
-        data = file_db.fetchall()
-        for sqlite3.Row.keys in data:
-            if key_name in data and val_name in data():
-                key = [key_name]
-                val = [val_name]
+        cur = con.cursor()
+        for keys in cur:
+            if key_name and val_name in cur():
+                key = keys[key_name]
+                val = keys[val_name]
                 db_dict[key] = val
     except AssertionError:
         print('exceptation')

@@ -1,21 +1,29 @@
-from ast import Attribute
-from platform import node
+
 import sqlite3
 
 
-def work_with_sql_lite_db_files(file_db, key_name, val_name):
+def work_with_sql_lite_db_files(file_name, key_name, val_name):
     db_dict = {}
+    con = sqlite3.connect(file_name)
     try:
-        con = sqlite3.connect()
         con.row_factory = sqlite3.Row
-        data = file_db.fetchall()
-        for key_name, val_name in con:
-            keys = con.keys()
-                for keys in con.row_factory:
-                    if key_name in Attribute and val_name Attribute:
-                    key = node.attr[key_name]
-                    val = sqlite3.Row.attr[val_name]
-                    db_dict[key] = val
+        db_dict = con.cursor()
+        for keys in db_dict:
+            dict = db_dict.execute()
+            if keys not in dict():
+                return{}
     except AssertionError:
         print('exceptation')
-    return db_dict
+    return keys.fromkeys()
+
+
+
+
+
+
+def work_with_sql_lite_db_files(file, key_name, val_name):
+    con = sqlite3.connect(file)
+    con.row_factory = sqlite3.Row
+    data = con.fetchall()
+    for result in data:
+        return result[key_name], result[val_name]
