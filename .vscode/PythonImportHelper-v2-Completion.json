@@ -1,10 +1,34 @@
 [
     {
+        "label": "ttk",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
         "label": "sqlite3",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "sqlite3",
         "description": "sqlite3",
+        "detail": "sqlite3",
+        "documentation": {}
+    },
+    {
+        "label": "Error",
+        "importPath": "sqlite3",
+        "description": "sqlite3",
+        "isExtraImport": true,
         "detail": "sqlite3",
         "documentation": {}
     },
@@ -120,20 +144,47 @@
         "documentation": {}
     },
     {
-        "label": "work_with_sql_lite_db_files",
-        "kind": 2,
+        "label": "Dictionary",
+        "kind": 6,
         "importPath": "test_function.my_db_testing",
         "description": "test_function.my_db_testing",
-        "peekOfCode": "def work_with_sql_lite_db_files(file_name, key_name, val_name):\n    db_dict = {}\n    con = sqlite3.connect(file_name)\n    try:\n        con.row_factory = sqlite3.Row\n        db_dict = con.cursor()\n        for keys in db_dict:\n            dict = db_dict.execute()\n            if keys not in dict():\n                return{}",
+        "peekOfCode": "class Dictionary:\n    db_name = 'dictionary.db'\n    def __init__(self, window):\n        self.wind = window\n        self.wind.title('Редактирование словаря')\n        # создание элементов для ввода слов и значений\n        frame = LabelFrame(self.wind, text='Введите новое слово')\n        frame.grid(row=0, column=0, columnspan=3, pady=20)\n        Label(frame, text='Слово: ').grid(row=1, column=0)\n        self.word = Entry(frame)",
         "detail": "test_function.my_db_testing",
         "documentation": {}
     },
     {
-        "label": "work_with_sql_lite_db_files",
+        "label": "edit_word",
         "kind": 2,
         "importPath": "test_function.my_db_testing",
         "description": "test_function.my_db_testing",
-        "peekOfCode": "def work_with_sql_lite_db_files(file, key_name, val_name):\n    con = sqlite3.connect(file)\n    con.row_factory = sqlite3.Row\n    data = con.fetchall()\n    for result in data:\n        return result[key_name], result[val_name]",
+        "peekOfCode": "def edit_word(self):\n    self.message['text'] = ''\n    try:\n        self.tree.item(self.tree.selection())['values'][0]\n    except IndexError as e:\n        self.message['text'] = 'Выберите слово для изменения'\n        return\n    word = self.tree.item(self.tree.selection())['text']\n    old_meaning = self.tree.item(self.tree.selection())['values'][0]\n    self.edit_wind = Toplevel()",
+        "detail": "test_function.my_db_testing",
+        "documentation": {}
+    },
+    {
+        "label": "edit_records",
+        "kind": 2,
+        "importPath": "test_function.my_db_testing",
+        "description": "test_function.my_db_testing",
+        "peekOfCode": "def edit_records(self, new_word, word, new_meaning, old_meaning):\n    query = 'UPDATE dictionary SET word = ?, meaning = ? WHERE word = ? AND meaning = ?'\n    parameters = (new_word, new_meaning, word, old_meaning)\n    self.run_query(query, parameters)\n    self.edit_wind.destroy()\n    self.message['text'] = 'слово {} успешно изменено'.format(word)\n    self.get_words()\nif __name__ == '__main__':\nwindow = Tk()\napplication = Dictionary(window)",
+        "detail": "test_function.my_db_testing",
+        "documentation": {}
+    },
+    {
+        "label": "window",
+        "kind": 5,
+        "importPath": "test_function.my_db_testing",
+        "description": "test_function.my_db_testing",
+        "peekOfCode": "window = Tk()\napplication = Dictionary(window)",
+        "detail": "test_function.my_db_testing",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "test_function.my_db_testing",
+        "description": "test_function.my_db_testing",
+        "peekOfCode": "application = Dictionary(window)",
         "detail": "test_function.my_db_testing",
         "documentation": {}
     },
@@ -435,20 +486,56 @@
         "documentation": {}
     },
     {
-        "label": "work_with_sql_lite_db_files",
+        "label": "run_query",
         "kind": 2,
         "importPath": "mymodule",
         "description": "mymodule",
-        "peekOfCode": "def work_with_sql_lite_db_files(file_name, key_name, val_name):\n    db_dict = {}\n    try:\n        con = sqlite3.connect(file_name)\n        con.row_factory = sqlite3.Row\n        cur = con.cursor()\n        for keys in cur:\n            dict = cur.fetchall()\n            if key_name and val_name in dict():\n                key = keys[key_name]",
+        "peekOfCode": "def run_query(self, query, parameters=()):\n    with sqlite3.connect(self.db_name) as conn:\n        cursor = conn.cursor()\n        result = cursor.execute(query, parameters)\n        conn.commit()\n    try:\n        result = cursor.fetchall()\n        return result\n    except sqlite3.Error as e:\n        print(f\"The error '{e}' occurred\")",
         "detail": "mymodule",
         "documentation": {}
     },
     {
-        "label": "work_with_sql1_lite_db_files",
+        "label": "create_connection",
         "kind": 2,
         "importPath": "mymodule",
         "description": "mymodule",
-        "peekOfCode": "def work_with_sql1_lite_db_files():\n    con_db = sqlite3.connect()\n    return con_db.fetchall()",
+        "peekOfCode": "def create_connection(db_file):\n    conn = None\n    try:\n        conn = sqlite3.connect(db_file)\n        return conn\n    except Error as e:\n        print(e)\n    return conn\ndef create_table(conn, create_table_sql):\n    try:",
+        "detail": "mymodule",
+        "documentation": {}
+    },
+    {
+        "label": "create_table",
+        "kind": 2,
+        "importPath": "mymodule",
+        "description": "mymodule",
+        "peekOfCode": "def create_table(conn, create_table_sql):\n    try:\n        c = conn.cursor()\n        c.execute(create_table_sql)\n    except Error as e:\n        print(e)\ndef main():\n    database = r\"file_name\"\n    # описание столбцов словаря - id номер, слово и значение\n    sql_create_dictionary_table = \"\"\" CREATE TABLE IF NOT EXISTS dictionary (",
+        "detail": "mymodule",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "mymodule",
+        "description": "mymodule",
+        "peekOfCode": "def main():\n    database = r\"file_name\"\n    # описание столбцов словаря - id номер, слово и значение\n    sql_create_dictionary_table = \"\"\" CREATE TABLE IF NOT EXISTS dictionary (\n                                        id integer PRIMARY KEY,\n                                        word text,\n                                        meaning text\n                                    ); \"\"\"\n    # подключение к базе\n    conn = create_connection(database)",
+        "detail": "mymodule",
+        "documentation": {}
+    },
+    {
+        "label": "run_query",
+        "kind": 2,
+        "importPath": "mymodule",
+        "description": "mymodule",
+        "peekOfCode": "def run_query(self, query, parameters=()):\n        with sqlite3.connect(self.db_name) as conn:\n            cursor = conn.cursor()\n            result = cursor.execute(query, parameters)\n            conn.commit()\n    # запрос на извлечение всех существующих записей из базы в алфавитном порядке\ndef get_words(self):\n        query = 'SELECT * FROM dictionary ORDER BY word DESC'\n        db_rows = self.run_query(query)\n        # формирование словаря из перемешанных в случайном порядке слов и их значений",
+        "detail": "mymodule",
+        "documentation": {}
+    },
+    {
+        "label": "get_words",
+        "kind": 2,
+        "importPath": "mymodule",
+        "description": "mymodule",
+        "peekOfCode": "def get_words(self):\n        query = 'SELECT * FROM dictionary ORDER BY word DESC'\n        db_rows = self.run_query(query)\n        # формирование словаря из перемешанных в случайном порядке слов и их значений\n        lst_left, lst_right = [], []\n    for row in db_rows:\n            lst_left.append(row[1])\n            lst_right.append(row[2])\n        random.shuffle(lst_left)\n        random.shuffle(lst_right)",
         "detail": "mymodule",
         "documentation": {}
     },
@@ -502,7 +589,7 @@
         "kind": 2,
         "importPath": "test_my_modul_sql",
         "description": "test_my_modul_sql",
-        "peekOfCode": "def work_with_db_sql_lite_staff_shift():\n    assert mymodule.NAME == \"mymodule\"\ndef test_empty_sql_lite_shut_return_empty_dictionary():\n    dict_empty = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\", 'day', 'time_shift')\n    assert len(dict_empty) == 0\ndef test_sql_lite_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\", 'day', 'time_shift')\n    assert len(persons) == 6",
+        "peekOfCode": "def work_with_db_sql_lite_staff_shift():\n    assert mymodule.NAME == \"mymodule\"\ndef test_empty_sql_lite_shut_return_empty_dictionary():\n    dict_empty = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\", 'day', 'time_shift')\n    assert len(dict_empty) == 0\ndef test_sql_lite_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\", 'time', 'time_shift')\n    assert persons(\"Monday\", \"10.am-4.pm\") == \"Monday\", \"10.am-4.pm\"",
         "detail": "test_my_modul_sql",
         "documentation": {}
     },
@@ -511,7 +598,7 @@
         "kind": 2,
         "importPath": "test_my_modul_sql",
         "description": "test_my_modul_sql",
-        "peekOfCode": "def test_empty_sql_lite_shut_return_empty_dictionary():\n    dict_empty = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\", 'day', 'time_shift')\n    assert len(dict_empty) == 0\ndef test_sql_lite_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\", 'day', 'time_shift')\n    assert len(persons) == 6\ndef test_sql_lite_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_sql_lite_db_files(",
+        "peekOfCode": "def test_empty_sql_lite_shut_return_empty_dictionary():\n    dict_empty = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\", 'day', 'time_shift')\n    assert len(dict_empty) == 0\ndef test_sql_lite_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\", 'time', 'time_shift')\n    assert persons(\"Monday\", \"10.am-4.pm\") == \"Monday\", \"10.am-4.pm\"\ndef test_sql_lite_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_sql_lite_db_files(",
         "detail": "test_my_modul_sql",
         "documentation": {}
     },
@@ -520,7 +607,7 @@
         "kind": 2,
         "importPath": "test_my_modul_sql",
         "description": "test_my_modul_sql",
-        "peekOfCode": "def test_sql_lite_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\", 'day', 'time_shift')\n    assert len(persons) == 6\ndef test_sql_lite_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\", 'time', 'time_shift')\n    assert valid_dictionary(\n        'Saturday', '10.am-5.pm') == 'Saturday', '10.am-5.pm'\ndef test_sql_lite_shut_return_exist_day_and_time():",
+        "peekOfCode": "def test_sql_lite_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\", 'time', 'time_shift')\n    assert persons(\"Monday\", \"10.am-4.pm\") == \"Monday\", \"10.am-4.pm\"\ndef test_sql_lite_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\", 'time', 'time_shift')\n    assert valid_dictionary(\n        'Saturday', '10.am-5.pm') == 'Saturday', '10.am-5.pm'\ndef test_sql_lite_shut_return_exist_day_and_time():",
         "detail": "test_my_modul_sql",
         "documentation": {}
     },
@@ -547,7 +634,7 @@
         "kind": 2,
         "importPath": "test_my_modul_sql",
         "description": "test_my_modul_sql",
-        "peekOfCode": "def test_7_line_sql_lite_shut_retur_7_itiems():\n    line_test = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\", 'day', 'time')\n    assert len(line_test) == 3\ndef test_1_line_sql_lite_shut_retur_1_itiems():\n    line_test = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\", 'day', 'time_shift'\n    )\n    assert len(line_test) ==",
+        "peekOfCode": "def test_7_line_sql_lite_shut_retur_7_itiems():\n    line_test = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\", 'day', 'time')\n    assert len(line_test) == 3\ndef test_1_line_sql_lite_shut_retur_1_itiems():\n    line_test = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\", 'day', 'time_shift'\n    )\n    assert len(line_test) == 7",
         "detail": "test_my_modul_sql",
         "documentation": {}
     },
@@ -556,7 +643,7 @@
         "kind": 2,
         "importPath": "test_my_modul_sql",
         "description": "test_my_modul_sql",
-        "peekOfCode": "def test_1_line_sql_lite_shut_retur_1_itiems():\n    line_test = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\", 'day', 'time_shift'\n    )\n    assert len(line_test) ==",
+        "peekOfCode": "def test_1_line_sql_lite_shut_retur_1_itiems():\n    line_test = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\", 'day', 'time_shift'\n    )\n    assert len(line_test) == 7",
         "detail": "test_my_modul_sql",
         "documentation": {}
     },
