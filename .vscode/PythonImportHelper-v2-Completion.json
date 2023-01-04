@@ -486,11 +486,11 @@
         "documentation": {}
     },
     {
-        "label": "run_query",
+        "label": "work_with_sql_lite_db_files",
         "kind": 2,
         "importPath": "mymodule",
         "description": "mymodule",
-        "peekOfCode": "def run_query(self, query, parameters=()):\n    with sqlite3.connect(self.db_name) as conn:\n        cursor = conn.cursor()\n        result = cursor.execute(query, parameters)\n        conn.commit()\n    try:\n        result = cursor.fetchall()\n        return result\n    except sqlite3.Error as e:\n        print(f\"The error '{e}' occurred\")",
+        "peekOfCode": "def work_with_sql_lite_db_files(self, query, parameters=()):\n    with sqlite3.connect(self.db_name) as conn:\n        cursor = conn.cursor()\n        result = cursor.execute(query, parameters)\n        conn.commit()\n    try:\n        result = cursor.fetchall()\n        return result\n    except sqlite3.Error as e:\n        print(f\"The error '{e}' occurred\")",
         "detail": "mymodule",
         "documentation": {}
     },

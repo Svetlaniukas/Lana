@@ -76,7 +76,7 @@ def work_with_db_json_staff_shift(file_name, root_node_name):
 """
 
 
-def run_query(self, query, parameters=()):
+def work_with_sql_lite_db_files(self, query, parameters=()):
     with sqlite3.connect(self.db_name) as conn:
         cursor = conn.cursor()
         result = cursor.execute(query, parameters)
