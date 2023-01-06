@@ -4,6 +4,68 @@ from tkinter import *
 import sqlite3
 
 
+def create_connection(db_file):
+    conn = None
+    try:
+        conn = sqlite3.connect(db_file)
+        return conn
+    except Error as e:
+        print(e)
+
+    return conn
+
+
+def create_table(conn, create_table_sql):
+    try:
+        c = conn.cursor()
+        c.execute(create_table_sql)
+    except Error as e:
+        print(e)
+
+
+def main():
+    database = r"file_name"
+    # описание столбцов словаря - id номер, слово и значение
+    sql_create_dictionary_table = """ CREATE TABLE IF NOT EXISTS dictionary (
+                                        id integer PRIMARY KEY,
+                                        word text,
+                                        meaning text
+                                    ); """
+
+    # подключение к базе
+    conn = create_connection(database)
+
+    # создание таблицы dictionary
+    if conn is not None:
+        create_table(conn, sql_create_dictionary_table)
+    else:
+        print("Ошибка: не удалось подключиться к базе.")
+
+
+if __name__ == '__main__':
+    main()
+
+
+def run_query(self, query, parameters=()):
+    with sqlite3.connect(self.db_name) as conn:
+        cursor = conn.cursor()
+        result = cursor.execute(query, parameters)
+        conn.commit()
+
+    # запрос на извлечение всех существующих записей из базы в алфавитном порядке
+
+
+def get_words(self):
+        query = 'SELECT * FROM dictionary ORDER BY word DESC'
+        db_rows = self.run_query(query)
+        # формирование словаря из перемешанных в случайном порядке слов и их значений
+        lst_left, lst_right = [], []
+        for row in db_rows:
+            lst_left.append(row[1])
+            lst_right.append(row[2])
+        random.shuffle(lst_left)
+        random.shuffle(lst_right)
+        dic = dict(zip(lst_left, lst_right))
 class Dictionary:
     db_name = 'dictionary.db'
 
@@ -140,5 +202,5 @@ def edit_records(self, new_word, word, new_meaning, old_meaning):
 
 
 if __name__ == '__main__':
-window = Tk()
+   window = Tk()
 application = Dictionary(window)

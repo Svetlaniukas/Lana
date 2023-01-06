@@ -2,10 +2,10 @@
 import sqlite3
 
 
-def work_with_sql_lite_db_files(file_name, key_name, val_name):
+def work_with2_sql_lite_db_files(file_name, key_name, val_name):
     db_dict = {}
     try:
-        con = sqlite3.connect('staft_shift.db')
+        con = sqlite3.connect(file_name)
         con.row_factory = sqlite3.Row
         cur = con.cursor()
         for keys in cur:
@@ -19,14 +19,10 @@ def work_with_sql_lite_db_files(file_name, key_name, val_name):
     return db_dict
 
 
-
-
-
-
 def work1_with_sql_lite_db_files(key_name, val_name):
     db_dict = {}
     try:
-        con = sqlite3.connect('staff_sfift.db')
+        con = sqlite3.connect()
         con.row_factory = sqlite3.Row
         cur = con.cursor()
         for keys in cur:

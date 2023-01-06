@@ -1,7 +1,6 @@
 """
     module is open different types of files and return dictionary
 """
-from sqlite3 import Error
 import xml
 import xml.etree.ElementTree as ET
 from json import JSONDecodeError
@@ -72,84 +71,22 @@ def work_with_db_json_staff_shift(file_name, root_node_name):
 
 
 """
-    function is open sql_lite_db_files and return dictionary
+   function is open sql_lite_db_files and return dictionary
 """
 
 
-def work_with_sql_lite_db_files(self, query, parameters=()):
-    with sqlite3.connect(self.db_name) as conn:
-        cursor = conn.cursor()
-        result = cursor.execute(query, parameters)
-        conn.commit()
+def work_with_sql_lite_db_files(db_data, time_table, key_name, val_name):
+    db_dict = {}
     try:
-        result = cursor.fetchall()
-        return result
-    except sqlite3.Error as e:
-        print(f"The error '{e}' occurred")
-        select_posts = "SELECT * FROM posts"
-        posts = execute_read_query(select_posts)
-
-        for post in posts:
-            print(post)
-            
-            
-def create_connection(db_file):
-    conn = None
-    try:
-        conn = sqlite3.connect(db_file)
-        return conn
-    except Error as e:
-        print(e)
-
-    return conn
-
-
-def create_table(conn, create_table_sql):
-    try:
-        c = conn.cursor()
-        c.execute(create_table_sql)
-    except Error as e:
-        print(e)
-
-
-def main():
-    database = r"file_name"
-    # описание столбцов словаря - id номер, слово и значение
-    sql_create_dictionary_table = """ CREATE TABLE IF NOT EXISTS dictionary (
-                                        id integer PRIMARY KEY,
-                                        word text,
-                                        meaning text
-                                    ); """
-
-    # подключение к базе
-    conn = create_connection(database)
-
-    # создание таблицы dictionary
-    if conn is not None:
-        create_table(conn, sql_create_dictionary_table)
-    else:
-        print("Ошибка: не удалось подключиться к базе.")
-
-
-if __name__ == '__main__':
-    main()
-
-
-def run_query(self, query, parameters=()):
-        with sqlite3.connect(self.db_name) as conn:
-            cursor = conn.cursor()
-            result = cursor.execute(query, parameters)
-            conn.commit()
-
-    # запрос на извлечение всех существующих записей из базы в алфавитном порядке
-def get_words(self):
-        query = 'SELECT * FROM dictionary ORDER BY word DESC'
-        db_rows = self.run_query(query)
-        # формирование словаря из перемешанных в случайном порядке слов и их значений
-        lst_left, lst_right = [], []
-    for row in db_rows:
-            lst_left.append(row[1])
-            lst_right.append(row[2])
-        random.shuffle(lst_left)
-        random.shuffle(lst_right)
-        dic = dict(zip(lst_left, lst_right))
+        with sqlite3.connect(db_data) as con:
+            cur = con.cursor()
+            query = "SELECT {},{} FROM {}".format(
+                time_table, key_name, val_name)
+            cur.execute(query)
+            rows = cur.fetchall()
+            for row in rows:
+                (key, value) = row
+                db_dict[key] = value
+    except(sqlite3.Error, sqlite3.OperationalError) as e:
+        print(f"The erroe '{e}' occurred")
+    return db_dict

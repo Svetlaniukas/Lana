@@ -1,43 +1,77 @@
 import mymodule
 
 
-def work_with_db_sql_lite_staff_shift():
+def work_with_db_jsql_staff_shift():
     assert mymodule.NAME == "mymodule"
 
 
-def test_empty_sql_lite_shut_return_empty_dictionary():
+def test_empty_sql_shut_return_empty_dictionary():
     dict_empty = mymodule.work_with_sql_lite_db_files(
-        "staff_shift.db", 'day', 'time_shift')
+        "staff_shift.db",
+        'time_table',
+        'day',
+        'time_shift'
+    )
     assert len(dict_empty) == 0
 
 
-def test_sql_lite_valid_shut_return_valid_dictionary():
+def test_not_empty_sql_shut_retur_not_emthy_dictionary():
+    staff_shift = mymodule.work_with_sql_lite_db_files(
+        "staff_shift.db",
+        'time_table',
+        'day',
+        'time_shift'
+    )
+    assert len(staff_shift) == 7
+
+
+def test_sql_valid_shut_return_valid_dictionary():
     persons = mymodule.work_with_sql_lite_db_files(
-        "staff_shift.db", 'time', 'time_shift')
-    assert persons("Monday", "10.am-4.pm") == "Monday", "10.am-4.pm"
+        "staff_shift.db",
+        'staff_name_surname',
+        'name',
+        "surname"
+    )
+    assert persons['Denis'] == 'Petrov'
+    assert persons['Tania'] == 'Bal'
+    assert persons['Lana'] == 'Mel'
 
 
-def test_sql_lite_shut_retur_valid_dictionary():
+def test_sql_shut_retur_valid_dictionary():
     valid_dictionary = mymodule.work_with_sql_lite_db_files(
-        "staff_shift.db", 'time', 'time_shift')
-    assert valid_dictionary(
-        'Saturday', '10.am-5.pm') == 'Saturday', '10.am-5.pm'
+        "staff_shift.db",
+        'staff_position',
+        'name'
+        'position'
+        )
+    assert len(valid_dictionary) == 1
 
 
-def test_sql_lite_shut_return_exist_day_and_time():
-    file_with_data = mymodule.work_with_sql_lite_db_files(
-        "staff_shift.db", 'day', 'time_shift')
-    assert file_with_data[0] == 'Monday', '10.am-4.pm'
+def test_sql_not_root__should_return_empty_dict():
+    dict = mymodule.work_with_sql_lite_db_files(
+        "staff_shift.db",
+        'time_table',
+        'day',
+        'time_shift'
+    )
+    assert len(dict) == 7
 
 
-def test_7_line_sql_lite_shut_retur_7_itiems():
+def test_3_line_sql_shut_retur_3_itiems():
     line_test = mymodule.work_with_sql_lite_db_files(
-        "staff_shift.db", 'day', 'time')
+        "staff_shift.db",
+        'time_table',
+        'day',
+        'time_shift'
+    )
     assert len(line_test) == 3
 
 
-def test_1_line_sql_lite_shut_retur_1_itiems():
-    line_test = mymodule.work_with_sql_lite_db_files(
-        "staff_shift.db", 'day', 'time_shift'
+def test_1_line_sql_shut_retur_1_itiems():
+    test_1_line = mymodule.work_with_sql_lite_db_files(
+        "staff_shift.db",
+        'time_table',
+        'day',
+        'time_shift'
     )
-    assert len(line_test) == 7
+    assert len(test_1_line) == 1
