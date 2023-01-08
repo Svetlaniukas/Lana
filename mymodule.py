@@ -6,7 +6,6 @@ import xml.etree.ElementTree as ET
 from json import JSONDecodeError
 import json
 import sqlite3
-
 NAME = "mymodule"
 
 """
@@ -70,23 +69,21 @@ def work_with_db_json_staff_shift(file_name, root_node_name):
     return json_dict[root_node_name]
 
 
-"""
-   function is open sql_lite_db_files and return dictionary
-"""
+"""Returns data from an SQL query as a list of dicts."""
 
 
-def work_with_sql_lite_db_files(db_data, time_table, key_name, val_name):
+def work_with_sql_lite_db_files(file_name, select_query, key_name, val_name):
     db_dict = {}
     try:
-        with sqlite3.connect(db_data) as con:
-            cur = con.cursor()
-            query = "SELECT {},{} FROM {}".format(
-                time_table, key_name, val_name)
-            cur.execute(query)
-            rows = cur.fetchall()
-            for row in rows:
+        with sqlite3.connect(file_name) as mydict:
+            cursor = mydict.cursor()
+            select_query = "SELECT {},{} FROM {}".format(select_query,
+                                                         key_name, val_name)
+            cursor.execute(select_query)
+            mydict = cursor.fetchall()
+            for row in mydict:
                 (key, value) = row
                 db_dict[key] = value
-    except(sqlite3.Error, sqlite3.OperationalError) as e:
-        print(f"The erroe '{e}' occurred")
+    except (sqlite3.Error, sqlite3.OperationalError) as e:
+        print(f"The Error '{e}' accurred")
     return db_dict
