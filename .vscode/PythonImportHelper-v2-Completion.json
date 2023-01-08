@@ -534,181 +534,37 @@
     {
         "label": "test_index_contain_route",
         "kind": 2,
-        "importPath": "test_app",
-        "description": "test_app",
+        "importPath": "test_mymodel_app",
+        "description": "test_mymodel_app",
         "peekOfCode": "def test_index_contain_route():\n    response = app.test_client().get('/')\n    assert 'A lot of people ask where we got our name' in response.data.decode(\n        'utf-8')\ndef test_index_contain_main_title_name():\n    response = app.test_client().get('/home')\n    print(response.data)\n    assert response.status_code == 200\n    assert 'New Look Hair Design' in response.data.decode('utf-8')\n@pytest.mark.parametrize(",
-        "detail": "test_app",
+        "detail": "test_mymodel_app",
         "documentation": {}
     },
     {
         "label": "test_index_contain_main_title_name",
         "kind": 2,
-        "importPath": "test_app",
-        "description": "test_app",
+        "importPath": "test_mymodel_app",
+        "description": "test_mymodel_app",
         "peekOfCode": "def test_index_contain_main_title_name():\n    response = app.test_client().get('/home')\n    print(response.data)\n    assert response.status_code == 200\n    assert 'New Look Hair Design' in response.data.decode('utf-8')\n@pytest.mark.parametrize(\n    \"day\", ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']\n    )\ndef test_index_contain_staff_shift_week_day(day):\n    response = app.test_client().get('/staff')",
-        "detail": "test_app",
+        "detail": "test_mymodel_app",
         "documentation": {}
     },
     {
         "label": "test_index_contain_staff_shift_week_day",
         "kind": 2,
-        "importPath": "test_app",
-        "description": "test_app",
+        "importPath": "test_mymodel_app",
+        "description": "test_mymodel_app",
         "peekOfCode": "def test_index_contain_staff_shift_week_day(day):\n    response = app.test_client().get('/staff')\n    print(f'\"{day}\"')\n    assert 'Monday' in response.data.decode('utf-8')\n@pytest.mark.parametrize(\"weekend\", ['Saturday', 'Sunday'])\ndef test_index_contain_staff_shift_weekend(weekend):\n    response = app.test_client().get('/staff')\n    print(f'\"{weekend}\"')\n    assert 'Sunday' in response.data.decode('utf-8')",
-        "detail": "test_app",
+        "detail": "test_mymodel_app",
         "documentation": {}
     },
     {
         "label": "test_index_contain_staff_shift_weekend",
         "kind": 2,
-        "importPath": "test_app",
-        "description": "test_app",
+        "importPath": "test_mymodel_app",
+        "description": "test_mymodel_app",
         "peekOfCode": "def test_index_contain_staff_shift_weekend(weekend):\n    response = app.test_client().get('/staff')\n    print(f'\"{weekend}\"')\n    assert 'Sunday' in response.data.decode('utf-8')",
-        "detail": "test_app",
-        "documentation": {}
-    },
-    {
-        "label": "work_with_db_jsql_staff_shift",
-        "kind": 2,
-        "importPath": "test_db",
-        "description": "test_db",
-        "peekOfCode": "def work_with_db_jsql_staff_shift():\n    assert mymodule.NAME == \"mymodule\"\ndef test_empty_sql_shut_return_empty_dictionary():\n    test_empty_sql = mymodule.work_with_sql_lite_db_files(\n        \"shift.db\",\n        'time_table'\n        'day'\n        'time'\n    )\n    assert len(test_empty_sql) == 7",
-        "detail": "test_db",
-        "documentation": {}
-    },
-    {
-        "label": "test_empty_sql_shut_return_empty_dictionary",
-        "kind": 2,
-        "importPath": "test_db",
-        "description": "test_db",
-        "peekOfCode": "def test_empty_sql_shut_return_empty_dictionary():\n    test_empty_sql = mymodule.work_with_sql_lite_db_files(\n        \"shift.db\",\n        'time_table'\n        'day'\n        'time'\n    )\n    assert len(test_empty_sql) == 7\ndef test_not_empty_sql_shut_retur_not_emthy_dictionary():\n    staff_shift = mymodule. work_with_sql_lite_db_files(",
-        "detail": "test_db",
-        "documentation": {}
-    },
-    {
-        "label": "test_not_empty_sql_shut_retur_not_emthy_dictionary",
-        "kind": 2,
-        "importPath": "test_db",
-        "description": "test_db",
-        "peekOfCode": "def test_not_empty_sql_shut_retur_not_emthy_dictionary():\n    staff_shift = mymodule. work_with_sql_lite_db_files(\n        \"staff_shift.db\",\n        'time_table',\n        'User_id',\n        'day'\n    )\n    assert staff_shift(\"SELECT * FROM time_table\") == 7\ndef test_sql_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_sql_lite_db_files(",
-        "detail": "test_db",
-        "documentation": {}
-    },
-    {
-        "label": "test_sql_valid_shut_return_valid_dictionary",
-        "kind": 2,
-        "importPath": "test_db",
-        "description": "test_db",
-        "peekOfCode": "def test_sql_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\",\n        'staff_name_surname',\n        'Name',\n        'Surname'\n    )\n    assert persons['Denis'] == 'Petrov'\n    assert persons['Tania'] == 'Bal'\n    assert persons['Lana'] == 'Mel'",
-        "detail": "test_db",
-        "documentation": {}
-    },
-    {
-        "label": "test_sql_shut_retur_valid_dictionary",
-        "kind": 2,
-        "importPath": "test_db",
-        "description": "test_db",
-        "peekOfCode": "def test_sql_shut_retur_valid_dictionary():\n    staff = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\",\n        'staff_position',\n        'Name'\n    )\n    assert staff[\"Tomas\"] == 'Web-Developer'\ndef test_sql_have_to_return_empty_dict():\n    test_sql_have_to_return = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\",",
-        "detail": "test_db",
-        "documentation": {}
-    },
-    {
-        "label": "test_sql_have_to_return_empty_dict",
-        "kind": 2,
-        "importPath": "test_db",
-        "description": "test_db",
-        "peekOfCode": "def test_sql_have_to_return_empty_dict():\n    test_sql_have_to_return = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\",\n        'time_table',\n        'day'\n        )\n    assert len(test_sql_have_to_return) == 7\ndef test_3_line_in_sql_dict():\n    test_3_line = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\",",
-        "detail": "test_db",
-        "documentation": {}
-    },
-    {
-        "label": "test_3_line_in_sql_dict",
-        "kind": 2,
-        "importPath": "test_db",
-        "description": "test_db",
-        "peekOfCode": "def test_3_line_in_sql_dict():\n    test_3_line = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\",\n        'staff_name_surname',\n        'Name'\n        )\n    assert len(test_3_line) == 3\ndef test_sql_have_to_return_1_key():\n    test_sql = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\",",
-        "detail": "test_db",
-        "documentation": {}
-    },
-    {
-        "label": "test_sql_have_to_return_1_key",
-        "kind": 2,
-        "importPath": "test_db",
-        "description": "test_db",
-        "peekOfCode": "def test_sql_have_to_return_1_key():\n    test_sql = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\",\n        'staff_position',\n        'Name'\n    )\n    assert len(test_sql) == 1",
-        "detail": "test_db",
-        "documentation": {}
-    },
-    {
-        "label": "work_with_db_jsql_staff_shift",
-        "kind": 2,
-        "importPath": "test_my_modul_sql",
-        "description": "test_my_modul_sql",
-        "peekOfCode": "def work_with_db_jsql_staff_shift():\n    assert mymodule.NAME == \"mymodule\"\ndef test_empty_sql_shut_return_empty_dictionary():\n    dict_empty = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\",\n        'time_table',\n        'day',\n        'time_shift'\n    )\n    assert len(dict_empty) == 0",
-        "detail": "test_my_modul_sql",
-        "documentation": {}
-    },
-    {
-        "label": "test_empty_sql_shut_return_empty_dictionary",
-        "kind": 2,
-        "importPath": "test_my_modul_sql",
-        "description": "test_my_modul_sql",
-        "peekOfCode": "def test_empty_sql_shut_return_empty_dictionary():\n    dict_empty = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\",\n        'time_table',\n        'day',\n        'time_shift'\n    )\n    assert len(dict_empty) == 0\ndef test_not_empty_sql_shut_retur_not_emthy_dictionary():\n    staff_shift = mymodule.work_with_sql_lite_db_files(",
-        "detail": "test_my_modul_sql",
-        "documentation": {}
-    },
-    {
-        "label": "test_not_empty_sql_shut_retur_not_emthy_dictionary",
-        "kind": 2,
-        "importPath": "test_my_modul_sql",
-        "description": "test_my_modul_sql",
-        "peekOfCode": "def test_not_empty_sql_shut_retur_not_emthy_dictionary():\n    staff_shift = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\",\n        'time_table',\n        'day',\n        'time_shift'\n    )\n    assert len(staff_shift) == 7\ndef test_sql_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_sql_lite_db_files(",
-        "detail": "test_my_modul_sql",
-        "documentation": {}
-    },
-    {
-        "label": "test_sql_valid_shut_return_valid_dictionary",
-        "kind": 2,
-        "importPath": "test_my_modul_sql",
-        "description": "test_my_modul_sql",
-        "peekOfCode": "def test_sql_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\",\n        'staff_name_surname',\n        'name',\n        \"surname\"\n    )\n    assert persons['Denis'] == 'Petrov'\n    assert persons['Tania'] == 'Bal'\n    assert persons['Lana'] == 'Mel'",
-        "detail": "test_my_modul_sql",
-        "documentation": {}
-    },
-    {
-        "label": "test_sql_shut_retur_valid_dictionary",
-        "kind": 2,
-        "importPath": "test_my_modul_sql",
-        "description": "test_my_modul_sql",
-        "peekOfCode": "def test_sql_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\",\n        'staff_position',\n        'name'\n        'position'\n        )\n    assert len(valid_dictionary) == 1\ndef test_sql_not_root__should_return_empty_dict():\n    dict = mymodule.work_with_sql_lite_db_files(",
-        "detail": "test_my_modul_sql",
-        "documentation": {}
-    },
-    {
-        "label": "test_sql_not_root__should_return_empty_dict",
-        "kind": 2,
-        "importPath": "test_my_modul_sql",
-        "description": "test_my_modul_sql",
-        "peekOfCode": "def test_sql_not_root__should_return_empty_dict():\n    dict = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\",\n        'time_table',\n        'day',\n        'time_shift'\n    )\n    assert len(dict) == 7\ndef test_3_line_sql_shut_retur_3_itiems():\n    line_test = mymodule.work_with_sql_lite_db_files(",
-        "detail": "test_my_modul_sql",
-        "documentation": {}
-    },
-    {
-        "label": "test_3_line_sql_shut_retur_3_itiems",
-        "kind": 2,
-        "importPath": "test_my_modul_sql",
-        "description": "test_my_modul_sql",
-        "peekOfCode": "def test_3_line_sql_shut_retur_3_itiems():\n    line_test = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\",\n        'time_table',\n        'day',\n        'time_shift'\n    )\n    assert len(line_test) == 3\ndef test_1_line_sql_shut_retur_1_itiems():\n    test_1_line = mymodule.work_with_sql_lite_db_files(",
-        "detail": "test_my_modul_sql",
-        "documentation": {}
-    },
-    {
-        "label": "test_1_line_sql_shut_retur_1_itiems",
-        "kind": 2,
-        "importPath": "test_my_modul_sql",
-        "description": "test_my_modul_sql",
-        "peekOfCode": "def test_1_line_sql_shut_retur_1_itiems():\n    test_1_line = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\",\n        'time_table',\n        'day',\n        'time_shift'\n    )\n    assert len(test_1_line) == 1",
-        "detail": "test_my_modul_sql",
+        "detail": "test_mymodel_app",
         "documentation": {}
     },
     {
@@ -781,6 +637,78 @@
         "description": "test_mymodul_json",
         "peekOfCode": "def test_1_line_json_shut_retur_1_itiems():\n    test_1_line = mymodule.work_with_db_json_staff_shift(\n        \"staff_position.json\", 'person'\n    )\n    assert len(test_1_line) == 1",
         "detail": "test_mymodul_json",
+        "documentation": {}
+    },
+    {
+        "label": "work_with_db_jsql_staff_shift",
+        "kind": 2,
+        "importPath": "test_mymodul_sql",
+        "description": "test_mymodul_sql",
+        "peekOfCode": "def work_with_db_jsql_staff_shift():\n    assert mymodule.NAME == \"mymodule\"\ndef test_empty_sql_shut_return_empty_dictionary():\n    test_empty_sql = mymodule.work_with_sql_lite_db_files(\n        \"shift.db\",\n        'time_table'\n        'day'\n        'time'\n    )\n    assert len(test_empty_sql) == 7",
+        "detail": "test_mymodul_sql",
+        "documentation": {}
+    },
+    {
+        "label": "test_empty_sql_shut_return_empty_dictionary",
+        "kind": 2,
+        "importPath": "test_mymodul_sql",
+        "description": "test_mymodul_sql",
+        "peekOfCode": "def test_empty_sql_shut_return_empty_dictionary():\n    test_empty_sql = mymodule.work_with_sql_lite_db_files(\n        \"shift.db\",\n        'time_table'\n        'day'\n        'time'\n    )\n    assert len(test_empty_sql) == 7\ndef test_not_empty_sql_shut_retur_not_emthy_dictionary():\n    staff_shift = mymodule. work_with_sql_lite_db_files(",
+        "detail": "test_mymodul_sql",
+        "documentation": {}
+    },
+    {
+        "label": "test_not_empty_sql_shut_retur_not_emthy_dictionary",
+        "kind": 2,
+        "importPath": "test_mymodul_sql",
+        "description": "test_mymodul_sql",
+        "peekOfCode": "def test_not_empty_sql_shut_retur_not_emthy_dictionary():\n    staff_shift = mymodule. work_with_sql_lite_db_files(\n        \"staff_shift.db\",\n        'time_table',\n        'User_id',\n        'day'\n    )\n    assert staff_shift(\"SELECT * FROM time_table\") == 7\ndef test_sql_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_sql_lite_db_files(",
+        "detail": "test_mymodul_sql",
+        "documentation": {}
+    },
+    {
+        "label": "test_sql_valid_shut_return_valid_dictionary",
+        "kind": 2,
+        "importPath": "test_mymodul_sql",
+        "description": "test_mymodul_sql",
+        "peekOfCode": "def test_sql_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\",\n        'staff_name_surname',\n        'Name',\n        'Surname'\n    )\n    assert persons['Denis'] == 'Petrov'\n    assert persons['Tania'] == 'Bal'\n    assert persons['Lana'] == 'Mel'",
+        "detail": "test_mymodul_sql",
+        "documentation": {}
+    },
+    {
+        "label": "test_sql_shut_retur_valid_dictionary",
+        "kind": 2,
+        "importPath": "test_mymodul_sql",
+        "description": "test_mymodul_sql",
+        "peekOfCode": "def test_sql_shut_retur_valid_dictionary():\n    staff = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\",\n        'staff_position',\n        'Name',\n        'Position'\n    )\n    assert staff[\"Tomas\"] == 'Web-Developer'\ndef test_sql_have_to_return_empty_dict():\n    test_sql_have_to_return = mymodule.work_with_sql_lite_db_files(",
+        "detail": "test_mymodul_sql",
+        "documentation": {}
+    },
+    {
+        "label": "test_sql_have_to_return_empty_dict",
+        "kind": 2,
+        "importPath": "test_mymodul_sql",
+        "description": "test_mymodul_sql",
+        "peekOfCode": "def test_sql_have_to_return_empty_dict():\n    test_sql_have_to_return = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\",\n        'time_table',\n        'day',\n        'time_shift'\n        )\n    assert len(test_sql_have_to_return) == 7\ndef test_3_line_in_sql_dict():\n    test_3_line = mymodule.work_with_sql_lite_db_files(",
+        "detail": "test_mymodul_sql",
+        "documentation": {}
+    },
+    {
+        "label": "test_3_line_in_sql_dict",
+        "kind": 2,
+        "importPath": "test_mymodul_sql",
+        "description": "test_mymodul_sql",
+        "peekOfCode": "def test_3_line_in_sql_dict():\n    test_3_line = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\",\n        'staff_name_surname',\n        'Name',\n        'Surname'\n        )\n    assert len(test_3_line) == 3\ndef test_sql_have_to_return_1_key():\n    test_sql = mymodule.work_with_sql_lite_db_files(",
+        "detail": "test_mymodul_sql",
+        "documentation": {}
+    },
+    {
+        "label": "test_sql_have_to_return_1_key",
+        "kind": 2,
+        "importPath": "test_mymodul_sql",
+        "description": "test_mymodul_sql",
+        "peekOfCode": "def test_sql_have_to_return_1_key():\n    test_sql = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\",\n        'staff_position',\n        'Name',\n        'Position'\n    )\n    assert len(test_sql) == 1",
+        "detail": "test_mymodul_sql",
         "documentation": {}
     },
     {
