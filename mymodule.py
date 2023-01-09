@@ -6,6 +6,7 @@ import xml.etree.ElementTree as ET
 from json import JSONDecodeError
 import json
 import sqlite3
+from my_sql_lite_db import time_table
 NAME = "mymodule"
 
 """
@@ -72,14 +73,14 @@ def work_with_db_json_staff_shift(file_name, root_node_name):
 """Returns data from an SQL query as a list of dicts."""
 
 
-def work_with_sql_lite_db_files(file_name, select_query, key_name, val_name):
+def work_with_sql_lite_db_files(file_name, key_name, val_name, time_table):
     db_dict = {}
     try:
         with sqlite3.connect(file_name) as mydict:
             cursor = mydict.cursor()
-            select_query = "SELECT {},{} FROM {}".format(select_query,
-                                                         key_name, val_name)
-            cursor.execute(select_query)
+            query = "SELECT {},{} FROM {}".format(
+                key_name, val_name, time_table)
+            cursor.execute(query)
             mydict = cursor.fetchall()
             for row in mydict:
                 (key, value) = row
