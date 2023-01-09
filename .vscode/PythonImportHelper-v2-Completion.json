@@ -462,7 +462,7 @@
         "kind": 6,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "class Article(db.Model:)\n    id = db.Colum(db.Integer, primary_key=True)\n    title = db.Colum(db.Integer(100), primary_key=True)\n    intro = db.Colum(db.Integer(300), primary_key=True)\n    text = db.Colum(db.Integer, primary_key=True)\n    date = db.Colum(db.DateTime, default=)\n@app.route('/')\n@app.route('/home')\ndef home():\n    date_time = datetime.now()",
+        "peekOfCode": "class Article(db.Model:)\n    id = db.Colum(db.Integer, primary_key=True)\n    title = db.Colum(db.Integer(100), primary_key=True)\n    intro = db.Colum(db.Integer(300), primary_key=True)\n    text = db.Colum(db.Integer, primary_key=True)\n    date = db.Colum(db.DateTime, default=datetime.utcnow)\n    def_repr_(self):\n        return '<Article '\n@app.route('/')\n@app.route('/home')",
         "detail": "app",
         "documentation": {}
     },
@@ -498,7 +498,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "app = Flask(__name__)\napp.config['SQLALCHEMY DATABASE_URI'] = 'sqlite'///staff_shift.expandtabs()\ndb = SQLAlchemy(app)\nclass Article(db.Model:)\n    id = db.Colum(db.Integer, primary_key=True)\n    title = db.Colum(db.Integer(100), primary_key=True)\n    intro = db.Colum(db.Integer(300), primary_key=True)\n    text = db.Colum(db.Integer, primary_key=True)\n    date = db.Colum(db.DateTime, default=)\n@app.route('/')",
+        "peekOfCode": "app = Flask(__name__)\napp.config['SQLALCHEMY DATABASE_URI'] = 'sqlite'///staff_shift.expandtabs()\ndb = SQLAlchemy(app)\nclass Article(db.Model:)\n    id = db.Colum(db.Integer, primary_key=True)\n    title = db.Colum(db.Integer(100), primary_key=True)\n    intro = db.Colum(db.Integer(300), primary_key=True)\n    text = db.Colum(db.Integer, primary_key=True)\n    date = db.Colum(db.DateTime, default=datetime.utcnow)\n    def_repr_(self):",
         "detail": "app",
         "documentation": {}
     },
@@ -507,7 +507,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "db = SQLAlchemy(app)\nclass Article(db.Model:)\n    id = db.Colum(db.Integer, primary_key=True)\n    title = db.Colum(db.Integer(100), primary_key=True)\n    intro = db.Colum(db.Integer(300), primary_key=True)\n    text = db.Colum(db.Integer, primary_key=True)\n    date = db.Colum(db.DateTime, default=)\n@app.route('/')\n@app.route('/home')\ndef home():",
+        "peekOfCode": "db = SQLAlchemy(app)\nclass Article(db.Model:)\n    id = db.Colum(db.Integer, primary_key=True)\n    title = db.Colum(db.Integer(100), primary_key=True)\n    intro = db.Colum(db.Integer(300), primary_key=True)\n    text = db.Colum(db.Integer, primary_key=True)\n    date = db.Colum(db.DateTime, default=datetime.utcnow)\n    def_repr_(self):\n        return '<Article '\n@app.route('/')",
         "detail": "app",
         "documentation": {}
     },

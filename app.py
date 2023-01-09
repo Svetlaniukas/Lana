@@ -15,7 +15,10 @@ class Article(db.Model:)
     title = db.Colum(db.Integer(100), primary_key=True)
     intro = db.Colum(db.Integer(300), primary_key=True)
     text = db.Colum(db.Integer, primary_key=True)
-    date = db.Colum(db.DateTime, default=)
+    date = db.Colum(db.DateTime, default=datetime.utcnow)
+    
+    def_repr_(self):
+        return '<Article '
 
 @app.route('/')
 @app.route('/home')
