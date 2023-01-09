@@ -21,8 +21,9 @@ def test_not_empty_json_shut_retur_not_emthy_dictionary():
 
 def test_json_valid_shut_return_valid_dictionary():
     pass
-    persons = mymodule.work_with_db_json_staff_shift("staff_name_surname.json",
-                                                     'person')
+    persons = mymodule.work_with_db_json_staff_shift(
+        "staff_name_surname.json", 'person'
+    )
     assert persons['Denis'] == 'Petrov'
     assert persons['Tania'] == 'Bal'
     assert persons['Lana'] == 'Mel'
@@ -38,13 +39,16 @@ def test_json_shut_retur_valid_dictionary():
 def test_json_not_root__should_return_empty_dict():
     pass
     dict = mymodule.work_with_db_json_staff_shift(
-        "staff_position.json", ':::')
+        "staff_position.json", ':::'
+    )
     assert len(dict) == 0
 
 
 def test_3_line_json_shut_retur_3_itiems():
     line_test = mymodule.work_with_db_json_staff_shift(
-        "staff_name_surname.json", 'person')
+        "staff_name_surname.json", 'person'
+    )
+    
     assert len(line_test) == 3
 
 

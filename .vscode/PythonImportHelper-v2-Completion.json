@@ -598,7 +598,7 @@
         "kind": 2,
         "importPath": "test_mymodul_json",
         "description": "test_mymodul_json",
-        "peekOfCode": "def test_not_empty_json_shut_retur_not_emthy_dictionary():\n    file_with_data = mymodule.work_with_db_json_staff_shift(\n        \"staff.json\", 'weekday'\n    )\n    assert len(file_with_data) == 5\ndef test_json_valid_shut_return_valid_dictionary():\n    pass\n    persons = mymodule.work_with_db_json_staff_shift(\"staff_name_surname.json\",\n                                                     'person')\n    assert persons['Denis'] == 'Petrov'",
+        "peekOfCode": "def test_not_empty_json_shut_retur_not_emthy_dictionary():\n    file_with_data = mymodule.work_with_db_json_staff_shift(\n        \"staff.json\", 'weekday'\n    )\n    assert len(file_with_data) == 5\ndef test_json_valid_shut_return_valid_dictionary():\n    pass\n    persons = mymodule.work_with_db_json_staff_shift(\n        \"staff_name_surname.json\", 'person'\n    )",
         "detail": "test_mymodul_json",
         "documentation": {}
     },
@@ -607,7 +607,7 @@
         "kind": 2,
         "importPath": "test_mymodul_json",
         "description": "test_mymodul_json",
-        "peekOfCode": "def test_json_valid_shut_return_valid_dictionary():\n    pass\n    persons = mymodule.work_with_db_json_staff_shift(\"staff_name_surname.json\",\n                                                     'person')\n    assert persons['Denis'] == 'Petrov'\n    assert persons['Tania'] == 'Bal'\n    assert persons['Lana'] == 'Mel'\ndef test_json_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_db_json_staff_shift(\n        \"staff_position.json\", 'person'",
+        "peekOfCode": "def test_json_valid_shut_return_valid_dictionary():\n    pass\n    persons = mymodule.work_with_db_json_staff_shift(\n        \"staff_name_surname.json\", 'person'\n    )\n    assert persons['Denis'] == 'Petrov'\n    assert persons['Tania'] == 'Bal'\n    assert persons['Lana'] == 'Mel'\ndef test_json_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_db_json_staff_shift(",
         "detail": "test_mymodul_json",
         "documentation": {}
     },
@@ -616,7 +616,7 @@
         "kind": 2,
         "importPath": "test_mymodul_json",
         "description": "test_mymodul_json",
-        "peekOfCode": "def test_json_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_db_json_staff_shift(\n        \"staff_position.json\", 'person'\n    )\n    assert len(valid_dictionary) == 1\ndef test_json_not_root__should_return_empty_dict():\n    pass\n    dict = mymodule.work_with_db_json_staff_shift(\n        \"staff_position.json\", ':::')\n    assert len(dict) == 0",
+        "peekOfCode": "def test_json_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_db_json_staff_shift(\n        \"staff_position.json\", 'person'\n    )\n    assert len(valid_dictionary) == 1\ndef test_json_not_root__should_return_empty_dict():\n    pass\n    dict = mymodule.work_with_db_json_staff_shift(\n        \"staff_position.json\", ':::'\n    )",
         "detail": "test_mymodul_json",
         "documentation": {}
     },
@@ -625,7 +625,7 @@
         "kind": 2,
         "importPath": "test_mymodul_json",
         "description": "test_mymodul_json",
-        "peekOfCode": "def test_json_not_root__should_return_empty_dict():\n    pass\n    dict = mymodule.work_with_db_json_staff_shift(\n        \"staff_position.json\", ':::')\n    assert len(dict) == 0\ndef test_3_line_json_shut_retur_3_itiems():\n    line_test = mymodule.work_with_db_json_staff_shift(\n        \"staff_name_surname.json\", 'person')\n    assert len(line_test) == 3\ndef test_1_line_json_shut_retur_1_itiems():",
+        "peekOfCode": "def test_json_not_root__should_return_empty_dict():\n    pass\n    dict = mymodule.work_with_db_json_staff_shift(\n        \"staff_position.json\", ':::'\n    )\n    assert len(dict) == 0\ndef test_3_line_json_shut_retur_3_itiems():\n    line_test = mymodule.work_with_db_json_staff_shift(\n        \"staff_name_surname.json\", 'person'\n    )",
         "detail": "test_mymodul_json",
         "documentation": {}
     },
@@ -634,7 +634,7 @@
         "kind": 2,
         "importPath": "test_mymodul_json",
         "description": "test_mymodul_json",
-        "peekOfCode": "def test_3_line_json_shut_retur_3_itiems():\n    line_test = mymodule.work_with_db_json_staff_shift(\n        \"staff_name_surname.json\", 'person')\n    assert len(line_test) == 3\ndef test_1_line_json_shut_retur_1_itiems():\n    test_1_line = mymodule.work_with_db_json_staff_shift(\n        \"staff_position.json\", 'person'\n    )\n    assert len(test_1_line) == 1",
+        "peekOfCode": "def test_3_line_json_shut_retur_3_itiems():\n    line_test = mymodule.work_with_db_json_staff_shift(\n        \"staff_name_surname.json\", 'person'\n    )\n    assert len(line_test) == 3\ndef test_1_line_json_shut_retur_1_itiems():\n    test_1_line = mymodule.work_with_db_json_staff_shift(\n        \"staff_position.json\", 'person'\n    )\n    assert len(test_1_line) == 1",
         "detail": "test_mymodul_json",
         "documentation": {}
     },
@@ -724,7 +724,7 @@
         "kind": 2,
         "importPath": "test_mymodul_txt",
         "description": "test_mymodul_txt",
-        "peekOfCode": "def test_modul_name_is_valid():\n    assert mymodule.NAME == \"mymodule\"\ndef test_empty_file_shut_return_empty_dictionary():\n    dict_empty = mymodule.open_staff_file(\n        \"test_function/staff_empty_file.txt\", ':')\n    assert len(dict_empty) == 0\ndef test_not_emthy_file_shut_retur_not_emthy_dictionary():\n    file_with_data = mymodule.open_staff_file(\"staff_week_day.txt\", ':')\n    assert file_with_data['Wednesday'] == '10.am-5.pm\\n'\ndef test_delimiter_comma_shut_retur_valid_dictionary():",
+        "peekOfCode": "def test_modul_name_is_valid():\n    assert mymodule.NAME == \"mymodule\"\ndef test_empty_file_shut_return_empty_dictionary():\n    dict_empty = mymodule.open_staff_file(\n        \"test_function/staff_empty_file.txt\", ':'\n        )\n    assert len(dict_empty) == 0\ndef test_not_emthy_file_shut_retur_not_emthy_dictionary():\n    file_with_data = mymodule.open_staff_file(\n        \"staff_week_day.txt\", ':'",
         "detail": "test_mymodul_txt",
         "documentation": {}
     },
@@ -733,7 +733,7 @@
         "kind": 2,
         "importPath": "test_mymodul_txt",
         "description": "test_mymodul_txt",
-        "peekOfCode": "def test_empty_file_shut_return_empty_dictionary():\n    dict_empty = mymodule.open_staff_file(\n        \"test_function/staff_empty_file.txt\", ':')\n    assert len(dict_empty) == 0\ndef test_not_emthy_file_shut_retur_not_emthy_dictionary():\n    file_with_data = mymodule.open_staff_file(\"staff_week_day.txt\", ':')\n    assert file_with_data['Wednesday'] == '10.am-5.pm\\n'\ndef test_delimiter_comma_shut_retur_valid_dictionary():\n    persons = mymodule.open_staff_file(\n        \"test_function/staff_name_surname.txt\", ','",
+        "peekOfCode": "def test_empty_file_shut_return_empty_dictionary():\n    dict_empty = mymodule.open_staff_file(\n        \"test_function/staff_empty_file.txt\", ':'\n        )\n    assert len(dict_empty) == 0\ndef test_not_emthy_file_shut_retur_not_emthy_dictionary():\n    file_with_data = mymodule.open_staff_file(\n        \"staff_week_day.txt\", ':'\n        )\n    assert file_with_data['Wednesday'] == '10.am-5.pm\\n'",
         "detail": "test_mymodul_txt",
         "documentation": {}
     },
@@ -742,7 +742,7 @@
         "kind": 2,
         "importPath": "test_mymodul_txt",
         "description": "test_mymodul_txt",
-        "peekOfCode": "def test_not_emthy_file_shut_retur_not_emthy_dictionary():\n    file_with_data = mymodule.open_staff_file(\"staff_week_day.txt\", ':')\n    assert file_with_data['Wednesday'] == '10.am-5.pm\\n'\ndef test_delimiter_comma_shut_retur_valid_dictionary():\n    persons = mymodule.open_staff_file(\n        \"test_function/staff_name_surname.txt\", ','\n        )\n    assert persons.get(\"Denis\") == \"Petrov\\n\"\n    assert persons.get(\"Tania\") == \"Bal\\n\"\n    assert persons.get(\"Lana\") == \"Mel\"",
+        "peekOfCode": "def test_not_emthy_file_shut_retur_not_emthy_dictionary():\n    file_with_data = mymodule.open_staff_file(\n        \"staff_week_day.txt\", ':'\n        )\n    assert file_with_data['Wednesday'] == '10.am-5.pm\\n'\ndef test_delimiter_comma_shut_retur_valid_dictionary():\n    persons = mymodule.open_staff_file(\n        \"test_function/staff_name_surname.txt\", ','\n        )\n    assert persons.get(\"Denis\") == \"Petrov\\n\"",
         "detail": "test_mymodul_txt",
         "documentation": {}
     },
@@ -760,7 +760,7 @@
         "kind": 2,
         "importPath": "test_mymodul_txt",
         "description": "test_mymodul_txt",
-        "peekOfCode": "def test_delimiter_slash_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.open_staff_file(\n        \"test_function/staff_position.txt\", '/'\n        )\n    assert valid_dictionary['Tomas'] == 'web developer'\ndef test_not_valid_delimiter_shud_trow_error():\n    dict = mymodule.open_staff_file(\"test_function/staff_position.txt\", ':::')\n    assert len(dict) == 0\ndef test_3_line_file_shut_retur_3_itiems():\n    line_test = mymodule.open_staff_file(",
+        "peekOfCode": "def test_delimiter_slash_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.open_staff_file(\n        \"test_function/staff_position.txt\", '/'\n        )\n    assert valid_dictionary['Tomas'] == 'web developer'\ndef test_not_valid_delimiter_shud_trow_error():\n    dict = mymodule.open_staff_file(\n        \"test_function/staff_position.txt\", ':::'\n        )\n    assert len(dict) == 0",
         "detail": "test_mymodul_txt",
         "documentation": {}
     },
@@ -769,7 +769,7 @@
         "kind": 2,
         "importPath": "test_mymodul_txt",
         "description": "test_mymodul_txt",
-        "peekOfCode": "def test_not_valid_delimiter_shud_trow_error():\n    dict = mymodule.open_staff_file(\"test_function/staff_position.txt\", ':::')\n    assert len(dict) == 0\ndef test_3_line_file_shut_retur_3_itiems():\n    line_test = mymodule.open_staff_file(\n        \"test_function/staff_name_surname.txt\", ',')\n    assert len(line_test) == 3\ndef test_1_line_file_shut_retur_1_itiems():\n    test_1_line = len(mymodule.open_staff_file(\n        \"test_function/staff_position.txt\", '/')",
+        "peekOfCode": "def test_not_valid_delimiter_shud_trow_error():\n    dict = mymodule.open_staff_file(\n        \"test_function/staff_position.txt\", ':::'\n        )\n    assert len(dict) == 0\ndef test_3_line_file_shut_retur_3_itiems():\n    line_test = mymodule.open_staff_file(\n        \"test_function/staff_name_surname.txt\", ','\n        )\n    assert len(line_test) == 3",
         "detail": "test_mymodul_txt",
         "documentation": {}
     },
@@ -778,7 +778,7 @@
         "kind": 2,
         "importPath": "test_mymodul_txt",
         "description": "test_mymodul_txt",
-        "peekOfCode": "def test_3_line_file_shut_retur_3_itiems():\n    line_test = mymodule.open_staff_file(\n        \"test_function/staff_name_surname.txt\", ',')\n    assert len(line_test) == 3\ndef test_1_line_file_shut_retur_1_itiems():\n    test_1_line = len(mymodule.open_staff_file(\n        \"test_function/staff_position.txt\", '/')\n                      )\n    assert test_1_line == 1",
+        "peekOfCode": "def test_3_line_file_shut_retur_3_itiems():\n    line_test = mymodule.open_staff_file(\n        \"test_function/staff_name_surname.txt\", ','\n        )\n    assert len(line_test) == 3\ndef test_1_line_file_shut_retur_1_itiems():\n    test_1_line = len(mymodule.open_staff_file(\n        \"test_function/staff_position.txt\", '/')\n        )\n    assert test_1_line == 1",
         "detail": "test_mymodul_txt",
         "documentation": {}
     },
@@ -787,7 +787,7 @@
         "kind": 2,
         "importPath": "test_mymodul_txt",
         "description": "test_mymodul_txt",
-        "peekOfCode": "def test_1_line_file_shut_retur_1_itiems():\n    test_1_line = len(mymodule.open_staff_file(\n        \"test_function/staff_position.txt\", '/')\n                      )\n    assert test_1_line == 1",
+        "peekOfCode": "def test_1_line_file_shut_retur_1_itiems():\n    test_1_line = len(mymodule.open_staff_file(\n        \"test_function/staff_position.txt\", '/')\n        )\n    assert test_1_line == 1",
         "detail": "test_mymodul_txt",
         "documentation": {}
     },
@@ -796,7 +796,7 @@
         "kind": 2,
         "importPath": "test_mymodul_xml",
         "description": "test_mymodul_xml",
-        "peekOfCode": "def work_with_db_xml_staff_shift():\n    assert mymodule.NAME == \"mymodule\"\ndef test_empty_xml_shut_return_empty_dictionary():\n    dict_empty = mymodule.work_with_db_xml_staff_shift(\n        \"staff_empty_file.xml\", 'key_name', 'val_name')\n    assert len(dict_empty) == 0\ndef test_xml_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_db_xml_staff_shift(\n        \"staff_name_surname.xml\", 'name', 'surname')\n    assert len(persons) == 3",
+        "peekOfCode": "def work_with_db_xml_staff_shift():\n    assert mymodule.NAME == \"mymodule\"\ndef test_empty_xml_shut_return_empty_dictionary():\n    dict_empty = mymodule.work_with_db_xml_staff_shift(\n        \"staff_empty_file.xml\", 'key_name', 'val_name'\n        )\n    assert len(dict_empty) == 0\ndef test_xml_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_db_xml_staff_shift(\n        \"staff_name_surname.xml\", 'name', 'surname'",
         "detail": "test_mymodul_xml",
         "documentation": {}
     },
@@ -805,7 +805,7 @@
         "kind": 2,
         "importPath": "test_mymodul_xml",
         "description": "test_mymodul_xml",
-        "peekOfCode": "def test_empty_xml_shut_return_empty_dictionary():\n    dict_empty = mymodule.work_with_db_xml_staff_shift(\n        \"staff_empty_file.xml\", 'key_name', 'val_name')\n    assert len(dict_empty) == 0\ndef test_xml_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_db_xml_staff_shift(\n        \"staff_name_surname.xml\", 'name', 'surname')\n    assert len(persons) == 3\ndef test_xml_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_db_xml_staff_shift(",
+        "peekOfCode": "def test_empty_xml_shut_return_empty_dictionary():\n    dict_empty = mymodule.work_with_db_xml_staff_shift(\n        \"staff_empty_file.xml\", 'key_name', 'val_name'\n        )\n    assert len(dict_empty) == 0\ndef test_xml_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_db_xml_staff_shift(\n        \"staff_name_surname.xml\", 'name', 'surname'\n        )\n    assert len(persons) == 3",
         "detail": "test_mymodul_xml",
         "documentation": {}
     },
@@ -814,7 +814,7 @@
         "kind": 2,
         "importPath": "test_mymodul_xml",
         "description": "test_mymodul_xml",
-        "peekOfCode": "def test_xml_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_db_xml_staff_shift(\n        \"staff_name_surname.xml\", 'name', 'surname')\n    assert len(persons) == 3\ndef test_xml_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_db_xml_staff_shift(\n        \"staff_position.xml\", 'name', 'position')\n    assert len(valid_dictionary) == 1\ndef test_xml_shut_return_exist_day_and_time():\n    file_with_data = mymodule.work_with_db_xml_staff_shift(",
+        "peekOfCode": "def test_xml_valid_shut_return_valid_dictionary():\n    persons = mymodule.work_with_db_xml_staff_shift(\n        \"staff_name_surname.xml\", 'name', 'surname'\n        )\n    assert len(persons) == 3\ndef test_xml_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_db_xml_staff_shift(\n        \"staff_position.xml\", 'name', 'position'\n        )\n    assert len(valid_dictionary) == 1",
         "detail": "test_mymodul_xml",
         "documentation": {}
     },
@@ -823,7 +823,7 @@
         "kind": 2,
         "importPath": "test_mymodul_xml",
         "description": "test_mymodul_xml",
-        "peekOfCode": "def test_xml_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_db_xml_staff_shift(\n        \"staff_position.xml\", 'name', 'position')\n    assert len(valid_dictionary) == 1\ndef test_xml_shut_return_exist_day_and_time():\n    file_with_data = mymodule.work_with_db_xml_staff_shift(\n        \"staff_weekend.xml\", 'day', 'time')\n    assert len(file_with_data) == 2\ndef test_7_line_xml_shut_retur_7_itiems():\n    line_test = mymodule.work_with_db_xml_staff_shift(",
+        "peekOfCode": "def test_xml_shut_retur_valid_dictionary():\n    valid_dictionary = mymodule.work_with_db_xml_staff_shift(\n        \"staff_position.xml\", 'name', 'position'\n        )\n    assert len(valid_dictionary) == 1\ndef test_xml_shut_return_exist_day_and_time():\n    file_with_data = mymodule.work_with_db_xml_staff_shift(\n        \"staff_weekend.xml\", 'day', 'time'\n        )\n    assert len(file_with_data) == 2",
         "detail": "test_mymodul_xml",
         "documentation": {}
     },
@@ -832,7 +832,7 @@
         "kind": 2,
         "importPath": "test_mymodul_xml",
         "description": "test_mymodul_xml",
-        "peekOfCode": "def test_xml_shut_return_exist_day_and_time():\n    file_with_data = mymodule.work_with_db_xml_staff_shift(\n        \"staff_weekend.xml\", 'day', 'time')\n    assert len(file_with_data) == 2\ndef test_7_line_xml_shut_retur_7_itiems():\n    line_test = mymodule.work_with_db_xml_staff_shift(\n        \"staff_week_day.xml\", 'day', 'time')\n    assert len(line_test) == 7\ndef test_1_line_xml_shut_retur_1_itiems():\n    line_test = mymodule.work_with_db_xml_staff_shift(",
+        "peekOfCode": "def test_xml_shut_return_exist_day_and_time():\n    file_with_data = mymodule.work_with_db_xml_staff_shift(\n        \"staff_weekend.xml\", 'day', 'time'\n        )\n    assert len(file_with_data) == 2\ndef test_7_line_xml_shut_retur_7_itiems():\n    line_test = mymodule.work_with_db_xml_staff_shift(\n        \"staff_week_day.xml\", 'day', 'time'\n        )\n    assert len(line_test) == 7",
         "detail": "test_mymodul_xml",
         "documentation": {}
     },
@@ -841,7 +841,7 @@
         "kind": 2,
         "importPath": "test_mymodul_xml",
         "description": "test_mymodul_xml",
-        "peekOfCode": "def test_7_line_xml_shut_retur_7_itiems():\n    line_test = mymodule.work_with_db_xml_staff_shift(\n        \"staff_week_day.xml\", 'day', 'time')\n    assert len(line_test) == 7\ndef test_1_line_xml_shut_retur_1_itiems():\n    line_test = mymodule.work_with_db_xml_staff_shift(\n        \"staff_position.xml\", 'name', 'position'\n    )\n    assert len(line_test) == 1",
+        "peekOfCode": "def test_7_line_xml_shut_retur_7_itiems():\n    line_test = mymodule.work_with_db_xml_staff_shift(\n        \"staff_week_day.xml\", 'day', 'time'\n        )\n    assert len(line_test) == 7\ndef test_1_line_xml_shut_retur_1_itiems():\n    line_test = mymodule.work_with_db_xml_staff_shift(\n        \"staff_position.xml\", 'name', 'position'\n    )\n    assert len(line_test) == 1",
         "detail": "test_mymodul_xml",
         "documentation": {}
     },
