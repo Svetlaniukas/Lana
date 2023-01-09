@@ -1,12 +1,21 @@
 import calendar
 from datetime import datetime
-
+from flask_sqlalchemy import SQLAlchemy
 from flask import Flask, render_template
 
 import mymodule
 
 app = Flask(__name__)
+app.config['SQLALCHEMY DATABASE_URI'] = 'sqlite'///staff_shift.expandtabs()
+db = SQLAlchemy(app)
 
+
+class Article(db.Model:)
+    id = db.Colum(db.Integer, primary_key=True)
+    title = db.Colum(db.Integer(100), primary_key=True)
+    intro = db.Colum(db.Integer(300), primary_key=True)
+    text = db.Colum(db.Integer, primary_key=True)
+    date = db.Colum(db.DateTime, default=)
 
 @app.route('/')
 @app.route('/home')
@@ -33,6 +42,10 @@ def staff():
         for_staff_weekend_shift=for_staff_weekend_shift
         )
     return page_content
+
+
+@app.route('/posts')
+def posts():
 
 
 if __name__ == "__main__":
