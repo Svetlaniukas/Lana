@@ -78,8 +78,7 @@ def work_with_sql_lite_db_files(file_name, key_name, val_name, time_table):
     try:
         with sqlite3.connect(file_name) as mydict:
             cursor = mydict.cursor()
-            query = "SELECT {},{} FROM {}".format(
-                key_name, val_name, time_table)
+            query = "SELECT {},{} FROM {}".format(key_name, val_name, time_table)
             cursor.execute(query)
             mydict = cursor.fetchall()
             for row in mydict:

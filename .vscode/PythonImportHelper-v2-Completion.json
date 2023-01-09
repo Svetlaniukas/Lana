@@ -526,7 +526,7 @@
         "kind": 2,
         "importPath": "mymodule",
         "description": "mymodule",
-        "peekOfCode": "def work_with_sql_lite_db_files(file_name, key_name, val_name, time_table):\n    db_dict = {}\n    try:\n        with sqlite3.connect(file_name) as mydict:\n            cursor = mydict.cursor()\n            query = \"SELECT {},{} FROM {}\".format(\n                key_name, val_name, time_table)\n            cursor.execute(query)\n            mydict = cursor.fetchall()\n            for row in mydict:",
+        "peekOfCode": "def work_with_sql_lite_db_files(file_name, key_name, val_name, time_table):\n    db_dict = {}\n    try:\n        with sqlite3.connect(file_name) as mydict:\n            cursor = mydict.cursor()\n            query = \"SELECT {},{} FROM {}\".format(key_name, val_name, time_table)\n            cursor.execute(query)\n            mydict = cursor.fetchall()\n            for row in mydict:\n                (key, value) = row",
         "detail": "mymodule",
         "documentation": {}
     },
@@ -652,43 +652,43 @@
         "kind": 2,
         "importPath": "test_mymodul_sql",
         "description": "test_mymodul_sql",
-        "peekOfCode": "def work_with_db_jsql_staff_shift():\n    assert mymodule.NAME == \"mymodule\"\ndef test_empty_sql_file_should_return_empty_dictionary():\n    test_empty_sql = mymodule.work_with_sql_lite_db_files(\n        \"shift.db\",\n        'time_table',\n        'day',\n        'time'\n    )\n    assert len(test_empty_sql) == 0",
+        "peekOfCode": "def work_with_db_jsql_staff_shift():\n    assert mymodule.NAME == \"mymodule\"\ndef test_empty_sql_db_should_return_empty_dictionary():\n    test_empty_sql_db = mymodule.work_with_sql_lite_db_files(\n        \"shift.db\",\n        'time_table',\n        'day',\n        'time'\n    )\n    assert len(test_empty_sql_db) == 0",
         "detail": "test_mymodul_sql",
         "documentation": {}
     },
     {
-        "label": "test_empty_sql_file_should_return_empty_dictionary",
+        "label": "test_empty_sql_db_should_return_empty_dictionary",
         "kind": 2,
         "importPath": "test_mymodul_sql",
         "description": "test_mymodul_sql",
-        "peekOfCode": "def test_empty_sql_file_should_return_empty_dictionary():\n    test_empty_sql = mymodule.work_with_sql_lite_db_files(\n        \"shift.db\",\n        'time_table',\n        'day',\n        'time'\n    )\n    assert len(test_empty_sql) == 0\ndef test_sql_file_retur_not_emthy_dictionary():\n    test_sql_file = mymodule. work_with_sql_lite_db_files(",
+        "peekOfCode": "def test_empty_sql_db_should_return_empty_dictionary():\n    test_empty_sql_db = mymodule.work_with_sql_lite_db_files(\n        \"shift.db\",\n        'time_table',\n        'day',\n        'time'\n    )\n    assert len(test_empty_sql_db) == 0\ndef test_sql_db_should_retur_valid_dictionary():\n    test_sql_db = mymodule. work_with_sql_lite_db_files(",
         "detail": "test_mymodul_sql",
         "documentation": {}
     },
     {
-        "label": "test_sql_file_retur_not_emthy_dictionary",
+        "label": "test_sql_db_should_retur_valid_dictionary",
         "kind": 2,
         "importPath": "test_mymodul_sql",
         "description": "test_mymodul_sql",
-        "peekOfCode": "def test_sql_file_retur_not_emthy_dictionary():\n    test_sql_file = mymodule. work_with_sql_lite_db_files(\n        \"staff_shift.db\",\n        'User_id',\n        'day',\n        'time_table'\n    )\n    assert len(test_sql_file) == 7\ndef test_sql_valid_file_shut_return_valid_dictionary():\n    test_sql_valid_file = mymodule.work_with_sql_lite_db_files(",
+        "peekOfCode": "def test_sql_db_should_retur_valid_dictionary():\n    test_sql_db = mymodule. work_with_sql_lite_db_files(\n        \"staff_shift.db\",\n        'User_id',\n        'day',\n        'time_table'\n    )\n    assert len(test_sql_db) == 7\ndef test_sql_db_should_return_valid_dictionary():\n    test_sql_db = mymodule.work_with_sql_lite_db_files(",
         "detail": "test_mymodul_sql",
         "documentation": {}
     },
     {
-        "label": "test_sql_valid_file_shut_return_valid_dictionary",
+        "label": "test_sql_db_should_return_valid_dictionary",
         "kind": 2,
         "importPath": "test_mymodul_sql",
         "description": "test_mymodul_sql",
-        "peekOfCode": "def test_sql_valid_file_shut_return_valid_dictionary():\n    test_sql_valid_file = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\",\n        'Name',\n        'Surname',\n        'staff_name_surname'\n    )\n    assert test_sql_valid_file['Denis'] == 'Petrov'\n    assert test_sql_valid_file['Tania'] == 'Bal'\n    assert test_sql_valid_file['Lana'] == 'Mel'",
+        "peekOfCode": "def test_sql_db_should_return_valid_dictionary():\n    test_sql_db = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\",\n        'Name',\n        'Surname',\n        'staff_name_surname'\n    )\n    assert test_sql_db['Denis'] == 'Petrov'\n    assert test_sql_db['Tania'] == 'Bal'\n    assert test_sql_db['Lana'] == 'Mel'",
         "detail": "test_mymodul_sql",
         "documentation": {}
     },
     {
-        "label": "test_sql_shut_retur_valid_dictionary",
+        "label": "test_sql_db_should_retur_valid_dictionary",
         "kind": 2,
         "importPath": "test_mymodul_sql",
         "description": "test_mymodul_sql",
-        "peekOfCode": "def test_sql_shut_retur_valid_dictionary():\n    staff = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\",\n        'Name',\n        'Position',\n        'staff_position',\n    )\n    assert staff[\"Tomas\"] == 'Web-Developer'\ndef test_sql_db_should_return_7_itiem():\n    test_sql_db = mymodule.work_with_sql_lite_db_files(",
+        "peekOfCode": "def test_sql_db_should_retur_valid_dictionary():\n    test_sql_db = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\",\n        'Name',\n        'Position',\n        'staff_position'\n    )\n    assert test_sql_db['Tomas'] == 'Web-Developer'\ndef test_sql_db_should_return_7_itiem():\n    test_sql_db = mymodule.work_with_sql_lite_db_files(",
         "detail": "test_mymodul_sql",
         "documentation": {}
     },
@@ -697,16 +697,16 @@
         "kind": 2,
         "importPath": "test_mymodul_sql",
         "description": "test_mymodul_sql",
-        "peekOfCode": "def test_sql_db_should_return_7_itiem():\n    test_sql_db = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\",\n        'user_id',\n        'day',\n        'time_table'\n    )\n    assert len(test_sql_db) == 7\ndef test_sql_db_file_should_return_3_items():\n    test_sql_db = mymodule.work_with_sql_lite_db_files(",
+        "peekOfCode": "def test_sql_db_should_return_7_itiem():\n    test_sql_db = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\",\n        'user_id',\n        'day',\n        'time_table'\n    )\n    assert len(test_sql_db) == 7\ndef test_sql_db_should_return_3_items():\n    test_sql_db = mymodule.work_with_sql_lite_db_files(",
         "detail": "test_mymodul_sql",
         "documentation": {}
     },
     {
-        "label": "test_sql_db_file_should_return_3_items",
+        "label": "test_sql_db_should_return_3_items",
         "kind": 2,
         "importPath": "test_mymodul_sql",
         "description": "test_mymodul_sql",
-        "peekOfCode": "def test_sql_db_file_should_return_3_items():\n    test_sql_db = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\",\n        'Name',\n        'Surname',\n        'staff_name_surname'\n    )\n    assert len(test_sql_db) == 3\ndef test_sql_db_should_return_1_itiem():\n    test_sql_db = mymodule.work_with_sql_lite_db_files(",
+        "peekOfCode": "def test_sql_db_should_return_3_items():\n    test_sql_db = mymodule.work_with_sql_lite_db_files(\n        \"staff_shift.db\",\n        'Name',\n        'Surname',\n        'staff_name_surname'\n    )\n    assert len(test_sql_db) == 3\ndef test_sql_db_should_return_1_itiem():\n    test_sql_db = mymodule.work_with_sql_lite_db_files(",
         "detail": "test_mymodul_sql",
         "documentation": {}
     },
