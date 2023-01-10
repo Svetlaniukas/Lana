@@ -68,12 +68,20 @@
         "documentation": {}
     },
     {
-        "label": "calendar",
+        "label": "app",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "calendar",
-        "description": "calendar",
-        "detail": "calendar",
+        "importPath": "app",
+        "description": "app",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "app",
+        "description": "app",
+        "isExtraImport": true,
+        "detail": "app",
         "documentation": {}
     },
     {
@@ -102,6 +110,22 @@
     },
     {
         "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "reguest",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
         "importPath": "flask",
         "description": "flask",
         "isExtraImport": true,
@@ -141,14 +165,6 @@
         "description": "my_sql_lite_db",
         "isExtraImport": true,
         "detail": "my_sql_lite_db",
-        "documentation": {}
-    },
-    {
-        "label": "app",
-        "importPath": "app",
-        "description": "app",
-        "isExtraImport": true,
-        "detail": "app",
         "documentation": {}
     },
     {
@@ -462,7 +478,16 @@
         "kind": 6,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "class Article(db.Model:)\n    id = db.Colum(db.Integer, primary_key=True)\n    title = db.Colum(db.Integer(100), primary_key=True)\n    intro = db.Colum(db.Integer(300), primary_key=True)\n    text = db.Colum(db.Integer, primary_key=True)\n    date = db.Colum(db.DateTime, default=datetime.utcnow)\n    def_repr_(self):\n        return '<Article '\n@app.route('/')\n@app.route('/home')",
+        "peekOfCode": "class Article(db.Model):\n    id = db.Colum(db.Integer, primary_key=True)\n    title = db.Colum(db.Integer(100), primary_key=True)\n    intro = db.Colum(db.Integer(300), primary_key=True)\n    text = db.Colum(db.Integer, primary_key=True)\n    date = db.Colum(db.DateTime, default=datetime.utcnow)\n    def __repr__(self):\n        return '<Article %r>' % self.id\n@app.route('/crest-article', methhod=['POST', 'GET'])\ndef create_article():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "create_article",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def create_article():\n    if reguest.method == \"POST\":\n        pass\n        title = reguest.form['title']\n        intro = reguest.form['intro']\n        text = reguest.form['text']\n        article = Article(title=title, intro=intro, text=text)\n        try:\n            db.session.add(article)\n            db.session.commit()",
         "detail": "app",
         "documentation": {}
     },
@@ -471,7 +496,7 @@
         "kind": 2,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "def home():\n    date_time = datetime.now()\n    calendar_year = calendar.TextCalendar()\n    page_content = render_template(\"home.html\",\n                                   current_time=date_time,\n                                   calendar_year=calendar_year.formatyear(\n                                       2023, w=2, l=1, c=6, m=3)\n                                   )\n    return page_content\n@app.route('/staff')",
+        "peekOfCode": "def home():\n    date_time = datetime.now()\n    page_content = render_template(\"home.html\",\n            current_time=date_time,\n    )\n    return page_content\n@app.route('/staff')\ndef staff():\n    for_week_days_shift = mymodule.work_with_db_json_staff_shift(\n        \"staff.json\", 'weekday')",
         "detail": "app",
         "documentation": {}
     },
@@ -480,16 +505,7 @@
         "kind": 2,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "def staff():\n    for_week_days_shift = mymodule.work_with_db_json_staff_shift(\n        \"staff.json\", 'weekday')\n    for_staff_weekend_shift = mymodule.work_with_db_xml_staff_shift(\n        \"staff_weekend.xml\", 'day', 'time')\n    page_content = render_template(\n        \"staff.html\",\n        for_week_days_shift=for_week_days_shift,\n        for_staff_weekend_shift=for_staff_weekend_shift\n        )",
-        "detail": "app",
-        "documentation": {}
-    },
-    {
-        "label": "posts",
-        "kind": 2,
-        "importPath": "app",
-        "description": "app",
-        "peekOfCode": "def posts():\nif __name__ == \"__main__\":\n    app.run(debug=True)",
+        "peekOfCode": "def staff():\n    for_week_days_shift = mymodule.work_with_db_json_staff_shift(\n        \"staff.json\", 'weekday')\n    for_staff_weekend_shift = mymodule.work_with_db_xml_staff_shift(\n        \"staff_weekend.xml\", 'day', 'time')\n    page_content = render_template(\n        \"staff.html\",\n        for_week_days_shift=for_week_days_shift,\n        for_staff_weekend_shift=for_staff_weekend_shift\n    )",
         "detail": "app",
         "documentation": {}
     },
@@ -498,7 +514,16 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "app = Flask(__name__)\napp.config['SQLALCHEMY DATABASE_URI'] = 'sqlite'///staff_shift.expandtabs()\ndb = SQLAlchemy(app)\nclass Article(db.Model:)\n    id = db.Colum(db.Integer, primary_key=True)\n    title = db.Colum(db.Integer(100), primary_key=True)\n    intro = db.Colum(db.Integer(300), primary_key=True)\n    text = db.Colum(db.Integer, primary_key=True)\n    date = db.Colum(db.DateTime, default=datetime.utcnow)\n    def_repr_(self):",
+        "peekOfCode": "app = Flask(__name__)\napp.config['SQLALCHEMY DATABASE_URI'] = 'sqllite:///staff_shift.db'\napp.config['SQLALCHEMY_TRACK_MODIFICATION'] = False\ndb = SQLAlchemy(app)\nclass Article(db.Model):\n    id = db.Colum(db.Integer, primary_key=True)\n    title = db.Colum(db.Integer(100), primary_key=True)\n    intro = db.Colum(db.Integer(300), primary_key=True)\n    text = db.Colum(db.Integer, primary_key=True)\n    date = db.Colum(db.DateTime, default=datetime.utcnow)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app.config['SQLALCHEMY_TRACK_MODIFICATION']",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False\ndb = SQLAlchemy(app)\nclass Article(db.Model):\n    id = db.Colum(db.Integer, primary_key=True)\n    title = db.Colum(db.Integer(100), primary_key=True)\n    intro = db.Colum(db.Integer(300), primary_key=True)\n    text = db.Colum(db.Integer, primary_key=True)\n    date = db.Colum(db.DateTime, default=datetime.utcnow)\n    def __repr__(self):\n        return '<Article %r>' % self.id",
         "detail": "app",
         "documentation": {}
     },
@@ -507,7 +532,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "db = SQLAlchemy(app)\nclass Article(db.Model:)\n    id = db.Colum(db.Integer, primary_key=True)\n    title = db.Colum(db.Integer(100), primary_key=True)\n    intro = db.Colum(db.Integer(300), primary_key=True)\n    text = db.Colum(db.Integer, primary_key=True)\n    date = db.Colum(db.DateTime, default=datetime.utcnow)\n    def_repr_(self):\n        return '<Article '\n@app.route('/')",
+        "peekOfCode": "db = SQLAlchemy(app)\nclass Article(db.Model):\n    id = db.Colum(db.Integer, primary_key=True)\n    title = db.Colum(db.Integer(100), primary_key=True)\n    intro = db.Colum(db.Integer(300), primary_key=True)\n    text = db.Colum(db.Integer, primary_key=True)\n    date = db.Colum(db.DateTime, default=datetime.utcnow)\n    def __repr__(self):\n        return '<Article %r>' % self.id\n@app.route('/crest-article', methhod=['POST', 'GET'])",
         "detail": "app",
         "documentation": {}
     },
