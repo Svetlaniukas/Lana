@@ -24,7 +24,7 @@ db = SQLAlchemy (app)
 
 @app.route('/create-article', methods=['POST', 'GET'])
 def create_article():
-    #request.method == "POST"
+   #request.method == "POST"
    # title = request.form['title']
    # intro = request.form['intro']
    # text = request.form['text']
