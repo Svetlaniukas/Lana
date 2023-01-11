@@ -1,46 +1,45 @@
-import app
 from datetime import datetime
+from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
-from flask import Flask, render_template, reguest, redirect
-
 import mymodule
 
+
 app = Flask(__name__)
-app.config['SQLALCHEMY DATABASE_URI'] = 'sqllite:///staff_shift.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///staff_shift.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False
-db = SQLAlchemy(app)
+db = SQLAlchemy (app)
 
 
-class Article(db.Model):
-    id = db.Colum(db.Integer, primary_key=True)
-    title = db.Colum(db.Integer(100), primary_key=True)
-    intro = db.Colum(db.Integer(300), primary_key=True)
-    text = db.Colum(db.Integer, primary_key=True)
-    date = db.Colum(db.DateTime, default=datetime.utcnow)
+#class Article(db.Model):
+#   id = db.Colum(db.Integer, primary_key=True)
+#   text = db.Colum(db.Integer, primary_key=True)
+#   intro = db.Colum(db.Integer(300), primary_key=True)
+#   title = db.Colum(db.Integer(100), primary_key=True)
+#    date = db.Colum(db.DateTime, default=datetime.utcnow)
     
-    
-    def __repr__(self):
-        return '<Article %r>' % self.id
+    #def __repr__(self):
+        #return '<Article %r>' % self.id
 
 
-@app.route('/crest-article', methhod=['POST', 'GET'])
+
+@app.route('/create-article', methods=['POST', 'GET'])
 def create_article():
-    if reguest.method == "POST":
-        pass
-        title = reguest.form['title']
-        intro = reguest.form['intro']
-        text = reguest.form['text']
+    #request.method == "POST"
+   # title = request.form['title']
+   # intro = request.form['intro']
+   # text = request.form['text']
 
-        article = Article(title=title, intro=intro, text=text)
+        #article = Article(title=title, intro=intro, text=text)
 
-        try:
-            db.session.add(article)
-            db.session.commit()
-            return redirect('/home')
-        except:
-            return "For appload text return Error"
-    else:
-        return render_template("db_data.html")
+        #try:
+         #   db.session.add(article)
+          #  db.session.commit()
+           # return redirect('/home')
+        #except:
+            #return "For appload text return Error"
+    #else:
+    return render_template("db_data.html")
+
 
 @app.route('/')
 @app.route('/home')

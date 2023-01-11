@@ -6,7 +6,7 @@ import xml.etree.ElementTree as ET
 from json import JSONDecodeError
 import json
 import sqlite3
-from my_sql_lite_db import time_table
+
 NAME = "mymodule"
 
 """

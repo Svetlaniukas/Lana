@@ -1,35 +1,44 @@
 [
     {
-        "label": "ttk",
-        "importPath": "tkinter",
-        "description": "tkinter",
-        "isExtraImport": true,
-        "detail": "tkinter",
-        "documentation": {}
-    },
-    {
-        "label": "*",
-        "importPath": "tkinter",
-        "description": "tkinter",
-        "isExtraImport": true,
-        "detail": "tkinter",
-        "documentation": {}
-    },
-    {
-        "label": "sqlite3",
+        "label": "flask",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "sqlite3",
-        "description": "sqlite3",
-        "detail": "sqlite3",
+        "importPath": "flask",
+        "description": "flask",
+        "detail": "flask",
         "documentation": {}
     },
     {
-        "label": "Error",
-        "importPath": "sqlite3",
-        "description": "sqlite3",
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
         "isExtraImport": true,
-        "detail": "sqlite3",
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
         "documentation": {}
     },
     {
@@ -47,6 +56,23 @@
         "description": "json",
         "isExtraImport": true,
         "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "sqlite3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlite3",
+        "description": "sqlite3",
+        "detail": "sqlite3",
+        "documentation": {}
+    },
+    {
+        "label": "Error",
+        "importPath": "sqlite3",
+        "description": "sqlite3",
+        "isExtraImport": true,
+        "detail": "sqlite3",
         "documentation": {}
     },
     {
@@ -68,23 +94,6 @@
         "documentation": {}
     },
     {
-        "label": "app",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "app",
-        "description": "app",
-        "detail": "app",
-        "documentation": {}
-    },
-    {
-        "label": "app",
-        "importPath": "app",
-        "description": "app",
-        "isExtraImport": true,
-        "detail": "app",
-        "documentation": {}
-    },
-    {
         "label": "datetime",
         "importPath": "datetime",
         "description": "datetime",
@@ -98,38 +107,6 @@
         "description": "flask_sqlalchemy",
         "isExtraImport": true,
         "detail": "flask_sqlalchemy",
-        "documentation": {}
-    },
-    {
-        "label": "Flask",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "render_template",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "reguest",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "redirect",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
         "documentation": {}
     },
     {
@@ -160,91 +137,28 @@
         "documentation": {}
     },
     {
-        "label": "time_table",
-        "importPath": "my_sql_lite_db",
-        "description": "my_sql_lite_db",
+        "label": "app",
+        "importPath": "app",
+        "description": "app",
         "isExtraImport": true,
-        "detail": "my_sql_lite_db",
+        "detail": "app",
         "documentation": {}
     },
     {
-        "label": "Dictionary",
-        "kind": 6,
-        "importPath": "test_function.my_db_testing",
-        "description": "test_function.my_db_testing",
-        "peekOfCode": "class Dictionary:\n    db_name = 'dictionary.db'\n    def __init__(self, window):\n        self.wind = window\n        self.wind.title('Редактирование словаря')\n        # создание элементов для ввода слов и значений\n        frame = LabelFrame(self.wind, text='Введите новое слово')\n        frame.grid(row=0, column=0, columnspan=3, pady=20)\n        Label(frame, text='Слово: ').grid(row=1, column=0)\n        self.word = Entry(frame)",
-        "detail": "test_function.my_db_testing",
-        "documentation": {}
-    },
-    {
-        "label": "create_connection",
+        "label": "setUp",
         "kind": 2,
         "importPath": "test_function.my_db_testing",
         "description": "test_function.my_db_testing",
-        "peekOfCode": "def create_connection(db_file):\n    conn = None\n    try:\n        conn = sqlite3.connect(db_file)\n        return conn\n    except Error as e:\n        print(e)\n    return conn\ndef create_table(conn, create_table_sql):\n    try:",
+        "peekOfCode": "def setUp(self):\n    self.db_fd, flask.app.config['DATABASE'] = True\n    flask.app.config['TESTING'] = True\n    self.app = flask.app.test_client()\n    with flask.app.app_context():\n        flask.init_db()\ndef tearDown(self):\n    os.close(self.db_fd)\n    os.unlink(flask.app.config['DATABASE'])",
         "detail": "test_function.my_db_testing",
         "documentation": {}
     },
     {
-        "label": "create_table",
+        "label": "tearDown",
         "kind": 2,
         "importPath": "test_function.my_db_testing",
         "description": "test_function.my_db_testing",
-        "peekOfCode": "def create_table(conn, create_table_sql):\n    try:\n        c = conn.cursor()\n        c.execute(create_table_sql)\n    except Error as e:\n        print(e)\ndef main():\n    database = r\"file_name\"\n    # описание столбцов словаря - id номер, слово и значение\n    sql_create_dictionary_table = \"\"\" CREATE TABLE IF NOT EXISTS dictionary (",
-        "detail": "test_function.my_db_testing",
-        "documentation": {}
-    },
-    {
-        "label": "main",
-        "kind": 2,
-        "importPath": "test_function.my_db_testing",
-        "description": "test_function.my_db_testing",
-        "peekOfCode": "def main():\n    database = r\"file_name\"\n    # описание столбцов словаря - id номер, слово и значение\n    sql_create_dictionary_table = \"\"\" CREATE TABLE IF NOT EXISTS dictionary (\n                                        id integer PRIMARY KEY,\n                                        word text,\n                                        meaning text\n                                    ); \"\"\"\n    # подключение к базе\n    conn = create_connection(database)",
-        "detail": "test_function.my_db_testing",
-        "documentation": {}
-    },
-    {
-        "label": "run_query",
-        "kind": 2,
-        "importPath": "test_function.my_db_testing",
-        "description": "test_function.my_db_testing",
-        "peekOfCode": "def run_query(self, query, parameters=()):\n    with sqlite3.connect(self.db_name) as conn:\n        cursor = conn.cursor()\n        result = cursor.execute(query, parameters)\n        conn.commit()\n    # запрос на извлечение всех существующих записей из базы в алфавитном порядке\ndef get_words(self):\n        query = 'SELECT * FROM dictionary ORDER BY word DESC'\n        db_rows = self.run_query(query)\n        # формирование словаря из перемешанных в случайном порядке слов и их значений",
-        "detail": "test_function.my_db_testing",
-        "documentation": {}
-    },
-    {
-        "label": "get_words",
-        "kind": 2,
-        "importPath": "test_function.my_db_testing",
-        "description": "test_function.my_db_testing",
-        "peekOfCode": "def get_words(self):\n        query = 'SELECT * FROM dictionary ORDER BY word DESC'\n        db_rows = self.run_query(query)\n        # формирование словаря из перемешанных в случайном порядке слов и их значений\n        lst_left, lst_right = [], []\n        for row in db_rows:\n            lst_left.append(row[1])\n            lst_right.append(row[2])\n        random.shuffle(lst_left)\n        random.shuffle(lst_right)",
-        "detail": "test_function.my_db_testing",
-        "documentation": {}
-    },
-    {
-        "label": "edit_word",
-        "kind": 2,
-        "importPath": "test_function.my_db_testing",
-        "description": "test_function.my_db_testing",
-        "peekOfCode": "def edit_word(self):\n    self.message['text'] = ''\n    try:\n        self.tree.item(self.tree.selection())['values'][0]\n    except IndexError as e:\n        self.message['text'] = 'Выберите слово для изменения'\n        return\n    word = self.tree.item(self.tree.selection())['text']\n    old_meaning = self.tree.item(self.tree.selection())['values'][0]\n    self.edit_wind = Toplevel()",
-        "detail": "test_function.my_db_testing",
-        "documentation": {}
-    },
-    {
-        "label": "edit_records",
-        "kind": 2,
-        "importPath": "test_function.my_db_testing",
-        "description": "test_function.my_db_testing",
-        "peekOfCode": "def edit_records(self, new_word, word, new_meaning, old_meaning):\n    query = 'UPDATE dictionary SET word = ?, meaning = ? WHERE word = ? AND meaning = ?'\n    parameters = (new_word, new_meaning, word, old_meaning)\n    self.run_query(query, parameters)\n    self.edit_wind.destroy()\n    self.message['text'] = 'слово {} успешно изменено'.format(word)\n    self.get_words()\nif __name__ == '__main__':\n   window = Tk()\napplication = Dictionary(window)",
-        "detail": "test_function.my_db_testing",
-        "documentation": {}
-    },
-    {
-        "label": "application",
-        "kind": 5,
-        "importPath": "test_function.my_db_testing",
-        "description": "test_function.my_db_testing",
-        "peekOfCode": "application = Dictionary(window)",
+        "peekOfCode": "def tearDown(self):\n    os.close(self.db_fd)\n    os.unlink(flask.app.config['DATABASE'])",
         "detail": "test_function.my_db_testing",
         "documentation": {}
     },
@@ -474,20 +388,11 @@
         "documentation": {}
     },
     {
-        "label": "Article",
-        "kind": 6,
-        "importPath": "app",
-        "description": "app",
-        "peekOfCode": "class Article(db.Model):\n    id = db.Colum(db.Integer, primary_key=True)\n    title = db.Colum(db.Integer(100), primary_key=True)\n    intro = db.Colum(db.Integer(300), primary_key=True)\n    text = db.Colum(db.Integer, primary_key=True)\n    date = db.Colum(db.DateTime, default=datetime.utcnow)\n    def __repr__(self):\n        return '<Article %r>' % self.id\n@app.route('/crest-article', methhod=['POST', 'GET'])\ndef create_article():",
-        "detail": "app",
-        "documentation": {}
-    },
-    {
         "label": "create_article",
         "kind": 2,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "def create_article():\n    if reguest.method == \"POST\":\n        pass\n        title = reguest.form['title']\n        intro = reguest.form['intro']\n        text = reguest.form['text']\n        article = Article(title=title, intro=intro, text=text)\n        try:\n            db.session.add(article)\n            db.session.commit()",
+        "peekOfCode": "def create_article():\n    #request.method == \"POST\"\n   # title = request.form['title']\n   # intro = request.form['intro']\n   # text = request.form['text']\n        #article = Article(title=title, intro=intro, text=text)\n        #try:\n         #   db.session.add(article)\n          #  db.session.commit()\n           # return redirect('/home')",
         "detail": "app",
         "documentation": {}
     },
@@ -514,7 +419,16 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "app = Flask(__name__)\napp.config['SQLALCHEMY DATABASE_URI'] = 'sqllite:///staff_shift.db'\napp.config['SQLALCHEMY_TRACK_MODIFICATION'] = False\ndb = SQLAlchemy(app)\nclass Article(db.Model):\n    id = db.Colum(db.Integer, primary_key=True)\n    title = db.Colum(db.Integer(100), primary_key=True)\n    intro = db.Colum(db.Integer(300), primary_key=True)\n    text = db.Colum(db.Integer, primary_key=True)\n    date = db.Colum(db.DateTime, default=datetime.utcnow)",
+        "peekOfCode": "app = Flask(__name__)\napp.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///staff_shift.db'\napp.config['SQLALCHEMY_TRACK_MODIFICATION'] = False\ndb = SQLAlchemy (app)\n#class Article(db.Model):\n#   id = db.Colum(db.Integer, primary_key=True)\n#   text = db.Colum(db.Integer, primary_key=True)\n#   intro = db.Colum(db.Integer(300), primary_key=True)\n#   title = db.Colum(db.Integer(100), primary_key=True)\n#    date = db.Colum(db.DateTime, default=datetime.utcnow)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app.config['SQLALCHEMY_DATABASE_URI']",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///staff_shift.db'\napp.config['SQLALCHEMY_TRACK_MODIFICATION'] = False\ndb = SQLAlchemy (app)\n#class Article(db.Model):\n#   id = db.Colum(db.Integer, primary_key=True)\n#   text = db.Colum(db.Integer, primary_key=True)\n#   intro = db.Colum(db.Integer(300), primary_key=True)\n#   title = db.Colum(db.Integer(100), primary_key=True)\n#    date = db.Colum(db.DateTime, default=datetime.utcnow)\n    #def __repr__(self):",
         "detail": "app",
         "documentation": {}
     },
@@ -523,7 +437,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False\ndb = SQLAlchemy(app)\nclass Article(db.Model):\n    id = db.Colum(db.Integer, primary_key=True)\n    title = db.Colum(db.Integer(100), primary_key=True)\n    intro = db.Colum(db.Integer(300), primary_key=True)\n    text = db.Colum(db.Integer, primary_key=True)\n    date = db.Colum(db.DateTime, default=datetime.utcnow)\n    def __repr__(self):\n        return '<Article %r>' % self.id",
+        "peekOfCode": "app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False\ndb = SQLAlchemy (app)\n#class Article(db.Model):\n#   id = db.Colum(db.Integer, primary_key=True)\n#   text = db.Colum(db.Integer, primary_key=True)\n#   intro = db.Colum(db.Integer(300), primary_key=True)\n#   title = db.Colum(db.Integer(100), primary_key=True)\n#    date = db.Colum(db.DateTime, default=datetime.utcnow)\n    #def __repr__(self):\n        #return '<Article %r>' % self.id",
         "detail": "app",
         "documentation": {}
     },
@@ -532,7 +446,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "db = SQLAlchemy(app)\nclass Article(db.Model):\n    id = db.Colum(db.Integer, primary_key=True)\n    title = db.Colum(db.Integer(100), primary_key=True)\n    intro = db.Colum(db.Integer(300), primary_key=True)\n    text = db.Colum(db.Integer, primary_key=True)\n    date = db.Colum(db.DateTime, default=datetime.utcnow)\n    def __repr__(self):\n        return '<Article %r>' % self.id\n@app.route('/crest-article', methhod=['POST', 'GET'])",
+        "peekOfCode": "db = SQLAlchemy (app)\n#class Article(db.Model):\n#   id = db.Colum(db.Integer, primary_key=True)\n#   text = db.Colum(db.Integer, primary_key=True)\n#   intro = db.Colum(db.Integer(300), primary_key=True)\n#   title = db.Colum(db.Integer(100), primary_key=True)\n#    date = db.Colum(db.DateTime, default=datetime.utcnow)\n    #def __repr__(self):\n        #return '<Article %r>' % self.id\n@app.route('/create-article', methods=['POST', 'GET'])",
         "detail": "app",
         "documentation": {}
     },
@@ -600,38 +514,56 @@
         "documentation": {}
     },
     {
-        "label": "test_index_contain_route",
+        "label": "test_should_return_the_main_page",
         "kind": 2,
         "importPath": "test_mymodel_app",
         "description": "test_mymodel_app",
-        "peekOfCode": "def test_index_contain_route():\n    response = app.test_client().get('/')\n    assert 'A lot of people ask where we got our name' in response.data.decode(\n        'utf-8')\ndef test_index_contain_main_title_name():\n    response = app.test_client().get('/home')\n    print(response.data)\n    assert response.status_code == 200\n    assert 'New Look Hair Design' in response.data.decode('utf-8')\n@pytest.mark.parametrize(",
+        "peekOfCode": "def test_should_return_the_main_page():\n    response = app.test_client().get('/')\n    assert 'A lot of people ask where we got our name' in response.data.decode(\n        'utf-8')\n\"\"\"Тест должен загружать главную страницу c возвратом текста\"\"\"\ndef test_should_load_the_main_page_with_the_return_text():\n    response = app.test_client().get('/home')\n    print(response.data)\n    assert response.status_code == 200\n    assert 'New Look Hair Design' in response.data.decode('utf-8')",
         "detail": "test_mymodel_app",
         "documentation": {}
     },
     {
-        "label": "test_index_contain_main_title_name",
+        "label": "test_should_load_the_main_page_with_the_return_text",
         "kind": 2,
         "importPath": "test_mymodel_app",
         "description": "test_mymodel_app",
-        "peekOfCode": "def test_index_contain_main_title_name():\n    response = app.test_client().get('/home')\n    print(response.data)\n    assert response.status_code == 200\n    assert 'New Look Hair Design' in response.data.decode('utf-8')\n@pytest.mark.parametrize(\n    \"day\", ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']\n    )\ndef test_index_contain_staff_shift_week_day(day):\n    response = app.test_client().get('/staff')",
+        "peekOfCode": "def test_should_load_the_main_page_with_the_return_text():\n    response = app.test_client().get('/home')\n    print(response.data)\n    assert response.status_code == 200\n    assert 'New Look Hair Design' in response.data.decode('utf-8')\n\"\"\"Тест parametrize  на возврат данных из списка day\"\"\"\n@pytest.mark.parametrize(\n    \"day\", ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']\n    )\ndef test_to_return_data_from_the_day_list(day):",
         "detail": "test_mymodel_app",
         "documentation": {}
     },
     {
-        "label": "test_index_contain_staff_shift_week_day",
+        "label": "test_to_return_data_from_the_day_list",
         "kind": 2,
         "importPath": "test_mymodel_app",
         "description": "test_mymodel_app",
-        "peekOfCode": "def test_index_contain_staff_shift_week_day(day):\n    response = app.test_client().get('/staff')\n    print(f'\"{day}\"')\n    assert 'Monday' in response.data.decode('utf-8')\n@pytest.mark.parametrize(\"weekend\", ['Saturday', 'Sunday'])\ndef test_index_contain_staff_shift_weekend(weekend):\n    response = app.test_client().get('/staff')\n    print(f'\"{weekend}\"')\n    assert 'Sunday' in response.data.decode('utf-8')",
+        "peekOfCode": "def test_to_return_data_from_the_day_list(day):\n    response = app.test_client().get('/staff')\n    print(f'\"{day}\"')\n    assert 'Monday' in response.data.decode('utf-8')\n\"\"\"Тест parametrize  на возврат данных из списка weekend\"\"\"\n@pytest.mark.parametrize(\"weekend\", ['Saturday', 'Sunday'])\ndef test_to_return_data_from_the_weekend_list(weekend):\n    response = app.test_client().get('/staff')\n    print(f'\"{weekend}\"')\n    assert 'Sunday' in response.data.decode('utf-8')",
         "detail": "test_mymodel_app",
         "documentation": {}
     },
     {
-        "label": "test_index_contain_staff_shift_weekend",
+        "label": "test_to_return_data_from_the_weekend_list",
         "kind": 2,
         "importPath": "test_mymodel_app",
         "description": "test_mymodel_app",
-        "peekOfCode": "def test_index_contain_staff_shift_weekend(weekend):\n    response = app.test_client().get('/staff')\n    print(f'\"{weekend}\"')\n    assert 'Sunday' in response.data.decode('utf-8')",
+        "peekOfCode": "def test_to_return_data_from_the_weekend_list(weekend):\n    response = app.test_client().get('/staff')\n    print(f'\"{weekend}\"')\n    assert 'Sunday' in response.data.decode('utf-8')\n\"\"\" Тест должен возвращать таблицу db на главной странице\"\"\"   \ndef test_should_return_db_table_in_main_page_with_text():\n    response = app.test_client().get('/create-article')\n    assert 'Apload some text' in response.data.decode('utf-8')\n\"\"\" Тест должен возвращать кнопку CREATE  на главной странице\"\"\"\ndef test_ishould_return_a_CREATE_button_on_the_main_page():",
+        "detail": "test_mymodel_app",
+        "documentation": {}
+    },
+    {
+        "label": "test_should_return_db_table_in_main_page_with_text",
+        "kind": 2,
+        "importPath": "test_mymodel_app",
+        "description": "test_mymodel_app",
+        "peekOfCode": "def test_should_return_db_table_in_main_page_with_text():\n    response = app.test_client().get('/create-article')\n    assert 'Apload some text' in response.data.decode('utf-8')\n\"\"\" Тест должен возвращать кнопку CREATE  на главной странице\"\"\"\ndef test_ishould_return_a_CREATE_button_on_the_main_page():\n    response = app.test_client().get('/create-article')\n    assert \"post\" in response.data.decode(\n        'utf-8')",
+        "detail": "test_mymodel_app",
+        "documentation": {}
+    },
+    {
+        "label": "test_ishould_return_a_CREATE_button_on_the_main_page",
+        "kind": 2,
+        "importPath": "test_mymodel_app",
+        "description": "test_mymodel_app",
+        "peekOfCode": "def test_ishould_return_a_CREATE_button_on_the_main_page():\n    response = app.test_client().get('/create-article')\n    assert \"post\" in response.data.decode(\n        'utf-8')",
         "detail": "test_mymodel_app",
         "documentation": {}
     },
