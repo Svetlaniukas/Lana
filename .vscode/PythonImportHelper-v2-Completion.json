@@ -119,14 +119,6 @@
         "documentation": {}
     },
     {
-        "label": "Self",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
         "label": "app",
         "importPath": "app",
         "description": "app",
@@ -364,7 +356,7 @@
         "kind": 2,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "def create_article():\n    #request.method == \"POST\"\n   # title = request.form['title']\n   # intro = request.form['intro']\n   # text = request.form['text']\n        #article = Article(title=title, intro=intro, text=text)\n        #try:\n         #   db.session.add(article)\n          #  db.session.commit()\n           # return redirect('/home')",
+        "peekOfCode": "def create_article():\n   #request.method == \"POST\"\n   # title = request.form['title']\n   # intro = request.form['intro']\n   # text = request.form['text']\n        #article = Article(title=title, intro=intro, text=text)\n        #try:\n         #   db.session.add(article)\n          #  db.session.commit()\n           # return redirect('/home')",
         "detail": "app",
         "documentation": {}
     },
@@ -517,7 +509,7 @@
         "kind": 2,
         "importPath": "test_mymodel_app",
         "description": "test_mymodel_app",
-        "peekOfCode": "def test_to_return_data_from_the_weekend_list(weekend):\n    response = app.test_client().get('/staff')\n    print(f'\"{weekend}\"')\n    assert 'Sunday' in response.data.decode('utf-8')\n\"\"\" Тест должен возвращать таблицу db на главной странице\"\"\"   \ndef test_should_return_db_table_in_main_page_with_text():\n    response = app.test_client().get('/create-article')\n    assert 'Apload some text' in response.data.decode('utf-8')\n@pytest.fixture\ndef client():",
+        "peekOfCode": "def test_to_return_data_from_the_weekend_list(weekend):\n    response = app.test_client().get('/staff')\n    print(f'\"{weekend}\"')\n    assert 'Sunday' in response.data.decode('utf-8')\n\"\"\" Тест должен возвращать таблицу db на главной странице\"\"\"   \ndef test_should_return_db_table_in_main_page_with_text():\n    response = app.test_client().get('/create-article')\n    assert 'Apload some text' in response.data.decode('utf-8')\n\"\"\" Тест должен возвращать принимать запрос post\"\"\"\ndef test_ishould_return_a_CREATE_button_on_the_main_page():",
         "detail": "test_mymodel_app",
         "documentation": {}
     },
@@ -526,16 +518,7 @@
         "kind": 2,
         "importPath": "test_mymodel_app",
         "description": "test_mymodel_app",
-        "peekOfCode": "def test_should_return_db_table_in_main_page_with_text():\n    response = app.test_client().get('/create-article')\n    assert 'Apload some text' in response.data.decode('utf-8')\n@pytest.fixture\ndef client():\n    with app.test_client, self.app_context():\n        app.test_client.config['DATABASE'] = True\n        app.test_client.config['TESTING'] = True\n\"\"\" Тест должен возвращать принимать запрос post\"\"\"\ndef test_ishould_return_a_CREATE_button_on_the_main_page():",
-        "detail": "test_mymodel_app",
-        "documentation": {}
-    },
-    {
-        "label": "client",
-        "kind": 2,
-        "importPath": "test_mymodel_app",
-        "description": "test_mymodel_app",
-        "peekOfCode": "def client():\n    with app.test_client, self.app_context():\n        app.test_client.config['DATABASE'] = True\n        app.test_client.config['TESTING'] = True\n\"\"\" Тест должен возвращать принимать запрос post\"\"\"\ndef test_ishould_return_a_CREATE_button_on_the_main_page():\n    with app.test_client, self.app_context():\n        data = {\n            \"user_id\": \"1\",\n            \"content\": \"a content\",",
+        "peekOfCode": "def test_should_return_db_table_in_main_page_with_text():\n    response = app.test_client().get('/create-article')\n    assert 'Apload some text' in response.data.decode('utf-8')\n\"\"\" Тест должен возвращать принимать запрос post\"\"\"\ndef test_ishould_return_a_CREATE_button_on_the_main_page():\n    data = \"text=3&text=4&text=5\"\n    response = app.test_client().post(\n        \"/create-article\",\n        data=data,\n        headers={\"Content-Type\": \"application/json\"},",
         "detail": "test_mymodel_app",
         "documentation": {}
     },
@@ -544,7 +527,7 @@
         "kind": 2,
         "importPath": "test_mymodel_app",
         "description": "test_mymodel_app",
-        "peekOfCode": "def test_ishould_return_a_CREATE_button_on_the_main_page():\n    with app.test_client, self.app_context():\n        data = {\n            \"user_id\": \"1\",\n            \"content\": \"a content\",\n            \"participant1\": \"participant1\",\n            \"participant2\": \"participant2\",\n            \"participant3\": \"participants\"\n        }\n        response = app.test_client.post(",
+        "peekOfCode": "def test_ishould_return_a_CREATE_button_on_the_main_page():\n    data = \"text=3&text=4&text=5\"\n    response = app.test_client().post(\n        \"/create-article\",\n        data=data,\n        headers={\"Content-Type\": \"application/json\"},\n    )\n    assert 'Upload some text' in response.data.decode('utf-8')",
         "detail": "test_mymodel_app",
         "documentation": {}
     },

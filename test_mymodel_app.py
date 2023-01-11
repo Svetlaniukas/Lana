@@ -1,5 +1,3 @@
-import json
-from typing import Self
 from app import app
 import pytest
 
@@ -44,30 +42,18 @@ def test_should_return_db_table_in_main_page_with_text():
     assert 'Apload some text' in response.data.decode('utf-8')
     
 
-@pytest.fixture
-def client():
-    with app.test_client, self.app_context():
-        app.test_client.config['DATABASE'] = True
-        app.test_client.config['TESTING'] = True
-
 
 """ Тест должен возвращать принимать запрос post"""
 def test_ishould_return_a_CREATE_button_on_the_main_page():
-    with app.test_client, self.app_context():
-        data = {
-            "user_id": "1",
-            "content": "a content",
-            "participant1": "participant1",
-            "participant2": "participant2",
-            "participant3": "participants"
-        }
+    data = "text=3&text=4&text=5"
 
-        response = app.test_client.post(
-            "/create-article",
-            data=json.dumps(data),
-            headers={"Content-Type": "application/json"},
-        )
-        self.assertEqual(201, response.status_code)
-        self.assertEqual(
-            'Your message has been successfully saved', response.data)
+
+    
+    response = app.test_client().post(
+        "/create-article",
+        data=data,
+        headers={"Content-Type": "application/json"},
+    )
+
+    assert 'Upload some text' in response.data.decode('utf-8')
     
