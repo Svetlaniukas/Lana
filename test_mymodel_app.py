@@ -44,6 +44,13 @@ def test_should_return_db_table_in_main_page_with_text():
     assert 'Apload some text' in response.data.decode('utf-8')
     
 
+@pytest.fixture
+def client():
+    with app.test_client, self.app_context():
+        app.test_client.config['DATABASE'] = True
+        app.test_client.config['TESTING'] = True
+
+
 """ Тест должен возвращать принимать запрос post"""
 def test_ishould_return_a_CREATE_button_on_the_main_page():
     with app.test_client, self.app_context():

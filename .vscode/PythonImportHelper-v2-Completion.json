@@ -43,22 +43,6 @@
         "documentation": {}
     },
     {
-        "label": "create_article",
-        "importPath": "app",
-        "description": "app",
-        "isExtraImport": true,
-        "detail": "app",
-        "documentation": {}
-    },
-    {
-        "label": "app",
-        "importPath": "app",
-        "description": "app",
-        "isExtraImport": true,
-        "detail": "app",
-        "documentation": {}
-    },
-    {
         "label": "my_function",
         "kind": 6,
         "isExtraImport": true,
@@ -140,6 +124,14 @@
         "description": "typing",
         "isExtraImport": true,
         "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "app",
+        "description": "app",
+        "isExtraImport": true,
+        "detail": "app",
         "documentation": {}
     },
     {
@@ -284,15 +276,6 @@
         "description": "test_function.my_xml_testing",
         "peekOfCode": "def work1_with_sql_lite_db_files(key_name, val_name):\n    db_dict = {}\n    try:\n        con = sqlite3.connect()\n        con.row_factory = sqlite3.Row\n        cur = con.cursor()\n        for keys in cur:\n            if key_name and val_name in cur():\n                key = keys[key_name]\n                val = keys[val_name]",
         "detail": "test_function.my_xml_testing",
-        "documentation": {}
-    },
-    {
-        "label": "client",
-        "kind": 2,
-        "importPath": "test_function.test_flaskr",
-        "description": "test_function.test_flaskr",
-        "peekOfCode": "def client():\n    create_article.app.config['DATABASE'] = True\n    create_article.app.config['TESTING'] = True\n    with create_article.app.test_client() as client:\n        with create_article.app.app_context():\n            create_article.init_db()\n        yield client",
-        "detail": "test_function.test_flaskr",
         "documentation": {}
     },
     {
@@ -534,7 +517,7 @@
         "kind": 2,
         "importPath": "test_mymodel_app",
         "description": "test_mymodel_app",
-        "peekOfCode": "def test_to_return_data_from_the_weekend_list(weekend):\n    response = app.test_client().get('/staff')\n    print(f'\"{weekend}\"')\n    assert 'Sunday' in response.data.decode('utf-8')\n\"\"\" Тест должен возвращать таблицу db на главной странице\"\"\"   \ndef test_should_return_db_table_in_main_page_with_text():\n    response = app.test_client().get('/create-article')\n    assert 'Apload some text' in response.data.decode('utf-8')\n\"\"\" Тест должен возвращать принимать запрос post\"\"\"\ndef test_ishould_return_a_CREATE_button_on_the_main_page():",
+        "peekOfCode": "def test_to_return_data_from_the_weekend_list(weekend):\n    response = app.test_client().get('/staff')\n    print(f'\"{weekend}\"')\n    assert 'Sunday' in response.data.decode('utf-8')\n\"\"\" Тест должен возвращать таблицу db на главной странице\"\"\"   \ndef test_should_return_db_table_in_main_page_with_text():\n    response = app.test_client().get('/create-article')\n    assert 'Apload some text' in response.data.decode('utf-8')\n@pytest.fixture\ndef client():",
         "detail": "test_mymodel_app",
         "documentation": {}
     },
@@ -543,7 +526,16 @@
         "kind": 2,
         "importPath": "test_mymodel_app",
         "description": "test_mymodel_app",
-        "peekOfCode": "def test_should_return_db_table_in_main_page_with_text():\n    response = app.test_client().get('/create-article')\n    assert 'Apload some text' in response.data.decode('utf-8')\n\"\"\" Тест должен возвращать принимать запрос post\"\"\"\ndef test_ishould_return_a_CREATE_button_on_the_main_page():\n    with app.test_client, self.app_context():\n        data = {\n            \"user_id\": \"1\",\n            \"content\": \"a content\",\n            \"participant1\": \"participant1\",",
+        "peekOfCode": "def test_should_return_db_table_in_main_page_with_text():\n    response = app.test_client().get('/create-article')\n    assert 'Apload some text' in response.data.decode('utf-8')\n@pytest.fixture\ndef client():\n    with app.test_client, self.app_context():\n        app.test_client.config['DATABASE'] = True\n        app.test_client.config['TESTING'] = True\n\"\"\" Тест должен возвращать принимать запрос post\"\"\"\ndef test_ishould_return_a_CREATE_button_on_the_main_page():",
+        "detail": "test_mymodel_app",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "kind": 2,
+        "importPath": "test_mymodel_app",
+        "description": "test_mymodel_app",
+        "peekOfCode": "def client():\n    with app.test_client, self.app_context():\n        app.test_client.config['DATABASE'] = True\n        app.test_client.config['TESTING'] = True\n\"\"\" Тест должен возвращать принимать запрос post\"\"\"\ndef test_ishould_return_a_CREATE_button_on_the_main_page():\n    with app.test_client, self.app_context():\n        data = {\n            \"user_id\": \"1\",\n            \"content\": \"a content\",",
         "detail": "test_mymodel_app",
         "documentation": {}
     },
