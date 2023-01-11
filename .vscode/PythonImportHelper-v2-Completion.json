@@ -1,47 +1,5 @@
 [
     {
-        "label": "flask",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "flask",
-        "description": "flask",
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "Flask",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "render_template",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "request",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "os",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "os",
-        "description": "os",
-        "detail": "os",
-        "documentation": {}
-    },
-    {
         "label": "json",
         "kind": 6,
         "isExtraImport": true,
@@ -85,6 +43,22 @@
         "documentation": {}
     },
     {
+        "label": "create_article",
+        "importPath": "app",
+        "description": "app",
+        "isExtraImport": true,
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "app",
+        "description": "app",
+        "isExtraImport": true,
+        "detail": "app",
+        "documentation": {}
+    },
+    {
         "label": "my_function",
         "kind": 6,
         "isExtraImport": true,
@@ -99,6 +73,30 @@
         "description": "datetime",
         "isExtraImport": true,
         "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
         "documentation": {}
     },
     {
@@ -137,29 +135,11 @@
         "documentation": {}
     },
     {
-        "label": "app",
-        "importPath": "app",
-        "description": "app",
+        "label": "Self",
+        "importPath": "typing",
+        "description": "typing",
         "isExtraImport": true,
-        "detail": "app",
-        "documentation": {}
-    },
-    {
-        "label": "setUp",
-        "kind": 2,
-        "importPath": "test_function.my_db_testing",
-        "description": "test_function.my_db_testing",
-        "peekOfCode": "def setUp(self):\n    self.db_fd, flask.app.config['DATABASE'] = True\n    flask.app.config['TESTING'] = True\n    self.app = flask.app.test_client()\n    with flask.app.app_context():\n        flask.init_db()\ndef tearDown(self):\n    os.close(self.db_fd)\n    os.unlink(flask.app.config['DATABASE'])",
-        "detail": "test_function.my_db_testing",
-        "documentation": {}
-    },
-    {
-        "label": "tearDown",
-        "kind": 2,
-        "importPath": "test_function.my_db_testing",
-        "description": "test_function.my_db_testing",
-        "peekOfCode": "def tearDown(self):\n    os.close(self.db_fd)\n    os.unlink(flask.app.config['DATABASE'])",
-        "detail": "test_function.my_db_testing",
+        "detail": "typing",
         "documentation": {}
     },
     {
@@ -304,6 +284,15 @@
         "description": "test_function.my_xml_testing",
         "peekOfCode": "def work1_with_sql_lite_db_files(key_name, val_name):\n    db_dict = {}\n    try:\n        con = sqlite3.connect()\n        con.row_factory = sqlite3.Row\n        cur = con.cursor()\n        for keys in cur:\n            if key_name and val_name in cur():\n                key = keys[key_name]\n                val = keys[val_name]",
         "detail": "test_function.my_xml_testing",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "kind": 2,
+        "importPath": "test_function.test_flaskr",
+        "description": "test_function.test_flaskr",
+        "peekOfCode": "def client():\n    create_article.app.config['DATABASE'] = True\n    create_article.app.config['TESTING'] = True\n    with create_article.app.test_client() as client:\n        with create_article.app.app_context():\n            create_article.init_db()\n        yield client",
+        "detail": "test_function.test_flaskr",
         "documentation": {}
     },
     {
@@ -545,7 +534,7 @@
         "kind": 2,
         "importPath": "test_mymodel_app",
         "description": "test_mymodel_app",
-        "peekOfCode": "def test_to_return_data_from_the_weekend_list(weekend):\n    response = app.test_client().get('/staff')\n    print(f'\"{weekend}\"')\n    assert 'Sunday' in response.data.decode('utf-8')\n\"\"\" Тест должен возвращать таблицу db на главной странице\"\"\"   \ndef test_should_return_db_table_in_main_page_with_text():\n    response = app.test_client().get('/create-article')\n    assert 'Apload some text' in response.data.decode('utf-8')\n\"\"\" Тест должен возвращать кнопку CREATE  на главной странице\"\"\"\ndef test_ishould_return_a_CREATE_button_on_the_main_page():",
+        "peekOfCode": "def test_to_return_data_from_the_weekend_list(weekend):\n    response = app.test_client().get('/staff')\n    print(f'\"{weekend}\"')\n    assert 'Sunday' in response.data.decode('utf-8')\n\"\"\" Тест должен возвращать таблицу db на главной странице\"\"\"   \ndef test_should_return_db_table_in_main_page_with_text():\n    response = app.test_client().get('/create-article')\n    assert 'Apload some text' in response.data.decode('utf-8')\n\"\"\" Тест должен возвращать принимать запрос post\"\"\"\ndef test_ishould_return_a_CREATE_button_on_the_main_page():",
         "detail": "test_mymodel_app",
         "documentation": {}
     },
@@ -554,7 +543,7 @@
         "kind": 2,
         "importPath": "test_mymodel_app",
         "description": "test_mymodel_app",
-        "peekOfCode": "def test_should_return_db_table_in_main_page_with_text():\n    response = app.test_client().get('/create-article')\n    assert 'Apload some text' in response.data.decode('utf-8')\n\"\"\" Тест должен возвращать кнопку CREATE  на главной странице\"\"\"\ndef test_ishould_return_a_CREATE_button_on_the_main_page():\n    response = app.test_client().get('/create-article')\n    assert \"post\" in response.data.decode(\n        'utf-8')",
+        "peekOfCode": "def test_should_return_db_table_in_main_page_with_text():\n    response = app.test_client().get('/create-article')\n    assert 'Apload some text' in response.data.decode('utf-8')\n\"\"\" Тест должен возвращать принимать запрос post\"\"\"\ndef test_ishould_return_a_CREATE_button_on_the_main_page():\n    with app.test_client, self.app_context():\n        data = {\n            \"user_id\": \"1\",\n            \"content\": \"a content\",\n            \"participant1\": \"participant1\",",
         "detail": "test_mymodel_app",
         "documentation": {}
     },
@@ -563,7 +552,7 @@
         "kind": 2,
         "importPath": "test_mymodel_app",
         "description": "test_mymodel_app",
-        "peekOfCode": "def test_ishould_return_a_CREATE_button_on_the_main_page():\n    response = app.test_client().get('/create-article')\n    assert \"post\" in response.data.decode(\n        'utf-8')",
+        "peekOfCode": "def test_ishould_return_a_CREATE_button_on_the_main_page():\n    with app.test_client, self.app_context():\n        data = {\n            \"user_id\": \"1\",\n            \"content\": \"a content\",\n            \"participant1\": \"participant1\",\n            \"participant2\": \"participant2\",\n            \"participant3\": \"participants\"\n        }\n        response = app.test_client.post(",
         "detail": "test_mymodel_app",
         "documentation": {}
     },
